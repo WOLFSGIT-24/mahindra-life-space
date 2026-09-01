@@ -66,7 +66,7 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
               <div>
                 {item.image && (
                   <div className="relative aspect-[16/10] w-full bg-slate-950 overflow-hidden">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover"

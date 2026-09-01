@@ -83,7 +83,7 @@ export default function ProjectHighlights({
               <div>
                 {/* Visual Banner */}
                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={av.heroImage}
                     alt="Codename AquaVista at Mahindra World City"
                     className="w-full h-full object-cover"
@@ -204,7 +204,7 @@ export default function ProjectHighlights({
               <div>
                 {/* Visual Banner */}
                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={lw.heroImage}
                     alt="Mahindra Lakewoods at Mahindra World City"
                     className="w-full h-full object-cover"

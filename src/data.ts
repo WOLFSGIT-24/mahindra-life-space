@@ -33,7 +33,7 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
     reraNumber: "TN/01/Building/0174/2022",
     reraProjectName: "Aqualily phase 2C2",
     reraValidUntil: "31.12.2024",
-    heroImage: "/aquavista/aqua gallery.png",
+    heroImage: "/aquavista/aqua gallery.webp",
     typologies: ["3 BHK", "3.5 BHK", "4 BHK Duplex"],
     startingPrice: "₹ 79 Lakhs*",
     carpetAreaRange: "1,053.5 to 1,610.2 Sq.Ft. Carpet",
@@ -66,7 +66,7 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
     reraNumber: "TN/01/Building/0041/2022",
     reraProjectName: "Lakewoods Towers D & E",
     reraValidUntil: "31.05.2025",
-    heroImage: "/lakewoods/lakewood gallery.png",
+    heroImage: "/lakewoods/lakewood gallery.webp",
     typologies: ["Spacious 2 BHK", "Luxury 3 BHK"],
     startingPrice: "₹ 55 Lakhs*",
     carpetAreaRange: "751.2 to 1,013.9 Sq.Ft. Carpet",
@@ -108,51 +108,51 @@ export const mwcTownshipHighlights = {
     "India's 1st IGBC Gold Certified Green Township"
   ],
   corporateHubs: [
-    { name: "Infosys", sector: "Information Technology", campus: "Flagship SEZ Campus", image: "/aquavista/infosys.png" },
-    { name: "BMW", sector: "Automotive", campus: "Assembly & Engineering", image: "/aquavista/bmw.png" },
-    { name: "Renault Nissan", sector: "Automotive & R&D", campus: "Technology Centre", image: "/aquavista/renault.png" },
-    { name: "Timken", sector: "Precision Engineering", campus: "Global Tech Hub", image: "/aquavista/timken.png" },
-    { name: "Saint-Gobain", sector: "Advanced Materials", campus: "Industrial Park", image: "/aquavista/saint gobain.png" },
-    { name: "Parker Hannifin", sector: "Motion & Control", campus: "Manufacturing", image: "/aquavista/parker.png" },
-    { name: "Fujitec", sector: "Elevators & Systems", campus: "Global Manufacturing", image: "/aquavista/fujitec.png" },
-    { name: "B. Braun", sector: "Healthcare & Pharma", campus: "Medical Solutions", image: "/aquavista/b braun.png" }
+    { name: "Infosys", sector: "Information Technology", campus: "Flagship SEZ Campus", image: "/aquavista/infosys.webp" },
+    { name: "BMW", sector: "Automotive", campus: "Assembly & Engineering", image: "/aquavista/bmw.webp" },
+    { name: "Renault Nissan", sector: "Automotive & R&D", campus: "Technology Centre", image: "/aquavista/renault.webp" },
+    { name: "Timken", sector: "Precision Engineering", campus: "Global Tech Hub", image: "/aquavista/timken.webp" },
+    { name: "Saint-Gobain", sector: "Advanced Materials", campus: "Industrial Park", image: "/aquavista/saint gobain.webp" },
+    { name: "Parker Hannifin", sector: "Motion & Control", campus: "Manufacturing", image: "/aquavista/parker.webp" },
+    { name: "Fujitec", sector: "Elevators & Systems", campus: "Global Manufacturing", image: "/aquavista/fujitec.webp" },
+    { name: "B. Braun", sector: "Healthcare & Pharma", campus: "Medical Solutions", image: "/aquavista/b braun.webp" }
   ],
   socialInfra: [
     {
       title: "The Canopy Commercial Centre",
       desc: "Multi level shopping destination with Pizza Hut, Amul Ice Cream, superstores, banks, ATMs, and casual dining.",
       icon: "shopping_bag",
-      image: "/aquavista/canopy.png"
+      image: "/aquavista/canopy.webp"
     },
     {
       title: "Fairfield by Marriott",
       desc: "Four star international hospitality and business hotel for guests, dining, and corporate conferences.",
       icon: "hotel",
-      image: "/aquavista/fairfield.png"
+      image: "/aquavista/fairfield.webp"
     },
     {
       title: "MWC Club & Recreation",
       desc: "Private lifestyle club with tennis, squash, swimming, gymnasium, spa/salon, sports bar & restaurant.",
       icon: "sports_tennis",
-      image: "/aquavista/mwc club.png"
+      image: "/aquavista/mwc club.webp"
     },
     {
       title: "Healthcare & Care Centers",
       desc: "On campus multi speciality medical clinic, pharmacy, and Amelio Child Care & Daycare centre.",
       icon: "local_hospital",
-      image: "/aquavista/healthcare.png"
+      image: "/aquavista/healthcare.webp"
     },
     {
       title: "Eco Mobility & Bio Buses",
       desc: "Township internal commute powered by clean Bio CNG fueled shuttle buses and electric mobility.",
       icon: "directions_bus",
-      image: "/aquavista/eco mobility.png"
+      image: "/aquavista/eco mobility.webp"
     },
     {
       title: "Mahindra World School (CBSE)",
       desc: "Co educational CBSE school with state of the art academic & sports facilities right within the township.",
       icon: "school",
-      image: "/aquavista/central podium.png"
+      image: "/aquavista/central podium.webp"
     }
   ]
 };
@@ -170,7 +170,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "108.3",
     utilitySqFt: "32.51",
     totalAreaDisplay: "1,053.5 Sq.Ft. Carpet (+ 140.8 Sq.Ft. Balcony & Utility)",
-    imageUrl: "/aquavista/3 bhk.png",
+    imageUrl: "/aquavista/3 bhk.webp",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -198,7 +198,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "100.4",
     utilitySqFt: "30.7",
     totalAreaDisplay: "1,346.5 Sq.Ft. Carpet (+ 131.1 Sq.Ft. Balcony & Utility)",
-    imageUrl: "/aquavista/3.5 bhk.png",
+    imageUrl: "/aquavista/3.5 bhk.webp",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -226,7 +226,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "214.4",
     utilitySqFt: "31.3",
     totalAreaDisplay: "1,610.2 Sq.Ft. Carpet (+ 245.7 Sq.Ft. Terrace, Balcony & Utility)",
-    imageUrl: "/aquavista/4 bhk.png",
+    imageUrl: "/aquavista/4 bhk.webp",
     bedrooms: 4,
     bathrooms: 4,
     features: [
@@ -256,7 +256,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "37.89",
     utilitySqFt: "24.54",
     totalAreaDisplay: "751.22 Sq.Ft. Carpet (+ 62.43 Sq.Ft. Deck & Utility)",
-    imageUrl: "/lakewoods/2 bhk lakewood.png",
+    imageUrl: "/lakewoods/2 bhk lakewood.webp",
     bedrooms: 2,
     bathrooms: 2,
     features: [
@@ -284,7 +284,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "62.1",
     utilitySqFt: "24.43",
     totalAreaDisplay: "925.4 Sq.Ft. Carpet (+ 86.5 Sq.Ft. Deck & Utility)",
-    imageUrl: "/lakewoods/3 bhk lakewood.png",
+    imageUrl: "/lakewoods/3 bhk lakewood.webp",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -312,7 +312,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "84.82",
     utilitySqFt: "24.43",
     totalAreaDisplay: "1,013.86 Sq.Ft. Carpet (+ 109.25 Sq.Ft. Deck & Utility)",
-    imageUrl: "/lakewoods/3 bhk grand lakewood.png",
+    imageUrl: "/lakewoods/3 bhk grand lakewood.webp",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -342,42 +342,42 @@ export const amenitiesCategories: AmenityCategory[] = [
         desc: "Multi level recreation hub with reception lobby, multipurpose hall, yoga/aerobics room, and indoor games room.",
         icon: "castle",
         tag: "AquaVista",
-        image: "/aquavista/grand clubhouse.png"
+        image: "/aquavista/grand clubhouse.webp"
       },
       {
         title: "Resort Style Swimming Pool",
         desc: "Crystal clear adult swimming pool and dedicated kids splash pool with sun loungers.",
         icon: "pool",
         tag: "AquaVista",
-        image: "/aquavista/resort style pool.png"
+        image: "/aquavista/resort style pool.webp"
       },
       {
         title: "2 Acre Central Park & Shaded Walkways",
         desc: "Expansive landscaped central green park with pedestrian seating pavilions and tree lined jogging paths.",
         icon: "park",
         tag: "AquaVista",
-        image: "/aquavista/central podium.png"
+        image: "/aquavista/central podium.webp"
       },
       {
         title: "Open Amphitheatre & Party Lawns",
         desc: "Stepped open air amphitheatre for cultural gatherings, musical nights, and festive community celebrations.",
         icon: "theater_comedy",
         tag: "AquaVista",
-        image: "/aquavista/open amphitheatre.png"
+        image: "/aquavista/open amphitheatre.webp"
       },
       {
         title: "Regulation Badminton Court",
         desc: "Outdoor badminton courts and athletic facilities for residents of all age groups.",
         icon: "sports_tennis",
         tag: "AquaVista",
-        image: "/aquavista/badminton court.png"
+        image: "/aquavista/badminton court.webp"
       },
       {
         title: "Half Basketball Court & Play Arena",
         desc: "Dedicated half basketball hoop court and safe multi play equipment zone for kids.",
         icon: "sports_basketball",
         tag: "AquaVista",
-        image: "/aquavista/half basketball.png"
+        image: "/aquavista/half basketball.webp"
       }
     ]
   },
@@ -391,42 +391,42 @@ export const amenitiesCategories: AmenityCategory[] = [
         desc: "Zero traffic, pristine elevated podium providing total safety for children and seniors to stroll freely.",
         icon: "nature_people",
         tag: "Lakewoods",
-        image: "/lakewoods/lakewood gallery.png"
+        image: "/lakewoods/lakewood gallery.webp"
       },
       {
         title: "Open to Sky Swimming Pool",
         desc: "Sparkling resort swimming pool with changing rooms, dedicated shallow pool for children, and expansive timber deck.",
         icon: "water",
         tag: "Lakewoods",
-        image: "/lakewoods/pool-amenities.jpg"
+        image: "/lakewoods/pool-amenities.webp"
       },
       {
         title: "Elevated Lounge & Skyview Decks",
         desc: "Bespoke social pavilion overlooking the green podium, rolling reserve hills, and distant lake waters.",
         icon: "deck",
         tag: "Lakewoods",
-        image: "/lakewoods/podium-park.jpg"
+        image: "/lakewoods/podium-park.webp"
       },
       {
         title: "Podium Fitness Gym & Jogging Loop",
         desc: "Fully equipped gymnasium with cardio and strength training gear, opening onto a soft cushion jogging track.",
         icon: "fitness_center",
         tag: "Lakewoods",
-        image: "/lakewoods/hero.jpg"
+        image: "/lakewoods/hero.webp"
       },
       {
         title: "Open Badminton Court & Play Lawn",
         desc: "Outdoor badminton court and sprawling manicured lawns for morning yoga and evening family recreation.",
         icon: "sports_kabaddi",
         tag: "Lakewoods",
-        image: "/aquavista/badminton court.png"
+        image: "/aquavista/badminton court.webp"
       },
       {
         title: "Multipurpose Hall & Indoor Games",
         desc: "Air conditioned celebration hall with indoor games room for table tennis, carrom, and board games.",
         icon: "sports_esports",
         tag: "Lakewoods",
-        image: "/aquavista/grand clubhouse.png"
+        image: "/aquavista/grand clubhouse.webp"
       }
     ]
   },
@@ -440,42 +440,42 @@ export const amenitiesCategories: AmenityCategory[] = [
         desc: "Exclusive private retreat with squash court, tennis, billiards room, reading lounge, multicuisine dining & sports bar.",
         icon: "local_bar",
         tag: "MWC Club",
-        image: "/aquavista/mwc club.png"
+        image: "/aquavista/mwc club.webp"
       },
       {
         title: "The Canopy Shopping Centre",
         desc: "Walk to retail complex featuring Pizza Hut, Amul, multi cuisine food courts, ATMs, grocery, and salons.",
         icon: "storefront",
         tag: "Retail",
-        image: "/aquavista/canopy.png"
+        image: "/aquavista/canopy.webp"
       },
       {
         title: "Fairfield by Marriott",
         desc: "4 star international business hotel offering premium stays, banquet venues, and fine dining for your guests.",
         icon: "hotel",
         tag: "Hospitality",
-        image: "/aquavista/fairfield.png"
+        image: "/aquavista/fairfield.webp"
       },
       {
         title: "Healthcare & Care Centers",
         desc: "On campus multi speciality medical clinic, pharmacy, and Amelio Child Care & Daycare centre.",
         icon: "local_hospital",
         tag: "Healthcare",
-        image: "/aquavista/healthcare.png"
+        image: "/aquavista/healthcare.webp"
       },
       {
         title: "Eco Mobility & Bio Buses",
         desc: "Township internal commute powered by clean Bio CNG fueled shuttle buses and electric mobility.",
         icon: "directions_bus",
         tag: "Eco Transit",
-        image: "/aquavista/eco mobility.png"
+        image: "/aquavista/eco mobility.webp"
       },
       {
         title: "Mahindra World School (CBSE)",
         desc: "Premier educational institution with world class sports grounds, labs, and holistic student development.",
         icon: "school",
         tag: "Education",
-        image: "/aquavista/central podium.png"
+        image: "/aquavista/central podium.webp"
       }
     ]
   }

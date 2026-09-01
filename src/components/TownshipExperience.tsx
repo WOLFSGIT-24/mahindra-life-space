@@ -16,25 +16,25 @@ const projectGalleries = {
       {
         title: "Iconic Lakefront Towers & Promenade",
         subtitle: "Towers C7 & C8 rising above Kolavai Lake with private duplex rooftop terraces",
-        image: "/aquavista/aqua gallery.png",
+        image: "/aquavista/aqua gallery.webp",
         tag: "Lake View Towers",
       },
       {
         title: "16,000 Sq.Ft. Resort Clubhouse & Infinity Pool",
         subtitle: "Overlooking natural lake waters with pool deck, gymnasium & aerobics studio",
-        image: "/aquavista/grand clubhouse.png",
+        image: "/aquavista/grand clubhouse.webp",
         tag: "Clubhouse & Pool",
       },
       {
         title: "2 Acre Central Park & Architectural Elegance",
         subtitle: "Shaded green pathways, open amphitheatre, sports courts and play lawns",
-        image: "/aquavista/central podium.png",
+        image: "/aquavista/central podium.webp",
         tag: "Central Park",
       },
       {
         title: "Panoramic Kolavai Lake Balcony Vistas",
         subtitle: "Unobstructed lakefront serenity, cool breezes and picturesque sunset views",
-        image: "/aquavista/kolavai view.png",
+        image: "/aquavista/kolavai view.webp",
         tag: "Balcony Vista",
       },
     ],
@@ -48,25 +48,25 @@ const projectGalleries = {
       {
         title: "3.8 Acre Central Vehicle Free Elevated Podium",
         subtitle: "Lush green recreational podium with zero traffic, connecting Towers A to E",
-        image: "/lakewoods/lakewood gallery.png",
+        image: "/lakewoods/lakewood gallery.webp",
         tag: "Vehicle Free Podium",
       },
       {
         title: "Open To Sky Swimming Pool & Leisure Deck",
         subtitle: "Resort style pool, toddler splash zone, clubhouse and tropical sun loungers",
-        image: "/lakewoods/pool-amenities.jpg",
+        image: "/lakewoods/pool-amenities.webp",
         tag: "Swimming Pool",
       },
       {
         title: "Lush Landscaped Podium Lawns & Walkways",
         subtitle: "Continuous jogging loop, children's play areas, yoga pergolas, and serene gardens",
-        image: "/lakewoods/podium-park.jpg",
+        image: "/lakewoods/podium-park.webp",
         tag: "Podium Gardens",
       },
       {
         title: "Zero Common Walls Architectural Design",
         subtitle: "Thoughtfully crafted 2 & 3 BHK homes with complete 3 side ventilation & privacy",
-        image: "/lakewoods/hero.jpg",
+        image: "/lakewoods/hero.webp",
         tag: "Podium Residences",
       },
     ],
@@ -158,7 +158,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                   idx === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
                 }`}
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={slide.image}
                   alt={slide.title}
                   className="w-full h-full object-cover"
@@ -267,7 +267,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
               >
                 {infra.image && (
                   <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={infra.image}
                       alt={infra.title}
                       className="w-full h-full object-cover"
@@ -323,7 +323,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 >
                   {corp.image ? (
                     <div className="h-8 flex items-center justify-center mb-1">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={corp.image}
                         alt={corp.name}
                         className="max-h-7 max-w-[80px] object-contain filter brightness-110"

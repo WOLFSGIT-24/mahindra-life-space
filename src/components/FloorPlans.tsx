@@ -137,7 +137,7 @@ export default function FloorPlans({
                   onClick={() => handlePlanClick(plan)}
                   className="relative aspect-[4/3] bg-slate-50 p-4 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-100 transition-colors"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={plan.imageUrl}
                     alt={plan.title}
                     className={`max-w-full max-h-full object-contain transition-all duration-300 ${
@@ -264,7 +264,7 @@ export default function FloorPlans({
 
             {/* High-res Image Preview */}
             <div className="h-[40vh] sm:h-[48vh] p-2 sm:p-4 bg-slate-50 rounded border border-slate-200 flex items-center justify-center overflow-auto">
-              <img
+              <img loading="lazy" decoding="async"
                 src={selectedPlanModal.imageUrl}
                 alt={selectedPlanModal.title}
                 className="max-w-full max-h-full object-contain"

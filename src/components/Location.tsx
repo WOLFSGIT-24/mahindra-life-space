@@ -80,8 +80,8 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
               />
             ) : (
               <div className="flex-1 bg-slate-950 flex items-center justify-center p-2 overflow-auto">
-                <img
-                  src="/aquavista/location.png"
+                <img loading="lazy" decoding="async"
+                  src="/aquavista/location.webp"
                   alt="Mahindra World City Regional Connectivity Map"
                   className="max-w-full max-h-[380px] object-contain rounded"
                 />

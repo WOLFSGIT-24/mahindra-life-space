@@ -8,18 +8,15 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" />
     
-    <!-- Preload Critical Images -->
-    <link rel="preload" href="/aquavista/aqua gallery.png" as="image" fetchpriority="high" />
-    <link rel="preload" href="/lakewoods/lakewood gallery.png" as="image" />
-    <link rel="preload" href="/mwc-township.jpg" as="image" />
-
-    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <!-- Preconnect to Google Fonts for fast font delivery -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    
-    <!-- Material Symbols -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+    <!-- Preload Mobile & Desktop Hero LCP Image in WebP Format -->
+    <link rel="preload" href="/aquavista/aqua gallery.webp" as="image" type="image/webp" fetchpriority="high" />
+
+    <!-- Google Fonts with display=swap to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-slate-50 text-slate-900 antialiased selection:bg-red-500 selection:text-white">
     <div id="root"></div>

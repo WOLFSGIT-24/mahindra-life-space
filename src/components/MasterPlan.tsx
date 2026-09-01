@@ -13,7 +13,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
     aquavista: {
       name: "Codename AquaVista Master Plan",
       subtitle: "Overlooking Serene Kolavai Lake with 2 Acre Central Park & 16,000 Sq.Ft. Clubhouse",
-      imageUrl: "/aquavista/master pla aqua.png",
+      imageUrl: "/aquavista/master pla aqua.webp",
       badge: "Lakefront Master Layout",
       legendItems: [
         "Grand Entry / Exit Portal & Security",
@@ -31,7 +31,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
     lakewoods: {
       name: "Mahindra Lakewoods Master Plan",
       subtitle: "3.8 Acre Central Vehicle Free Elevated Podium with Towers A to E",
-      imageUrl: "/lakewoods/lakewood masterplan.png",
+      imageUrl: "/lakewoods/lakewood masterplan.webp",
       badge: "3.8 Acre Podium Master Layout",
       legendItems: [
         "Ground Level Grand Entry / Exit & Security Cabin",
@@ -143,7 +143,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             onClick={() => setZoomOpen(true)}
             className="lg:col-span-7 relative aspect-[4/3] rounded-lg overflow-hidden bg-slate-900 border border-slate-200 cursor-pointer"
           >
-            <img
+            <img loading="lazy" decoding="async"
               src={current.imageUrl}
               alt={current.name}
               className="w-full h-full object-cover"
@@ -186,7 +186,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             </div>
 
             <div className="h-[45vh] sm:h-[60vh] p-2 bg-slate-100 rounded overflow-auto flex items-center justify-center">
-              <img
+              <img loading="lazy" decoding="async"
                 src={current.imageUrl}
                 alt={current.name}
                 className="max-w-full max-h-full object-contain"
