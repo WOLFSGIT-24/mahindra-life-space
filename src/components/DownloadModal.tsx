@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { X, Download, Check, Phone, Mail, User } from "lucide-react";
 import { LeadSubmission } from "../types";
+import { downloadBrochures } from "../utils/downloadBrochure";
 
 interface DownloadModalProps {
   isOpen: boolean;
   onClose: () => void;
   onAddLead: (lead: Omit<LeadSubmission, "id" | "submittedAt" | "status">) => void;
+  initialProject?: string | null;
 }
 
 export default function DownloadModal({
   isOpen,
   onClose,
   onAddLead,
+  initialProject,
 }: DownloadModalProps) {
   if (!isOpen) return null;
 
@@ -19,11 +22,17 @@ export default function DownloadModal({
     fullName: "",
     email: "",
     phone: "",
-    project: "Both Projects (AquaVista & Lakewoods)",
+    project: initialProject || "Both Projects (AquaVista & Lakewoods)",
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    if (initialProject) {
+      setFormData((prev) => ({ ...prev, project: initialProject }));
+    }
+  }, [initialProject]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -67,17 +76,8 @@ export default function DownloadModal({
         notes: `Downloaded Brochure for ${formData.project}`,
       });
 
-      try {
-        window.open("/Brochure.pdf", "_blank");
-        const link = document.createElement("a");
-        link.href = "/Brochure.pdf";
-        link.setAttribute("download", "Mahindra_World_City_Brochures.pdf");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch (e) {
-        console.error(e);
-      }
+      // Trigger project-specific or both PDF downloads
+      downloadBrochures(formData.project);
 
       setLoading(false);
       setSubmitted(true);
@@ -208,11 +208,11 @@ export default function DownloadModal({
                 Download Started
               </h4>
               <p className="font-body text-xs text-slate-900 max-w-sm mx-auto">
-                Your official brochures for <strong>{formData.project}</strong> have been downloaded. Our team has also emailed you the complete price sheets.
+                Your requested brochure for <strong>{formData.project}</strong> has been downloaded. Our team has also emailed you the complete price sheets.
               </p>
               <button
                 onClick={onClose}
-                className="bg-[#c8102e] text-white font-body text-xs font-bold tracking-wider uppercase px-6 py-2.5 rounded-md shadow"
+                className="bg-[#c8102e] text-white font-body text-xs font-bold tracking-wider uppercase px-6 py-2.5 rounded-md shadow cursor-pointer"
               >
                 Close
               </button>

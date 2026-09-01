@@ -144,6 +144,15 @@ export default function App() {
     setOfferOpen(true);
   };
 
+  const handleRequestDownload = (project?: string) => {
+    if (project) {
+      setPreselectedProject(project);
+    } else {
+      setPreselectedProject(null);
+    }
+    setDownloadModalOpen(true);
+  };
+
   return (
     <div className="relative min-h-screen bg-slate-50 text-slate-900 pb-20 md:pb-0 overflow-x-hidden w-full font-body">
       
@@ -154,7 +163,7 @@ export default function App() {
           setPreselectedProject(null);
           setBookingOpen(true);
         }}
-        onRequestDownload={() => setDownloadModalOpen(true)}
+        onRequestDownload={() => handleRequestDownload()}
         onToggleAdmin={() => setAdminOpen(!adminOpen)}
         isAdminActive={adminOpen}
         selectedProject={selectedProject}
@@ -164,7 +173,7 @@ export default function App() {
       {/* Hero Section */}
       <Hero
         onOpenEnquiry={handleOpenEnquiry}
-        onRequestDownload={() => setDownloadModalOpen(true)}
+        onRequestDownload={() => handleRequestDownload(selectedProject !== "all" ? (selectedProject === "aquavista" ? "Codename AquaVista (3, 3.5 & 4 BHK Duplex)" : "Mahindra Lakewoods (2 & 3 BHK)") : undefined)}
         selectedProject={selectedProject}
         onSelectProject={(p) => setSelectedProject(p)}
       />
@@ -173,7 +182,7 @@ export default function App() {
       <ProjectHighlights
         onSelectProject={(p) => setSelectedProject(p)}
         onOpenEnquiry={handleOpenEnquiry}
-        onRequestDownload={() => setDownloadModalOpen(true)}
+        onRequestDownload={(p) => handleRequestDownload(p)}
       />
 
       {/* Floor Plans & Unit Layouts */}
@@ -243,8 +252,12 @@ export default function App() {
 
       <DownloadModal
         isOpen={downloadModalOpen}
-        onClose={() => setDownloadModalOpen(false)}
+        onClose={() => {
+          setDownloadModalOpen(false);
+          setPreselectedProject(null);
+        }}
         onAddLead={handleAddLead}
+        initialProject={preselectedProject}
       />
 
       <OfferModal

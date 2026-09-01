@@ -4,9 +4,9 @@ import { projectsData } from "../data";
 
 interface ProjectHighlightsProps {
   onOpenBooking?: (unitType?: string, projectId?: string) => void;
-  onOpenDownload?: () => void;
+  onOpenDownload?: (projectId?: string) => void;
   onOpenEnquiry?: (topicOrProject?: string) => void;
-  onRequestDownload?: () => void;
+  onRequestDownload?: (projectId?: string) => void;
   onSelectProject?: (projectId: "aquavista" | "lakewoods") => void;
 }
 
@@ -24,9 +24,9 @@ export default function ProjectHighlights({
     else if (onOpenEnquiry) onOpenEnquiry(projectId || unitType);
   };
 
-  const handleDownload = () => {
+  const handleDownload = (projectId?: string) => {
     if (onOpenDownload) onOpenDownload();
-    else if (onRequestDownload) onRequestDownload();
+    else if (onRequestDownload) onRequestDownload(projectId);
   };
 
   const av = projectsData.aquavista;
@@ -188,7 +188,7 @@ export default function ProjectHighlights({
                   Book Site Visit
                 </button>
                 <button
-                  onClick={handleDownload}
+                  onClick={() => handleDownload("Codename AquaVista (3, 3.5 & 4 BHK Duplex)")}
                   className="flex-1 bg-white hover:bg-slate-50 text-slate-900 font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded border border-slate-300 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Download className="h-4 w-4 text-[#c8102e]" />
@@ -309,7 +309,7 @@ export default function ProjectHighlights({
                   Book Site Visit
                 </button>
                 <button
-                  onClick={handleDownload}
+                  onClick={() => handleDownload("Mahindra Lakewoods (2 & 3 BHK)")}
                   className="flex-1 bg-white hover:bg-slate-50 text-slate-900 font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded border border-slate-300 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Download className="h-4 w-4 text-[#c8102e]" />

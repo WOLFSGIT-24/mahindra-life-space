@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Download, Check, ShieldCheck, Phone, Mail, User } from "lucide-react";
 import { LeadSubmission } from "../types";
+import { downloadBrochures } from "../utils/downloadBrochure";
 
 interface BrochureFormProps {
   onAddLead: (lead: Omit<LeadSubmission, "id" | "submittedAt" | "status">) => void;
@@ -71,21 +72,12 @@ export default function BrochureForm({
         notes: `Enquiry for ${formData.project} (${formData.unitType})`,
       });
 
-      try {
-        window.open("/Brochure.pdf", "_blank");
-        const link = document.createElement("a");
-        link.href = "/Brochure.pdf";
-        link.setAttribute("download", "Mahindra_World_City_Brochures.pdf");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch (e) {
-        console.error("PDF download initiation", e);
-      }
+      // Trigger project specific or both PDF downloads
+      downloadBrochures(formData.project);
 
       setLoading(false);
       setFormSubmitted(true);
-    }, 1200);
+    }, 1000);
   };
 
   return (
