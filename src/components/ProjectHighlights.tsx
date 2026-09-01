@@ -54,22 +54,23 @@ export default function ProjectHighlights({
         </div>
 
         {/* Filter Switcher */}
-        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
+        <div className="flex items-center justify-center max-w-lg mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-8 sm:mb-12">
           {[
-            { id: "both", label: "Compare Both Projects" },
-            { id: "aquavista", label: "Codename AquaVista" },
-            { id: "lakewoods", label: "Mahindra Lakewoods" },
+            { id: "both", labelMobile: "Both Projects", labelDesktop: "Compare Both Projects" },
+            { id: "aquavista", labelMobile: "AquaVista", labelDesktop: "Codename AquaVista" },
+            { id: "lakewoods", labelMobile: "Lakewoods", labelDesktop: "Mahindra Lakewoods" },
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id as any)}
-              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+              className={`flex-1 py-2 sm:py-2.5 px-1.5 sm:px-4 rounded-md font-body text-[10px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
                 filter === tab.id
                   ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                  : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                  : "text-slate-700 hover:text-slate-900"
               }`}
             >
-              {tab.label}
+              <span className="sm:hidden">{tab.labelMobile}</span>
+              <span className="hidden sm:inline">{tab.labelDesktop}</span>
             </button>
           ))}
         </div>

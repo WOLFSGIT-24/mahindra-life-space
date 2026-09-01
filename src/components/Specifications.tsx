@@ -24,26 +24,28 @@ export default function Specifications() {
         </div>
 
         {/* View Switcher */}
-        <div className="flex justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
+        <div className="flex items-center justify-center max-w-md mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-8 sm:mb-12">
           <button
             onClick={() => setActiveTab("specs")}
-            className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
               activeTab === "specs"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            Technical Specifications
+            <span className="sm:hidden">Specifications</span>
+            <span className="hidden sm:inline">Technical Specifications</span>
           </button>
           <button
             onClick={() => setActiveTab("sustainability")}
-            className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
               activeTab === "sustainability"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            Green Living Scorecard
+            <span className="sm:hidden">Green Scorecard</span>
+            <span className="hidden sm:inline">Green Living Scorecard</span>
           </button>
         </div>
 

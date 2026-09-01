@@ -75,26 +75,52 @@ export default function Hero({
             </h1>
 
             <p className="font-body text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Welcome to Mahindra World City, Chennai. India’s 1st integrated green township with 65+ global blue chip corporates, 1,000 acres of reserve forest, 7 lakes, and on site Paranur railway station. Choose your preferred residence:
+              Welcome to Mahindra World City, Chennai. India’s 1st integrated green township with 65+ global blue chip corporates, 1,00,000+ professionals, 1,000 acres of reserve forest, 7 lakes, and on site Paranur railway station. Choose your preferred residence:
             </p>
 
+            {/* Mobile Only Hero Visual (Directly under Heading & Paragraph) */}
+            <div className="block lg:hidden my-4 sm:my-5">
+              <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group">
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={currentProj.heroImage}
+                    alt={currentProj.name}
+                    fetchPriority="high"
+                    decoding="async"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  
+                  {/* Image Overlay Label */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white bg-slate-950/80 backdrop-blur-sm p-2.5 rounded border border-white/20">
+                    <span className="font-semibold">{currentProj.name}</span>
+                    <span className="text-red-300 font-bold uppercase text-[10px] tracking-wider">
+                      {currentProj.greenRating}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Project Selection Tabs */}
-            <div className="bg-slate-100 p-1.5 rounded-xl border border-slate-200 max-w-xl mx-auto lg:mx-0 flex gap-2">
+            <div className="bg-slate-100 p-1.5 rounded-xl border border-slate-200 max-w-xl mx-auto lg:mx-0 grid grid-cols-1 sm:grid-cols-2 gap-2">
               <button
                 onClick={() => {
                   setActiveHeroTab("aquavista");
                   onSelectProject?.("aquavista");
                 }}
-                className={`flex-1 py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
+                className={`py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
                   activeHeroTab === "aquavista"
                     ? "bg-[#c8102e] text-white font-bold shadow-sm"
                     : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:bg-slate-50"
                 }`}
               >
-                <div className="text-xs uppercase tracking-wider font-bold truncate">
+                <div className="text-xs uppercase tracking-wider font-bold">
                   Codename AquaVista
                 </div>
-                <div className={`text-[11px] mt-0.5 font-normal truncate ${activeHeroTab === "aquavista" ? "text-white/90" : "text-slate-500"}`}>
+                <div className={`text-[11px] mt-0.5 font-normal ${activeHeroTab === "aquavista" ? "text-white/90" : "text-slate-500"}`}>
                   3, 3.5 & 4 BHK Duplex • Lake View
                 </div>
               </button>
@@ -104,16 +130,16 @@ export default function Hero({
                   setActiveHeroTab("lakewoods");
                   onSelectProject?.("lakewoods");
                 }}
-                className={`flex-1 py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
+                className={`py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
                   activeHeroTab === "lakewoods"
                     ? "bg-[#c8102e] text-white font-bold shadow-sm"
                     : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:bg-slate-50"
                 }`}
               >
-                <div className="text-xs uppercase tracking-wider font-bold truncate">
+                <div className="text-xs uppercase tracking-wider font-bold">
                   Mahindra Lakewoods
                 </div>
-                <div className={`text-[11px] mt-0.5 font-normal truncate ${activeHeroTab === "lakewoods" ? "text-white/90" : "text-slate-500"}`}>
+                <div className={`text-[11px] mt-0.5 font-normal ${activeHeroTab === "lakewoods" ? "text-white/90" : "text-slate-500"}`}>
                   2 & 3 BHK • 3.8 Acre Podium
                 </div>
               </button>
@@ -187,7 +213,7 @@ export default function Hero({
 
           {/* Right Column: Hero Visual & Fast Facts */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group">
+            <div className="hidden lg:block relative rounded-xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={currentProj.heroImage}

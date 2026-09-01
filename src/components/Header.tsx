@@ -90,19 +90,16 @@ export default function Header({
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-200">
       
       {/* Top Banner Announcement Strip - Minimal Luxury Light */}
-      <div className="bg-slate-100/90 text-slate-800 text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-200/80 flex items-center justify-center gap-2 backdrop-blur-sm">
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider shrink-0">
+      <div className="bg-slate-100/95 text-slate-800 text-[10px] sm:text-[11px] font-medium py-1.5 px-3 sm:px-4 border-b border-slate-200/80 flex items-center justify-center gap-2 text-center backdrop-blur-sm">
+        <span className="inline-flex items-center px-2 py-0.5 rounded text-[9px] sm:text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider shrink-0">
           Mahindra World City
         </span>
-        <span className="hidden md:inline text-slate-700 truncate">
-          Codename AquaVista (3, 3.5 & 4 BHK Duplex) & Mahindra Lakewoods (2 & 3 BHK)
-        </span>
-        <span className="md:hidden text-slate-700 truncate">
-          AquaVista & Lakewoods • 1,500 Acre Township
+        <span className="hidden sm:inline text-slate-700 font-medium">
+          Codename AquaVista & Mahindra Lakewoods • Luxury Residences
         </span>
         <button
           onClick={onRequestDownload}
-          className="underline text-[#c8102e] hover:text-[#a60d26] font-bold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
+          className="underline text-[#c8102e] hover:text-[#a60d26] font-bold cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
         >
           Download PDF
         </button>

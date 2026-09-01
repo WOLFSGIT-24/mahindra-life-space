@@ -122,27 +122,29 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
         </div>
 
         {/* 2 Project Tabs for Slideshow */}
-        <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+        <div className="flex items-center justify-center max-w-md mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-6 sm:mb-8">
           <button
             onClick={() => handleTabChange("aquavista")}
-            className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
               activeProject === "aquavista"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200"
+                : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            {projectGalleries.aquavista.buttonLabel}
+            <span className="sm:hidden">AquaVista</span>
+            <span className="hidden sm:inline">{projectGalleries.aquavista.buttonLabel}</span>
           </button>
 
           <button
             onClick={() => handleTabChange("lakewoods")}
-            className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+            className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
               activeProject === "lakewoods"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200"
+                : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            {projectGalleries.lakewoods.buttonLabel}
+            <span className="sm:hidden">Lakewoods</span>
+            <span className="hidden sm:inline">{projectGalleries.lakewoods.buttonLabel}</span>
           </button>
         </div>
 
