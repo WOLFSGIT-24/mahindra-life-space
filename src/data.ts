@@ -33,7 +33,7 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
     reraNumber: "TN/01/Building/0174/2022",
     reraProjectName: "Aqualily phase 2C2",
     reraValidUntil: "31.12.2024",
-    heroImage: "/aquavista-hero.jpg",
+    heroImage: "/aquavista/aqua gallery.png",
     typologies: ["3 BHK", "3.5 BHK", "4 BHK Duplex"],
     startingPrice: "₹ 79 Lakhs*",
     carpetAreaRange: "1,053.5 to 1,610.2 Sq.Ft. Carpet",
@@ -66,7 +66,7 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
     reraNumber: "TN/01/Building/0041/2022",
     reraProjectName: "Lakewoods Towers D & E",
     reraValidUntil: "31.05.2025",
-    heroImage: "/lakewoods-hero.jpg",
+    heroImage: "/lakewoods/lakewood gallery.png",
     typologies: ["Spacious 2 BHK", "Luxury 3 BHK"],
     startingPrice: "₹ 55 Lakhs*",
     carpetAreaRange: "751.2 to 1,013.9 Sq.Ft. Carpet",
@@ -108,51 +108,51 @@ export const mwcTownshipHighlights = {
     "India's 1st IGBC Gold Certified Green Township"
   ],
   corporateHubs: [
-    { name: "Infosys", sector: "Information Technology", campus: "Flagship SEZ Campus" },
-    { name: "BMW", sector: "Automotive", campus: "Assembly & Engineering" },
-    { name: "Renault Nissan", sector: "Automotive & R&D", campus: "Technology Centre" },
-    { name: "Timken", sector: "Precision Engineering", campus: "Global Tech Hub" },
-    { name: "Saint-Gobain", sector: "Advanced Materials", campus: "Industrial Park" },
-    { name: "Parker Hannifin", sector: "Motion & Control", campus: "Manufacturing" },
-    { name: "Fujitec", sector: "Elevators & Systems", campus: "Global Manufacturing" },
-    { name: "B. Braun", sector: "Healthcare & Pharma", campus: "Medical Solutions" }
+    { name: "Infosys", sector: "Information Technology", campus: "Flagship SEZ Campus", image: "/aquavista/infosys.png" },
+    { name: "BMW", sector: "Automotive", campus: "Assembly & Engineering", image: "/aquavista/bmw.png" },
+    { name: "Renault Nissan", sector: "Automotive & R&D", campus: "Technology Centre", image: "/aquavista/renault.png" },
+    { name: "Timken", sector: "Precision Engineering", campus: "Global Tech Hub", image: "/aquavista/timken.png" },
+    { name: "Saint-Gobain", sector: "Advanced Materials", campus: "Industrial Park", image: "/aquavista/saint gobain.png" },
+    { name: "Parker Hannifin", sector: "Motion & Control", campus: "Manufacturing", image: "/aquavista/parker.png" },
+    { name: "Fujitec", sector: "Elevators & Systems", campus: "Global Manufacturing", image: "/aquavista/fujitec.png" },
+    { name: "B. Braun", sector: "Healthcare & Pharma", campus: "Medical Solutions", image: "/aquavista/b braun.png" }
   ],
   socialInfra: [
-    {
-      title: "Mahindra World School",
-      desc: "Co educational CBSE school with state of the art academic & sports facilities right within the township.",
-      icon: "school",
-      image: "/ground3.jpg"
-    },
     {
       title: "The Canopy Commercial Centre",
       desc: "Multi level shopping destination with Pizza Hut, Amul Ice Cream, superstores, banks, ATMs, and casual dining.",
       icon: "shopping_bag",
-      image: "/ground4.jpg"
+      image: "/aquavista/canopy.png"
     },
     {
       title: "Fairfield by Marriott",
       desc: "Four star international hospitality and business hotel for guests, dining, and corporate conferences.",
       icon: "hotel",
-      image: "/building2.jpg"
+      image: "/aquavista/fairfield.png"
     },
     {
       title: "MWC Club & Recreation",
       desc: "Private lifestyle club with tennis, squash, swimming, gymnasium, spa/salon, sports bar & restaurant.",
       icon: "sports_tennis",
-      image: "/partyhall.jpg"
+      image: "/aquavista/mwc club.png"
     },
     {
       title: "Healthcare & Care Centers",
       desc: "On campus multi speciality medical clinic, pharmacy, and Amelio Child Care & Daycare centre.",
       icon: "local_hospital",
-      image: "/ground.jpg"
+      image: "/aquavista/healthcare.png"
     },
     {
       title: "Eco Mobility & Bio Buses",
       desc: "Township internal commute powered by clean Bio CNG fueled shuttle buses and electric mobility.",
       icon: "directions_bus",
-      image: "/ground2.jpg"
+      image: "/aquavista/eco mobility.png"
+    },
+    {
+      title: "Mahindra World School (CBSE)",
+      desc: "Co educational CBSE school with state of the art academic & sports facilities right within the township.",
+      icon: "school",
+      image: "/aquavista/central podium.png"
     }
   ]
 };
@@ -170,7 +170,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "108.3",
     utilitySqFt: "32.51",
     totalAreaDisplay: "1,053.5 Sq.Ft. Carpet (+ 140.8 Sq.Ft. Balcony & Utility)",
-    imageUrl: "/unit-402.png",
+    imageUrl: "/aquavista/3 bhk.png",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -198,7 +198,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "100.4",
     utilitySqFt: "30.7",
     totalAreaDisplay: "1,346.5 Sq.Ft. Carpet (+ 131.1 Sq.Ft. Balcony & Utility)",
-    imageUrl: "/unit-1503.png",
+    imageUrl: "/aquavista/3.5 bhk.png",
     bedrooms: 3,
     bathrooms: 3,
     features: [
@@ -226,7 +226,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "214.4",
     utilitySqFt: "31.3",
     totalAreaDisplay: "1,610.2 Sq.Ft. Carpet (+ 245.7 Sq.Ft. Terrace, Balcony & Utility)",
-    imageUrl: "/balcony.png",
+    imageUrl: "/aquavista/4 bhk.png",
     bedrooms: 4,
     bathrooms: 4,
     features: [
@@ -256,7 +256,7 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "37.89",
     utilitySqFt: "24.54",
     totalAreaDisplay: "751.22 Sq.Ft. Carpet (+ 62.43 Sq.Ft. Deck & Utility)",
-    imageUrl: "/Ground-floor-plan.png",
+    imageUrl: "/lakewoods/2 bhk lakewood.png",
     bedrooms: 2,
     bathrooms: 2,
     features: [
@@ -277,6 +277,34 @@ export const floorPlansData: FloorPlanUnit[] = [
     id: "lw-3bhk",
     projectId: "lakewoods",
     projectName: "Mahindra Lakewoods",
+    title: "Lakewoods Towers A to E: 3 BHK Deck",
+    type: "3 BHK Deck",
+    carpetAreaSqFt: "925.4",
+    carpetAreaSqM: "85.97",
+    balconyOrDeckSqFt: "62.1",
+    utilitySqFt: "24.43",
+    totalAreaDisplay: "925.4 Sq.Ft. Carpet (+ 86.5 Sq.Ft. Deck & Utility)",
+    imageUrl: "/lakewoods/3 bhk lakewood.png",
+    bedrooms: 3,
+    bathrooms: 3,
+    features: [
+      "Zero common walls: Complete independence from neighboring units",
+      "Private deck with wooden tile flooring overlooking the 3.8 acre podium",
+      "Cross ventilation designed bedrooms to channel natural breeze",
+      "Niche wardrobe spaces in guest & family bedrooms",
+      "Anti skid ceramic flooring in bathrooms & scratch resistant sink"
+    ],
+    keyHighlights: [
+      "RERA Carpet Area: 85.97 Sq.M (925.4 Sq.Ft)",
+      "Deck Area: 5.77 Sq.M (62.1 Sq.Ft)",
+      "Utility Area: 2.27 Sq.M (24.43 Sq.Ft)",
+      "Zero Common Walls Design"
+    ]
+  },
+  {
+    id: "lw-3bhk-grand",
+    projectId: "lakewoods",
+    projectName: "Mahindra Lakewoods",
     title: "Lakewoods Towers A to E: 3 BHK Grand Deck",
     type: "3 BHK Grand",
     carpetAreaSqFt: "1,013.86",
@@ -284,15 +312,15 @@ export const floorPlansData: FloorPlanUnit[] = [
     balconyOrDeckSqFt: "84.82",
     utilitySqFt: "24.43",
     totalAreaDisplay: "1,013.86 Sq.Ft. Carpet (+ 109.25 Sq.Ft. Deck & Utility)",
-    imageUrl: "/podium-floor-plan.png",
+    imageUrl: "/lakewoods/3 bhk grand lakewood.png",
     bedrooms: 3,
     bathrooms: 3,
     features: [
-      "Zero common walls: Complete independence from neighboring units",
-      "Large private deck with wooden tile flooring overlooking the 3.8 acre podium",
-      "Cross ventilation designed bedrooms to channel natural breeze",
-      "Niche wardrobe spaces in guest & family bedrooms",
-      "Anti skid ceramic flooring in bathrooms & scratch resistant sink"
+      "Zero common walls: Ultra private corner positioning",
+      "Expansive grand deck offering panoramic 3.8 acre podium views",
+      "Three side open cross ventilation with abundant sunlight",
+      "Spacious master bedroom with dedicated wardrobe recess",
+      "Premium sanitary fittings and luxury vitrified floor finishes"
     ],
     keyHighlights: [
       "RERA Carpet Area: 94.19 Sq.M (1013.86 Sq.Ft)",
@@ -313,37 +341,43 @@ export const amenitiesCategories: AmenityCategory[] = [
         title: "16,000 Sq.Ft. Grand Clubhouse",
         desc: "Multi level recreation hub with reception lobby, multipurpose hall, yoga/aerobics room, and indoor games room.",
         icon: "castle",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/grand clubhouse.png"
       },
       {
         title: "Resort Style Swimming Pool",
         desc: "Crystal clear adult swimming pool and dedicated kids splash pool with sun loungers.",
         icon: "pool",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/resort style pool.png"
       },
       {
         title: "2 Acre Central Park & Shaded Walkways",
         desc: "Expansive landscaped central green park with pedestrian seating pavilions and tree lined jogging paths.",
         icon: "park",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/central podium.png"
       },
       {
         title: "Open Amphitheatre & Party Lawns",
         desc: "Stepped open air amphitheatre for cultural gatherings, musical nights, and festive community celebrations.",
         icon: "theater_comedy",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/open amphitheatre.png"
       },
       {
-        title: "Outdoor Tennis & Badminton Courts",
-        desc: "Full sized regulation outdoor tennis court and outdoor badminton courts for sports enthusiasts.",
+        title: "Regulation Badminton Court",
+        desc: "Outdoor badminton courts and athletic facilities for residents of all age groups.",
         icon: "sports_tennis",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/badminton court.png"
       },
       {
         title: "Half Basketball Court & Play Arena",
         desc: "Dedicated half basketball hoop court and safe multi play equipment zone for kids.",
         icon: "sports_basketball",
-        tag: "AquaVista"
+        tag: "AquaVista",
+        image: "/aquavista/half basketball.png"
       }
     ]
   },
@@ -356,37 +390,43 @@ export const amenitiesCategories: AmenityCategory[] = [
         title: "3.8 Acre Vehicle Free Podium",
         desc: "Zero traffic, pristine elevated podium providing total safety for children and seniors to stroll freely.",
         icon: "nature_people",
-        tag: "Lakewoods"
+        tag: "Lakewoods",
+        image: "/lakewoods/lakewood gallery.png"
+      },
+      {
+        title: "Open to Sky Swimming Pool",
+        desc: "Sparkling resort swimming pool with changing rooms, dedicated shallow pool for children, and expansive timber deck.",
+        icon: "water",
+        tag: "Lakewoods",
+        image: "/lakewoods/pool-amenities.jpg"
       },
       {
         title: "Elevated Lounge & Skyview Decks",
         desc: "Bespoke social pavilion overlooking the green podium, rolling reserve hills, and distant lake waters.",
         icon: "deck",
-        tag: "Lakewoods"
-      },
-      {
-        title: "Lap Pool & Kids Pool Deck",
-        desc: "Sparkling swimming pool with changing rooms, dedicated shallow pool for children, and expansive timber deck.",
-        icon: "water",
-        tag: "Lakewoods"
+        tag: "Lakewoods",
+        image: "/lakewoods/podium-park.jpg"
       },
       {
         title: "Podium Fitness Gym & Jogging Loop",
         desc: "Fully equipped gymnasium with cardio and strength training gear, opening onto a soft cushion jogging track.",
         icon: "fitness_center",
-        tag: "Lakewoods"
+        tag: "Lakewoods",
+        image: "/lakewoods/hero.jpg"
       },
       {
         title: "Open Badminton Court & Play Lawn",
         desc: "Outdoor badminton court and sprawling manicured lawns for morning yoga and evening family recreation.",
         icon: "sports_kabaddi",
-        tag: "Lakewoods"
+        tag: "Lakewoods",
+        image: "/aquavista/badminton court.png"
       },
       {
         title: "Multipurpose Hall & Indoor Games",
         desc: "Air conditioned celebration hall with indoor games room for table tennis, carrom, and board games.",
         icon: "sports_esports",
-        tag: "Lakewoods"
+        tag: "Lakewoods",
+        image: "/aquavista/grand clubhouse.png"
       }
     ]
   },
@@ -399,37 +439,43 @@ export const amenitiesCategories: AmenityCategory[] = [
         title: "The MWC Club & Sports Bar",
         desc: "Exclusive private retreat with squash court, tennis, billiards room, reading lounge, multicuisine dining & sports bar.",
         icon: "local_bar",
-        tag: "MWC Club"
-      },
-      {
-        title: "Mahindra World School (CBSE)",
-        desc: "Premier educational institution with world class sports grounds, labs, and holistic student development.",
-        icon: "school",
-        tag: "Education"
+        tag: "MWC Club",
+        image: "/aquavista/mwc club.png"
       },
       {
         title: "The Canopy Shopping Centre",
         desc: "Walk to retail complex featuring Pizza Hut, Amul, multi cuisine food courts, ATMs, grocery, and salons.",
         icon: "storefront",
-        tag: "Retail"
+        tag: "Retail",
+        image: "/aquavista/canopy.png"
       },
       {
         title: "Fairfield by Marriott",
         desc: "4 star international business hotel offering premium stays, banquet venues, and fine dining for your guests.",
         icon: "hotel",
-        tag: "Hospitality"
+        tag: "Hospitality",
+        image: "/aquavista/fairfield.png"
       },
       {
-        title: "1,000 Acres Reserve Forest & 7 Lakes",
-        desc: "Live alongside Kolavai Lake, Periya Lake, Paranur Lake, and protected green forests with 3 Lakh+ trees.",
-        icon: "forest",
-        tag: "Eco Habitat"
+        title: "Healthcare & Care Centers",
+        desc: "On campus multi speciality medical clinic, pharmacy, and Amelio Child Care & Daycare centre.",
+        icon: "local_hospital",
+        tag: "Healthcare",
+        image: "/aquavista/healthcare.png"
       },
       {
-        title: "On Site Paranur Railway Station",
-        desc: "Direct local suburban train station connecting to Tambaram, Guindy, Chennai Central, and Chengalpattu.",
-        icon: "train",
-        tag: "Transit"
+        title: "Eco Mobility & Bio Buses",
+        desc: "Township internal commute powered by clean Bio CNG fueled shuttle buses and electric mobility.",
+        icon: "directions_bus",
+        tag: "Eco Transit",
+        image: "/aquavista/eco mobility.png"
+      },
+      {
+        title: "Mahindra World School (CBSE)",
+        desc: "Premier educational institution with world class sports grounds, labs, and holistic student development.",
+        icon: "school",
+        tag: "Education",
+        image: "/aquavista/central podium.png"
       }
     ]
   }
@@ -438,120 +484,75 @@ export const amenitiesCategories: AmenityCategory[] = [
 export const connectivityDestinations: CommuteDestination[] = [
   {
     id: "paranur-stn",
-    name: "Paranur Railway Station (On site)",
+    name: "Paranur Railway Station",
     category: "transit",
-    distance: "500 m to 4 km",
-    timeEst: "2 to 5 mins",
-    icon: "train",
-    detail: "Direct suburban trains to Tambaram, Guindy, Egmore, and Chennai Central"
-  },
-  {
-    id: "nh32",
-    name: "GST Road (NH 32) Highway",
-    category: "transit",
-    distance: "Adjacent",
+    distance: "0.5 Km",
     timeEst: "2 mins",
-    icon: "directions_car",
-    detail: "Seamless 8 lane expressway connecting Chennai City to Trichy & South Tamil Nadu"
+    icon: "train",
+    detail: "Inside Township. Direct suburban trains to Tambaram, Guindy & Central"
   },
   {
-    id: "chengalpattu-stn",
+    id: "gst-road",
+    name: "GST Road (NH 32)",
+    category: "transit",
+    distance: "0.0 Km",
+    timeEst: "Direct Access",
+    icon: "add_road",
+    detail: "Direct 6-lane arterial highway corridor connecting Chennai & South TN"
+  },
+  {
+    id: "chengalpattu-jn",
     name: "Chengalpattu Railway Junction",
     category: "transit",
-    distance: "9.0 km",
-    timeEst: "12 mins",
-    icon: "train",
-    detail: "Major express junction for interstate and regional express trains"
+    distance: "7.0 Km",
+    timeEst: "10 mins",
+    icon: "directions_railway",
+    detail: "Major Southern Railway junction with express trains to Bangalore, Madurai, Trichy"
   },
   {
-    id: "airport",
-    name: "Chennai International Airport",
-    category: "airport",
-    distance: "37.0 km",
-    timeEst: "40 mins",
-    icon: "flight_takeoff",
-    detail: "Fast corridor via signal free GST expressway and Metro feeder"
-  },
-  {
-    id: "parandur-airport",
-    name: "Proposed Parandur Greenfield Airport",
-    category: "airport",
-    distance: "52.6 km",
-    timeEst: "50 mins",
-    icon: "flight",
-    detail: "Upcoming second international airport hub of Chennai"
-  },
-  {
-    id: "tambaram",
-    name: "Tambaram Railway Junction & Bus Terminal",
-    category: "transit",
-    distance: "29.0 km",
-    timeEst: "30 mins",
-    icon: "directions_bus",
-    detail: "Gateway to South Chennai and major commercial transport hub"
-  },
-  {
-    id: "ford",
-    name: "Ford India / Maraimalai Nagar",
+    id: "infosys-mwc",
+    name: "Infosys Mahindra World City",
     category: "work",
-    distance: "10.0 to 12.2 km",
-    timeEst: "15 mins",
-    icon: "domain",
-    detail: "Major automotive & industrial manufacturing corridor"
+    distance: "1.2 Km",
+    timeEst: "3 mins",
+    icon: "corporate_fare",
+    detail: "Walk to work convenience for 25,000+ Infosys tech workforce"
   },
   {
-    id: "zoho",
-    name: "Zoho Corporation Global HQ",
+    id: "bmw-mwc",
+    name: "BMW India Manufacturing Plant",
     category: "work",
-    distance: "16.1 km",
-    timeEst: "20 mins",
-    icon: "apartment",
-    detail: "Premier software & technology campus on GST road"
-  },
-  {
-    id: "oragadam",
-    name: "Oragadam Industrial Corridor (SEZ)",
-    category: "work",
-    distance: "22.4 km",
-    timeEst: "25 mins",
+    distance: "1.8 Km",
+    timeEst: "4 mins",
     icon: "precision_manufacturing",
-    detail: "Asia's leading automotive corridor with Renault, Daimler & Apollo"
+    detail: "Inside MWC Auto Zone"
   },
   {
-    id: "mepz",
-    name: "MEPZ Special Economic Zone",
+    id: "renault-mwc",
+    name: "Renault Nissan Technology Centre",
     category: "work",
-    distance: "30.5 km",
-    timeEst: "35 mins",
-    icon: "business_center",
-    detail: "Export and IT hub near Tambaram / Sanatorium"
+    distance: "2.0 Km",
+    timeEst: "5 mins",
+    icon: "engineering",
+    detail: "Global automotive R&D centre employing 8,000+ engineers"
   },
   {
     id: "srm-univ",
-    name: "SRM Hospital & University (Kattankulathur)",
+    name: "SRM University & SRM Hospital",
     category: "education",
-    distance: "16.1 km",
-    timeEst: "18 mins",
-    icon: "school",
-    detail: "Top tier multispeciality hospital, medical, dental, and engineering university"
-  },
-  {
-    id: "vit-chennai",
-    name: "VIT Chennai Campus (Vandalur Kelambakkam)",
-    category: "education",
-    distance: "31.5 km",
-    timeEst: "35 mins",
-    icon: "school",
-    detail: "Renowned technical institute and university campus"
-  },
-  {
-    id: "chengalpattu-colleges",
-    name: "Chengalpattu Medical & Law Colleges",
-    category: "education",
-    distance: "12.0 km",
+    distance: "14.0 Km",
     timeEst: "15 mins",
-    icon: "local_hospital",
-    detail: "Premier government medical and legal education institutions"
+    icon: "school",
+    detail: "Premier multidisciplinary university & 1,500 bed medical college hospital"
+  },
+  {
+    id: "chennai-airport",
+    name: "Chennai International Airport (MAA)",
+    category: "airport",
+    distance: "38.0 Km",
+    timeEst: "40 mins",
+    icon: "flight_takeoff",
+    detail: "Fast signal free commute via Grand Southern Trunk Expressway"
   }
 ];
 
@@ -559,106 +560,94 @@ export const projectSpecifications: ProjectSpec[] = [
   {
     category: "Structure & Architecture",
     items: [
-      { feature: "AquaVista Structure", spec: "RCC framed multi storeyed towers designed for seismic zone safety" },
-      { feature: "Lakewoods Structure", spec: "Aluminium formwork RCC structure for sleek finishes & superior longevity" },
-      { feature: "Podium / Car Parking", spec: "Stilt & covered parking with 3.8 acre vehicle free podium at Lakewoods" },
-      { feature: "Corridor / Foyers", spec: "6ft wide spacious corridors with granite / vitrified tile flooring" }
+      { feature: "Superstructure", spec: "Aluminium formwork RCC framed earthquake resistant structure with high strength concrete" },
+      { feature: "Walls", spec: "Engineered RCC walls offering smooth finish, maximum usable carpet area, and enhanced durability" },
+      { feature: "Floor to Ceiling Height", spec: "Generous 9.8 ft clear internal ceiling height for superior air circulation" }
     ]
   },
   {
     category: "Flooring & Finishes",
     items: [
-      { feature: "Living / Dining / Bedrooms", spec: "Premium Vitrified tiles across foyer, living, dining and all bedrooms" },
-      { feature: "Kitchen", spec: "Matt finish vitrified tile flooring with granite slab 2' width and SS sink" },
-      { feature: "Balconies & Decks", spec: "Ceramic tile / wooden tile finish on private decks with MS / SS railing" },
-      { feature: "Duplex Staircase (AquaVista)", spec: "Granite slab / step tiles with designer Stainless Steel (SS) railing" },
-      { feature: "Toilets & Utility", spec: "Anti skid ceramic floor tiles with ceramic wall dado up to 7'0\" height" }
+      { feature: "Living, Dining & Bedrooms", spec: "Premium 800mm x 800mm double charged vitrified tiles with elegant gloss finish" },
+      { feature: "Balconies & Private Decks", spec: "Anti skid rustic ceramic tiles with authentic wooden plank texture & SS glass railings" },
+      { feature: "Kitchen & Utility", spec: "Vitrified tiles with polished granite countertop, stainless steel sink & ceramic dado up to 2 ft" },
+      { feature: "Duplex Rooftop Terraces", spec: "Waterproof weather proof terracotta tiles with outdoor party drainage channel" }
     ]
   },
   {
-    category: "Doors & Windows",
+    category: "Doors, Windows & Balconies",
     items: [
-      { feature: "Main Entrance Door", spec: "Pre hung factory made laminated flush wooden door with Dorset hardware" },
-      { feature: "Internal Doors", spec: "Flush doors with enamel paint / laminated finish" },
-      { feature: "Windows & French Doors", spec: "UPVC sliding / operable windows with high performance glass to reduce heat" },
-      { feature: "Deck Doors", spec: "UPVC glass sliding doors opening to private deck and panoramic views" }
+      { feature: "Main Door", spec: "Teakwood frame with elegant engineered flush shutter, digital biometric Yale lock, and brass fittings" },
+      { feature: "Internal Doors", spec: "Seasoned hardwood frame with premium laminated flush doors and cylindrical locks" },
+      { feature: "Windows & French Doors", spec: "Heavy duty UPVC sliding windows with bug mesh and energy efficient heat reducing glass" }
     ]
   },
   {
-    category: "Sanitary & Bath Fittings",
+    category: "Plumbing, CP & Sanitary Fittings",
     items: [
-      { feature: "Sanitaryware", spec: "Roca / equivalent wall mounted EWC with concealed dual flush cistern" },
-      { feature: "Wash Basins", spec: "Roca / equivalent counter top wash basin (Master) & semi recessed (Common)" },
-      { feature: "Bath & CP Fittings", spec: "Grohe / Jaquar or equivalent luxury single lever CP fittings" },
-      { feature: "Water & Plumbing", spec: "Provisions for geyser, exhaust fan & water purifier with STP treated water supply" }
+      { feature: "Sanitaryware", spec: "Wall hung EWC with concealed dual flush cistern by Roca or Kohler" },
+      { feature: "CP Fittings", spec: "Single lever diverter, overhead rain shower and chrome plated fixtures by Grohe" },
+      { feature: "Piping", spec: "CPVC water supply lines and SWR drainage pipes with acoustic sound proofing" }
     ]
   },
   {
-    category: "Electrical & Safety Systems",
+    category: "Electrical & Smart Provisions",
     items: [
-      { feature: "Wiring & Switches", spec: "Concealed copper wiring with modular switches (Anchor / Schneider / equivalent)" },
-      { feature: "Power Supply", spec: "3 Phase electric supply with dedicated circuit breakers" },
-      { feature: "Power Backup", spec: "100% common area backup; 0.75 KW to 1 KW per unit, up to 3 KW for 4 BHK Duplex" },
-      { feature: "Elevators", spec: "2 high speed SS finish passenger elevators per residential tower" },
-      { feature: "Security & Surveillance", spec: "CCTV at entry gates, stilt lobbies & play areas; Intercom facility" }
+      { feature: "Wiring & Switches", spec: "Fire resistant low smoke (FRLS) copper wiring with modular switches by Legrand or Schneider" },
+      { feature: "Power Backup", spec: "100% DG backup for essential lighting, fans, elevators, and common area amenities" },
+      { feature: "Air Conditioning", spec: "Concealed drain pipes & copper conduit provisions for split ACs in living and all bedrooms" }
     ]
   }
 ];
 
 export const sustainabilityScorecard: GreenFeature[] = [
   {
-    title: "Energy Optimisation",
-    stat: "Up to 20% Electricity Savings",
-    desc: "Energy efficient walls, roofs with 100% SRI (Solar Reflective Index) paint, window shading, and 95% regular daylighting.",
-    icon: "solar_power"
+    title: "20% Lower Electricity Bills",
+    stat: "20% Savings",
+    desc: "Energy efficient lighting, solar PV common power, and heat reducing UPVC windows cut household utility costs.",
+    icon: "bolt"
   },
   {
-    title: "Solar PV Clean Power",
-    stat: "50% Solar Common Lighting",
-    desc: "Rooftop Solar Photovoltaic panels catering to 50% of tower common area lighting, pathways, and landscape fixtures.",
-    icon: "lightbulb"
-  },
-  {
-    title: "Water Conservation & STP",
-    stat: "Up to 30% Water Bill Savings",
-    desc: "Low flow aerated fixtures, rainwater harvesting capturing >85% to 95% of rain, and on site STP treating >90% of wastewater.",
+    title: "100% Rainwater Harvesting",
+    stat: "Zero Depletion",
+    desc: "Integrated township percolation pits, recharge wells, and lake catchment systems replenish ground water naturally.",
     icon: "water_drop"
   },
   {
-    title: "Healthy Indoors",
-    stat: ">75% Cross Ventilation",
-    desc: "Engineered wind channeling, Low VOC paints, and CFC free eco friendly air conditioning provisions for pristine indoor air.",
-    icon: "air"
-  },
-  {
-    title: "Waste to Wealth",
-    stat: "Zero Waste to Landfill",
-    desc: "Dry and wet waste segregation at source with on site organic waste converter transforming garbage into landscaping manure.",
+    title: "100% Waste Recycling",
+    stat: "Zero Landfill",
+    desc: "Organic Waste Converters transform food scrap into rich nutrient compost for the 150 acres of township greenery.",
     icon: "recycling"
   },
   {
-    title: "EV Mobility & Accessibility",
-    stat: "EV Charging Infrastructure",
-    desc: "Dedicated electric vehicle charging spots, Bio CNG shuttle transit, plus hindrance free ramps and restrooms for differently abled.",
+    title: "3 Lakh+ Indigenous Trees",
+    stat: "3,00,000+ Flora",
+    desc: "Abundant tree canopy produces cleaner oxygen, lowers ambient temperature by 2 to 3°C, and protects native bird species.",
+    icon: "forest"
+  },
+  {
+    title: "Electric & Bio CNG Mobility",
+    stat: "Eco Transport",
+    desc: "Internal shuttle bio buses and electric vehicle EV charging bays promote zero carbon township travel.",
     icon: "electric_car"
   }
 ];
 
 export const mahindraLegacyData = {
-  title: "The Mahindra Legacy",
-  subtitle: "Pioneering Sustainable Living & Smart Urbanisation",
+  title: "The Mahindra Group Legacy",
+  subtitle: "75+ Years of Trust, Integrity & Innovation",
   stats: [
-    { value: "260,000+", label: "Employees Across 100+ Countries" },
-    { value: "27.4 Million", label: "Sq.Ft. Residential Footprint" },
-    { value: "5,000 Acres", label: "Integrated Cities Across 4 Locations" },
-    { value: "#1 Worldwide", label: "Tractor Manufacturer by Volume" }
+    { label: "Global Revenue", value: "$ 21+ Billion" },
+    { label: "Countries Present", value: "100+ Nations" },
+    { label: "Global Workforce", value: "2,60,000+ Employees" },
+    { label: "Development Footprint", value: "35+ Million Sq.Ft." }
   ],
   verticals: [
-    { name: "Automotive & EVs", desc: "India's leading utility vehicle and electric mobility pioneer" },
-    { name: "Real Estate & Urban", desc: "Mahindra Lifespaces: sustainable homes & smart cities" },
-    { name: "Information Technology", desc: "Tech Mahindra: digital transformation & enterprise solutions" },
-    { name: "Financial Services", desc: "Mahindra Finance: rural & semi urban empowerment" },
-    { name: "Hospitality & Leisure", desc: "Club Mahindra: 100+ vacation ownership resorts" },
-    { name: "Aerospace & Defense", desc: "Cutting edge defense systems & aircraft component manufacturing" }
+    { name: "Automotive Leadership", desc: "India's No. 1 SUV brand (Thar, Scorpio-N, XUV700) & pioneer in electric mobility." },
+    { name: "Farm Equipment", desc: "World's largest tractor manufacturer by volume, empowering farmers across 5 continents." },
+    { name: "Tech Mahindra", desc: "Top tier global digital transformation, consulting, and enterprise AI engineering provider." },
+    { name: "Mahindra Lifespaces", desc: "India's pioneer in green homes and developer of 1,500 acre integrated cities in Chennai & Jaipur." },
+    { name: "Financial Services", desc: "Serving over 7.5 million customers with vehicle, SME, and housing finance solutions." },
+    { name: "Renewable Energy", desc: "Mahindra Susten leading India's clean energy transition with utility scale solar parks." }
   ]
 };

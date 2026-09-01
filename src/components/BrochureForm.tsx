@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Download, CheckCircle, Sparkles, Phone, Mail, User, ShieldCheck, Building2 } from "lucide-react";
+import { Download, Check, Phone, Mail, User } from "lucide-react";
 import { LeadSubmission } from "../types";
 
 interface BrochureFormProps {
@@ -107,53 +107,49 @@ export default function BrochureForm({
   };
 
   return (
-    <section id="lead-capture-section" className="w-full py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden scroll-mt-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(227,24,55,0.08),transparent)] pointer-events-none" />
-
+    <section id="lead-capture-section" className="w-full py-16 lg:py-24 bg-[#0f172a] text-white relative overflow-hidden scroll-mt-20 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Project Snapshot */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest text-[#e31837] bg-red-950/80 border border-red-500/30">
-              <Sparkles className="h-3.5 w-3.5" />
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-400">
               Direct Developer Desk
-            </span>
+            </p>
 
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
               Begin Your Journey at <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-amber-100">
+              <span className="text-slate-300 font-normal">
                 Mahindra World City
               </span>
             </h2>
 
-            <p className="font-body text-sm text-slate-300 leading-relaxed">
+            <p className="font-body text-sm text-slate-400 leading-relaxed">
               Schedule a personalized site visit to experience the tranquil lakes, 16,000 sq.ft clubhouse, 3.8 acre vehicle free podium, and walk to work lifestyle.
             </p>
 
             {/* Quick Specs Cards */}
-            <div className="bg-slate-800/80 backdrop-blur-md p-6 rounded-2xl border border-slate-700 space-y-4">
-              <h4 className="font-display text-base font-bold text-amber-300 flex items-center gap-2">
-                <Building2 className="h-4 w-4 text-[#e31837]" />
-                Project Snapshot & TNRERA
+            <div className="bg-slate-900/90 p-5 sm:p-6 rounded-xl border border-slate-800 space-y-3">
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider">
+                Project Snapshot & RERA
               </h4>
 
-              <div className="space-y-3 text-xs text-slate-200 divide-y divide-slate-700/60">
+              <div className="space-y-2.5 text-xs text-slate-300 divide-y divide-slate-800">
                 <div className="pt-2 flex justify-between items-start">
                   <span className="text-slate-400">Codename AquaVista:</span>
-                  <span className="font-semibold text-right">3, 3.5 BHK & 4 BHK Duplex (TNRERA No: TN/01/Building/0174/2022)</span>
+                  <span className="font-medium text-right text-white">3, 3.5 & 4 BHK Duplex (TNRERA: TN/01/Building/0174/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
                   <span className="text-slate-400">Mahindra Lakewoods:</span>
-                  <span className="font-semibold text-right">Spacious 2 & 3 BHK (TNRERA No: TN/01/Building/0041/2022)</span>
+                  <span className="font-medium text-right text-white">2 & 3 BHK (TNRERA: TN/01/Building/0041/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
                   <span className="text-slate-400">Location:</span>
-                  <span className="font-semibold text-right">Mahindra World City, Chengalpattu 603004</span>
+                  <span className="font-medium text-right text-white">Mahindra World City, Chengalpattu 603004</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
                   <span className="text-slate-400">Sales Office:</span>
-                  <span className="font-semibold text-right">The Canopy, 1st Floor, Block A, MWC</span>
+                  <span className="font-medium text-right text-white">The Canopy, 1st Floor, Block A, MWC</span>
                 </div>
               </div>
             </div>
@@ -161,21 +157,21 @@ export default function BrochureForm({
 
           {/* Right Column: Lead Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white text-slate-900 p-5 sm:p-8 md:p-10 rounded-2xl shadow-2xl relative overflow-hidden border border-slate-100">
-              <div className="absolute top-0 left-0 w-full h-[5px] bg-[#e31837]" />
+            <div className="bg-white text-slate-900 p-5 sm:p-8 md:p-10 rounded-xl shadow-lg relative overflow-hidden border border-slate-200">
+              <div className="absolute top-0 left-0 w-full h-[4px] bg-[#c8102e]" />
 
               {!formSubmitted ? (
                 <>
                   <div className="mb-6">
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900">
-                      Schedule VIP Site Walkthrough
+                      Schedule Site Walkthrough
                     </h3>
                     <p className="font-body text-xs sm:text-sm text-slate-600 mt-1">
                       Fill out the form below to receive customized price sheets, sample apartment videos, and instant PDF brochures.
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     
                     {/* Project Preference Dropdown */}
                     <div>
@@ -186,7 +182,7 @@ export default function BrochureForm({
                         id="project"
                         value={formData.project}
                         onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#e31837] focus:ring-1 focus:ring-[#e31837]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-md px-3.5 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
                       >
                         <option value="Both Projects (AquaVista & Lakewoods)">Both Projects (AquaVista & Lakewoods)</option>
                         <option value="Codename AquaVista (3, 3.5 & 4 BHK Duplex)">Codename AquaVista (3, 3.5 & 4 BHK Duplex)</option>
@@ -199,7 +195,7 @@ export default function BrochureForm({
                       <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wider block mb-1">
                         Full Name*
                       </label>
-                      <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 focus-within:border-[#e31837] focus-within:ring-1 focus-within:ring-[#e31837]">
+                      <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 focus-within:border-[#c8102e]">
                         <User className="h-4 w-4 text-slate-400" />
                         <input
                           type="text"
@@ -211,7 +207,7 @@ export default function BrochureForm({
                           className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                         />
                       </div>
-                      {errors.fullName && <p className="text-red-500 text-[10px] mt-1">{errors.fullName}</p>}
+                      {errors.fullName && <p className="text-red-600 text-[10px] mt-1">{errors.fullName}</p>}
                     </div>
 
                     {/* Email & Phone Grid */}
@@ -220,7 +216,7 @@ export default function BrochureForm({
                         <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wider block mb-1">
                           Email Address*
                         </label>
-                        <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 focus-within:border-[#e31837] focus-within:ring-1 focus-within:ring-[#e31837]">
+                        <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 focus-within:border-[#c8102e]">
                           <Mail className="h-4 w-4 text-slate-400" />
                           <input
                             type="email"
@@ -232,14 +228,14 @@ export default function BrochureForm({
                             className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                           />
                         </div>
-                        {errors.email && <p className="text-red-500 text-[10px] mt-1">{errors.email}</p>}
+                        {errors.email && <p className="text-red-600 text-[10px] mt-1">{errors.email}</p>}
                       </div>
 
                       <div>
                         <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wider block mb-1">
                           Phone Number (10 Digits)*
                         </label>
-                        <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 focus-within:border-[#e31837] focus-within:ring-1 focus-within:ring-[#e31837]">
+                        <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 focus-within:border-[#c8102e]">
                           <Phone className="h-4 w-4 text-slate-400" />
                           <input
                             type="tel"
@@ -251,7 +247,7 @@ export default function BrochureForm({
                             className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                           />
                         </div>
-                        {errors.phone && <p className="text-red-500 text-[10px] mt-1">{errors.phone}</p>}
+                        {errors.phone && <p className="text-red-600 text-[10px] mt-1">{errors.phone}</p>}
                       </div>
                     </div>
 
@@ -266,7 +262,7 @@ export default function BrochureForm({
                           id="preferredDate"
                           value={formData.preferredDate}
                           onChange={handleChange}
-                          className="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#e31837]"
+                          className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
                         />
                       </div>
 
@@ -278,7 +274,7 @@ export default function BrochureForm({
                           id="preferredTime"
                           value={formData.preferredTime}
                           onChange={handleChange}
-                          className="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#e31837]"
+                          className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
                         >
                           <option value="10:00 AM">10:00 AM (Morning)</option>
                           <option value="11:30 AM">11:30 AM (Morning)</option>
@@ -292,7 +288,7 @@ export default function BrochureForm({
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-[#e31837] hover:bg-[#b9122c] text-white font-body text-xs font-bold tracking-widest uppercase py-4 rounded-lg shadow-lg hover:shadow-red-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
+                      className="w-full bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-4 rounded-md shadow transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
                     >
                       {loading ? (
                         <>
@@ -304,17 +300,16 @@ export default function BrochureForm({
                       )}
                     </button>
 
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
-                      <ShieldCheck className="h-4 w-4 text-emerald-600" />
-                      <span>Direct Official Developer Registration. Zero Brokerage.</span>
+                    <div className="text-center text-[11px] text-slate-500 pt-1">
+                      Direct Official Developer Registration. Zero Brokerage.
                     </div>
 
                   </form>
                 </>
               ) : (
                 <div className="text-center py-8 space-y-5 animate-fade-in">
-                  <div className="h-16 w-16 bg-emerald-50 border border-emerald-200 rounded-full flex items-center justify-center mx-auto text-emerald-600 shadow-sm">
-                    <CheckCircle className="h-8 w-8" />
+                  <div className="h-14 w-14 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-[#c8102e]">
+                    <Check className="h-8 w-8" />
                   </div>
 
                   <div>
@@ -329,7 +324,7 @@ export default function BrochureForm({
                   <div className="flex flex-col sm:flex-row gap-3 justify-center pt-3">
                     <button
                       onClick={handleDownloadBrochure}
-                      className="flex items-center justify-center gap-2 bg-[#e31837] hover:bg-[#b9122c] text-white font-body text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-lg shadow cursor-pointer"
+                      className="flex items-center justify-center gap-2 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase px-6 py-3.5 rounded-md shadow cursor-pointer"
                     >
                       <Download className="h-4 w-4" />
                       Download PDF Catalog
@@ -337,7 +332,7 @@ export default function BrochureForm({
 
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-body text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-lg cursor-pointer"
+                      className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-body text-xs font-bold tracking-[0.15em] uppercase px-6 py-3.5 rounded-md cursor-pointer"
                     >
                       Register Another
                     </button>

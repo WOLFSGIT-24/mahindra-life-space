@@ -279,12 +279,12 @@ export default function App() {
       />
 
       {/* Mobile Fixed CTA Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 flex shadow-[0_-8px_25px_rgba(0,0,0,0.2)] bg-slate-900 border-t border-slate-800">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 flex shadow-[0_-8px_25px_rgba(0,0,0,0.2)] bg-[#0f172a] border-t border-slate-800">
         <a
           href="tel:08047359991"
-          className="flex-1 flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-body text-xs font-bold uppercase tracking-wider py-3.5 border-r border-slate-800 transition-colors"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#0f172a] hover:bg-slate-800 text-white font-body text-xs font-bold uppercase tracking-wider py-3.5 border-r border-slate-800 transition-colors"
         >
-          <Phone className="h-4 w-4 text-[#e31837]" />
+          <Phone className="h-4 w-4 text-[#c8102e]" />
           Call Now
         </a>
         <button
@@ -293,7 +293,7 @@ export default function App() {
             setPreselectedProject(null);
             setBookingOpen(true);
           }}
-          className="flex-1 flex items-center justify-center gap-2 bg-[#e31837] hover:bg-[#b9122c] text-white font-body text-xs font-bold uppercase tracking-wider py-3.5 transition-colors cursor-pointer"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold uppercase tracking-wider py-3.5 transition-colors cursor-pointer"
         >
           <Building2 className="h-4 w-4" />
           Enquire Now

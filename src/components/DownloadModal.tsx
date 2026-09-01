@@ -86,11 +86,11 @@ export default function DownloadModal({
 
   return (
     <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative border border-slate-200">
-        <div className="bg-slate-900 p-6 text-white flex justify-between items-center border-b border-slate-800">
+      <div className="bg-white rounded-xl shadow-2xl max-w-md w-full overflow-hidden relative border border-slate-200">
+        <div className="bg-[#0f172a] p-6 text-white flex justify-between items-center border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-amber-400 text-slate-950 rounded-xl">
-              <Download className="h-5 w-5" />
+            <div className="p-2.5 bg-slate-800 text-white rounded-lg">
+              <Download className="h-5 w-5 text-red-400" />
             </div>
             <div>
               <h3 className="font-display text-lg font-bold">
@@ -120,7 +120,7 @@ export default function DownloadModal({
                   id="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#e31837]"
+                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
                 >
                   <option value="Both Projects (AquaVista & Lakewoods)">Both Projects (AquaVista & Lakewoods)</option>
                   <option value="Codename AquaVista (3, 3.5 & 4 BHK Duplex)">Codename AquaVista (3, 3.5 & 4 BHK Duplex)</option>
@@ -132,7 +132,7 @@ export default function DownloadModal({
                 <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
                   Your Full Name*
                 </label>
-                <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2">
+                <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
                   <User className="h-4 w-4 text-slate-400" />
                   <input
                     type="text"
@@ -144,7 +144,7 @@ export default function DownloadModal({
                     className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                   />
                 </div>
-                {errors.fullName && <p className="text-red-500 text-[10px] mt-1">{errors.fullName}</p>}
+                {errors.fullName && <p className="text-red-600 text-[10px] mt-1">{errors.fullName}</p>}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -152,7 +152,7 @@ export default function DownloadModal({
                   <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
                     Email Address*
                   </label>
-                  <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2">
+                  <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
                     <Mail className="h-4 w-4 text-slate-400" />
                     <input
                       type="email"
@@ -164,14 +164,14 @@ export default function DownloadModal({
                       className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                     />
                   </div>
-                  {errors.email && <p className="text-red-500 text-[10px] mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-red-600 text-[10px] mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
                   <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
                     Phone (10 Digits)*
                   </label>
-                  <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-lg px-3 py-2">
+                  <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
                     <Phone className="h-4 w-4 text-slate-400" />
                     <input
                       type="tel"
@@ -183,14 +183,14 @@ export default function DownloadModal({
                       className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
                     />
                   </div>
-                  {errors.phone && <p className="text-red-500 text-[10px] mt-1">{errors.phone}</p>}
+                  {errors.phone && <p className="text-red-600 text-[10px] mt-1">{errors.phone}</p>}
                 </div>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#e31837] hover:bg-[#b9122c] text-white font-body text-xs font-bold tracking-widest uppercase py-3.5 rounded-lg shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
+                className="w-full bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded-md shadow transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
               >
                 {loading ? (
                   <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -201,8 +201,8 @@ export default function DownloadModal({
             </form>
           ) : (
             <div className="text-center py-6 space-y-4 animate-fade-in">
-              <div className="h-14 w-14 bg-emerald-50 border border-emerald-200 rounded-full flex items-center justify-center mx-auto text-emerald-600 shadow-sm">
-                <Check className="h-7 w-7" />
+              <div className="h-12 w-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-[#c8102e]">
+                <Check className="h-6 w-6" />
               </div>
               <h4 className="font-display text-xl font-bold text-slate-900">
                 Download Started
@@ -212,7 +212,7 @@ export default function DownloadModal({
               </p>
               <button
                 onClick={onClose}
-                className="bg-slate-900 text-white font-body text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-md shadow"
+                className="bg-[#c8102e] text-white font-body text-xs font-bold tracking-wider uppercase px-6 py-2.5 rounded-md shadow"
               >
                 Close
               </button>

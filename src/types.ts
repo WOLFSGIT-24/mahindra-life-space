@@ -52,6 +52,7 @@ export interface AmenityCategory {
     desc: string;
     icon: string;
     tag?: string;
+    image?: string;
   }[];
 }
 

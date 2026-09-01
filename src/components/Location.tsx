@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, ExternalLink, Sparkles } from "lucide-react";
+import { MapPin, ExternalLink, Compass } from "lucide-react";
 import { connectivityDestinations } from "../data";
 
 interface LocationProps {
@@ -8,27 +8,26 @@ interface LocationProps {
 
 export default function Location({ onOpenEnquiry }: LocationProps) {
   const [activeCategory, setActiveCategory] = useState<"all" | "transit" | "work" | "education" | "airport">("all");
+  const [mapView, setMapView] = useState<"google" | "regional">("google");
 
   const filteredDestinations = connectivityDestinations.filter(
     (d) => activeCategory === "all" || d.category === activeCategory
   );
 
   return (
-    <section id="location" className="w-full py-12 sm:py-16 lg:py-24 bg-slate-50 text-slate-900 scroll-mt-20">
+    <section id="location" className="w-full py-12 sm:py-16 lg:py-24 bg-slate-50 text-slate-900 scroll-mt-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 space-y-3 sm:space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-[#e31837] bg-red-50 border border-red-200">
-            <Sparkles className="h-3.5 w-3.5" />
-            Prime GST Road Corridor
-          </span>
-          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8102e]">
+            Strategic Connectivity
+          </p>
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Strategic Location <br />
-            <span className="text-[#e31837]">Seamless Arterial Connectivity</span>
+            <span className="text-slate-600 font-normal">Seamless Arterial Connectivity</span>
           </h2>
-          <div className="h-1 w-20 bg-[#e31837] mx-auto rounded-full" />
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
             Located directly on the Grand Southern Trunk Road (NH 32) at Chengalpattu with an <strong>on site Paranur railway station</strong>, Mahindra World City provides rapid transit to Chennai city centre, international airports, tech parks, and top universities.
           </p>
         </div>
@@ -36,35 +35,58 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
         {/* Interactive Google Map and Connectivity Breakdown */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-stretch mb-8 sm:mb-12">
           
-          {/* Left Column: Interactive Google Map */}
-          <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-900 flex flex-col min-h-[300px] sm:min-h-[380px] lg:min-h-[420px]">
-            <div className="bg-slate-900 text-white p-3.5 sm:p-4 border-b border-slate-800 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[#e31837]" />
-                <span className="font-display text-[11px] sm:text-xs font-bold uppercase tracking-wider truncate">
-                  Mahindra World City, Chengalpattu
-                </span>
+          {/* Left Column: Interactive Map with Toggle */}
+          <div className="lg:col-span-6 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-900 flex flex-col min-h-[340px] sm:min-h-[400px] lg:min-h-[440px]">
+            <div className="bg-slate-900 text-white p-3 sm:p-4 border-b border-slate-800 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 bg-slate-800 p-1 rounded-md">
+                <button
+                  onClick={() => setMapView("google")}
+                  className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
+                    mapView === "google" ? "bg-[#c8102e] text-white" : "text-slate-300 hover:text-white"
+                  }`}
+                >
+                  Google Map
+                </button>
+                <button
+                  onClick={() => setMapView("regional")}
+                  className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
+                    mapView === "regional" ? "bg-[#c8102e] text-white" : "text-slate-300 hover:text-white"
+                  }`}
+                >
+                  Regional Plan
+                </button>
               </div>
+
               <a
                 href="https://maps.google.com/?q=Mahindra+World+City+Chengalpattu+Chennai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] sm:text-[11px] text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1 shrink-0 ml-2"
+                className="text-xs text-slate-300 hover:text-white font-semibold flex items-center gap-1 shrink-0"
               >
                 Open in Maps <ExternalLink className="h-3 w-3" />
               </a>
             </div>
             
-            <iframe
-              src="https://maps.google.com/maps?q=Mahindra%20World%20City%20Chengalpattu%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0, minHeight: "260px", flexGrow: 1 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mahindra World City Chennai Location Map"
-            />
+            {mapView === "google" ? (
+              <iframe
+                src="https://maps.google.com/maps?q=Mahindra%20World%20City%20Chengalpattu%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "280px", flexGrow: 1 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mahindra World City Chennai Location Map"
+              />
+            ) : (
+              <div className="flex-1 bg-slate-950 flex items-center justify-center p-2 overflow-auto">
+                <img
+                  src="/aquavista/location.png"
+                  alt="Mahindra World City Regional Connectivity Map"
+                  className="max-w-full max-h-[380px] object-contain rounded"
+                />
+              </div>
+            )}
           </div>
 
           {/* Right Column: Category Filter & Key Distances */}
@@ -82,9 +104,9 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id as any)}
-                    className={`px-3 sm:px-3.5 py-1.5 rounded-full font-body text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all cursor-pointer ${
+                    className={`px-3.5 py-1.5 rounded-md font-body text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
                       activeCategory === cat.id
-                        ? "bg-[#e31837] text-white shadow-sm"
+                        ? "bg-[#c8102e] text-white shadow-sm font-bold"
                         : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100"
                     }`}
                   >
@@ -98,31 +120,24 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 {filteredDestinations.map((dest) => (
                   <div
                     key={dest.id}
-                    className="p-3 sm:p-4 bg-white rounded-xl border border-slate-200 hover:border-red-300 shadow-sm transition-all flex items-center justify-between gap-3 sm:gap-4"
+                    className="p-3.5 sm:p-4 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center justify-between gap-3 sm:gap-4"
                   >
-                    <div className="flex items-center gap-2.5 sm:gap-3">
-                      <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-lg bg-red-50 text-[#e31837] flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-lg sm:text-xl">
-                          {dest.icon}
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="font-display text-xs sm:text-sm font-bold text-slate-900">
-                          {dest.name}
-                        </h4>
-                        {dest.detail && (
-                          <p className="text-[10px] sm:text-[11px] text-slate-500 line-clamp-1">
-                            {dest.detail}
-                          </p>
-                        )}
-                      </div>
+                    <div>
+                      <h4 className="font-display text-xs sm:text-sm font-bold text-slate-900">
+                        {dest.name}
+                      </h4>
+                      {dest.detail && (
+                        <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
+                          {dest.detail}
+                        </p>
+                      )}
                     </div>
 
                     <div className="text-right shrink-0">
-                      <span className="font-display text-sm sm:text-base font-black text-[#e31837] block">
+                      <span className="font-display text-sm sm:text-base font-bold text-[#c8102e] block">
                         {dest.distance}
                       </span>
-                      <span className="text-[9px] sm:text-[10px] text-slate-400 font-semibold uppercase">
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase">
                         ~{dest.timeEst}
                       </span>
                     </div>
@@ -132,14 +147,14 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
             </div>
 
             {/* Quick CTA */}
-            <div className="p-3.5 sm:p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
-              <div className="text-[11px] sm:text-xs text-slate-600 text-center sm:text-left">
+            <div className="p-4 bg-white rounded-lg border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
+              <div className="text-xs text-slate-600 text-center sm:text-left">
                 <strong className="text-slate-900 block">Want personalized driving route directions?</strong>
                 Our team can share detailed GPS coordinates & transit maps.
               </div>
               <button
                 onClick={() => onOpenEnquiry("Location Consultation")}
-                className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-body text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-md shrink-0 shadow cursor-pointer text-center"
+                className="w-full sm:w-auto bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded shadow-sm cursor-pointer text-center"
               >
                 Get Route Map
               </button>

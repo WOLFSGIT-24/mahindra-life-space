@@ -1,28 +1,25 @@
 import React from "react";
-import { Sparkles, Globe2, Building2, Car, Shield, Award } from "lucide-react";
 import { mahindraLegacyData } from "../data";
 
 export default function MahindraLegacy() {
   const legacy = mahindraLegacyData;
 
   return (
-    <section className="w-full py-12 sm:py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section className="w-full py-12 sm:py-16 lg:py-24 bg-[#0f172a] text-white relative overflow-hidden border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 space-y-3 sm:space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-[#e31837] bg-red-950/80 border border-red-500/30">
-            <Sparkles className="h-3.5 w-3.5" />
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 space-y-2">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-400">
             Brand Trust & Heritage
-          </span>
-          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          </p>
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
             {legacy.title} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-amber-100">
+            <span className="text-slate-400 font-normal">
               {legacy.subtitle}
             </span>
           </h2>
-          <div className="h-1 w-20 bg-[#e31837] mx-auto rounded-full" />
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-400 leading-relaxed pt-2">
             Mahindra Lifespaces brings 75+ years of the Mahindra Group's trusted leadership in engineering, sustainability, and ethics to transform Chennai's residential skyline.
           </p>
         </div>
@@ -32,12 +29,12 @@ export default function MahindraLegacy() {
           {legacy.stats.map((st, idx) => (
             <div
               key={idx}
-              className="bg-slate-800/80 backdrop-blur-md p-3.5 sm:p-6 rounded-2xl border border-slate-700/80 text-center hover:border-amber-400/40 transition-all hover:-translate-y-1 shadow-lg"
+              className="bg-slate-900/90 p-4 sm:p-6 rounded-xl border border-slate-800 text-center shadow-sm"
             >
-              <span className="font-display text-xl sm:text-2xl lg:text-3xl font-black text-amber-400 block mb-1">
+              <span className="font-display text-2xl sm:text-3xl font-bold text-white block mb-1">
                 {st.value}
               </span>
-              <span className="text-[10px] sm:text-xs text-slate-300 font-bold uppercase tracking-wider block">
+              <span className="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase tracking-wider block">
                 {st.label}
               </span>
             </div>
@@ -49,24 +46,17 @@ export default function MahindraLegacy() {
           {legacy.verticals.map((vert, idx) => (
             <div
               key={idx}
-              className="bg-slate-800/60 p-4 sm:p-6 rounded-xl border border-slate-700/60 flex items-start gap-3 sm:gap-4 hover:border-slate-500 transition-colors"
+              className="bg-slate-900/60 p-5 sm:p-6 rounded-xl border border-slate-800 space-y-1.5"
             >
-              <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-lg bg-red-950 text-[#e31837] flex items-center justify-center shrink-0 border border-red-500/20">
-                {idx === 0 && <Car className="h-4 sm:h-5 w-4 sm:h-5" />}
-                {idx === 1 && <Building2 className="h-4 sm:h-5 w-4 sm:h-5" />}
-                {idx === 2 && <Globe2 className="h-4 sm:h-5 w-4 sm:h-5" />}
-                {idx === 3 && <Award className="h-4 sm:h-5 w-4 sm:h-5" />}
-                {idx === 4 && <Sparkles className="h-4 sm:h-5 w-4 sm:h-5" />}
-                {idx === 5 && <Shield className="h-4 sm:h-5 w-4 sm:h-5" />}
-              </div>
-              <div>
-                <h4 className="font-display text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">
-                  {vert.name}
-                </h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed font-body">
-                  {vert.desc}
-                </p>
-              </div>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-red-400">
+                Pillar 0{idx + 1}
+              </span>
+              <h4 className="font-display text-sm sm:text-base font-bold text-white">
+                {vert.name}
+              </h4>
+              <p className="text-xs text-slate-400 leading-relaxed font-body">
+                {vert.desc}
+              </p>
             </div>
           ))}
         </div>
