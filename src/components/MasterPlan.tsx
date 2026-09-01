@@ -61,9 +61,9 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
           </p>
           <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Thoughtful Master Planning <br />
-            <span className="text-slate-600 font-normal">Harmonized with Nature</span>
+            Harmonized with Nature
           </h2>
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
             Explore the master layouts of both projects within Mahindra World City. Each development provides generous open space, dedicated sports courts, pedestrian safety, and tranquil water vistas.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activePlan === "aquavista"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
             }`}
           >
             AquaVista Master Plan
@@ -86,7 +86,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activePlan === "lakewoods"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
             }`}
           >
             Lakewoods Master Plan
@@ -99,25 +99,25 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
           {/* Left Column: Legend & Overview */}
           <div className="lg:col-span-5 space-y-4 sm:space-y-6">
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-slate-200 text-slate-800 inline-block mb-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-slate-200 text-slate-900 inline-block mb-2">
                 {current.badge}
               </span>
               <h3 className="font-display text-xl sm:text-3xl font-bold text-slate-900">
                 {current.name}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-900 mt-1.5 leading-relaxed">
                 {current.subtitle}
               </p>
             </div>
 
             {/* Master Plan Legend Items */}
             <div className="space-y-2.5 pt-2 border-t border-slate-200">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-800 block">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-900 block">
                 Key Master Plan Elements:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
                 {current.legendItems.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-900">
                     <span className="w-5 h-5 rounded bg-slate-800 text-white font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">
                       {idx + 1}
                     </span>

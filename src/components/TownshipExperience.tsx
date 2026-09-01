@@ -114,9 +114,9 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           </p>
           <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Mahindra World City, Chennai <br />
-            <span className="text-slate-600 font-normal">A City Where Life Thrives</span>
+            A City Where Life Thrives
           </h2>
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
             Ranked the <strong>4th Best City to Live in India</strong> by JLL, Mahindra World City is a benchmark for sustainable urbanisation where nature, global employment, world class schooling, and residences coalesce.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeProject === "aquavista"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
             }`}
           >
             {projectGalleries.aquavista.buttonLabel}
@@ -139,7 +139,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeProject === "lakewoods"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
             }`}
           >
             {projectGalleries.lakewoods.buttonLabel}
@@ -181,7 +181,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                     <h3 className="font-display text-base sm:text-xl lg:text-2xl font-bold text-white leading-snug">
                       {slide.title}
                     </h3>
-                    <p className="text-xs text-slate-300 leading-relaxed font-body">
+                    <p className="text-xs text-white leading-relaxed font-body">
                       {slide.subtitle}
                     </p>
                   </div>
@@ -231,7 +231,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           {mwc.certifications.map((cert, idx) => (
             <div
               key={idx}
-              className="p-4 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-3 text-slate-800"
+              className="p-4 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-3 text-slate-900"
             >
               <div className="w-7 h-7 rounded bg-slate-900 text-white flex items-center justify-center shrink-0">
                 <Check className="h-4 w-4 text-white" />
@@ -254,7 +254,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 Everything at Your Doorstep
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-md">
+            <p className="text-xs sm:text-sm text-slate-900 max-w-md">
               From top CBSE schooling to shopping at The Canopy, hospitality at Fairfield by Marriott, and on site train connectivity.
             </p>
           </div>
@@ -281,7 +281,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                   <h4 className="font-display text-sm sm:text-base font-bold text-slate-900">
                     {infra.title}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed font-body">
+                  <p className="text-xs text-slate-900 leading-relaxed font-body">
                     {infra.desc}
                   </p>
                 </div>
@@ -301,7 +301,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
               <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight">
                 Work Close to Home with 65+ Global Conglomerates
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-white leading-relaxed">
                 Save hours of stressful daily traffic. Mahindra World City houses dedicated SEZs and corporate parks employing over 1,00,000 professionals across IT, automotive, healthcare, and engineering.
               </p>
               <div className="pt-1 sm:pt-2">
@@ -334,7 +334,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                     <span className="font-display text-xs sm:text-sm font-bold text-white block truncate">
                       {corp.name}
                     </span>
-                    <span className="text-[10px] text-slate-400 block mt-0.5 truncate">
+                    <span className="text-[10px] text-white block mt-0.5 truncate">
                       {corp.sector}
                     </span>
                   </div>

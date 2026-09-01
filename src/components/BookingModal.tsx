@@ -99,17 +99,17 @@ export default function BookingModal({
               <Calendar className="h-4 sm:h-5 w-4 sm:w-5 text-red-400" />
             </div>
             <div>
-              <h3 className="font-display text-base sm:text-lg font-bold">
+              <h3 className="font-display text-base sm:text-lg font-bold text-white">
                 Book Site Visit & Model Tour
               </h3>
-              <p className="text-[10px] sm:text-[11px] text-slate-300">
+              <p className="text-[10px] sm:text-[11px] text-white">
                 Mahindra World City, Chengalpattu, Chennai
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors text-slate-300 hover:text-white cursor-pointer"
+            className="p-1.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors text-white cursor-pointer"
           >
             <X className="h-5 w-5" />
           </button>
@@ -119,14 +119,14 @@ export default function BookingModal({
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
               <div>
-                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                   Select Project
                 </label>
                 <select
                   id="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
+                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
                 >
                   <option value="Both Projects (AquaVista & Lakewoods)">Both Projects (AquaVista & Lakewoods)</option>
                   <option value="Codename AquaVista (3, 3.5 & 4 BHK Duplex)">Codename AquaVista (3, 3.5 & 4 BHK Duplex)</option>
@@ -135,7 +135,7 @@ export default function BookingModal({
               </div>
 
               <div>
-                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                   Your Full Name*
                 </label>
                 <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
@@ -146,16 +146,16 @@ export default function BookingModal({
                     required
                     value={formData.fullName}
                     onChange={handleChange}
-                    placeholder="e.g. Rahul Sharma"
-                    className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
+                    placeholder="Full Name"
+                    className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none text-slate-900"
                   />
                 </div>
-                {errors.fullName && <p className="text-red-600 text-[10px] mt-1">{errors.fullName}</p>}
+                {errors.fullName && <p className="text-[#c8102e] text-[10px] mt-1">{errors.fullName}</p>}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                     Email Address*
                   </label>
                   <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
@@ -166,15 +166,15 @@ export default function BookingModal({
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="e.g. rahul@example.com"
-                      className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
+                      placeholder="Email Address"
+                      className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none text-slate-900"
                     />
                   </div>
-                  {errors.email && <p className="text-red-600 text-[10px] mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-[#c8102e] text-[10px] mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
-                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                     Phone (10 Digits)*
                   </label>
                   <div className="flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
@@ -185,17 +185,17 @@ export default function BookingModal({
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. 9876543210"
-                      className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none"
+                      placeholder="XXXXX XXXXX"
+                      className="w-full bg-transparent border-none text-xs sm:text-sm font-body outline-none text-slate-900"
                     />
                   </div>
-                  {errors.phone && <p className="text-red-600 text-[10px] mt-1">{errors.phone}</p>}
+                  {errors.phone && <p className="text-[#c8102e] text-[10px] mt-1">{errors.phone}</p>}
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                     Preferred Date
                   </label>
                   <input
@@ -203,19 +203,19 @@ export default function BookingModal({
                     id="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                     Preferred Time Slot
                   </label>
                   <select
                     id="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleChange}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
                   >
                     <option value="10:00 AM">10:00 AM (Morning)</option>
                     <option value="11:30 AM">11:30 AM (Morning)</option>
@@ -226,7 +226,7 @@ export default function BookingModal({
               </div>
 
               <div>
-                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block mb-1">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1">
                   Interested Typology
                 </label>
                 <input
@@ -234,8 +234,8 @@ export default function BookingModal({
                   id="unitType"
                   value={formData.unitType}
                   onChange={handleChange}
-                  placeholder="e.g. 3 BHK or 4 BHK Duplex"
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
+                  placeholder="3 BHK or 4 BHK Duplex"
+                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
                 />
               </div>
 
@@ -253,13 +253,13 @@ export default function BookingModal({
             </form>
           ) : (
             <div className="text-center py-6 space-y-4 animate-fade-in">
-              <div className="h-12 w-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-[#c8102e]">
+              <div className="h-12 w-12 bg-red-50 rounded-full flex items-center justify-center mx-auto text-[#c8102e]">
                 <Check className="h-6 w-6" />
               </div>
               <h4 className="font-display text-xl font-bold text-slate-900">
                 Site Visit Scheduled
               </h4>
-              <p className="font-body text-xs text-slate-600 max-w-sm mx-auto">
+              <p className="font-body text-xs text-slate-900 max-w-sm mx-auto">
                 Thank you <strong>{formData.fullName}</strong>. Your visit to <strong>{formData.project}</strong> has been registered. Our representative will contact you with driver/gate pass details.
               </p>
               <button

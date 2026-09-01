@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, ExternalLink, Compass } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { connectivityDestinations } from "../data";
 
 interface LocationProps {
@@ -25,9 +25,9 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
           </p>
           <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Strategic Location <br />
-            <span className="text-slate-600 font-normal">Seamless Arterial Connectivity</span>
+            Seamless Arterial Connectivity
           </h2>
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
             Located directly on the Grand Southern Trunk Road (NH 32) at Chengalpattu with an <strong>on site Paranur railway station</strong>, Mahindra World City provides rapid transit to Chennai city centre, international airports, tech parks, and top universities.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 <button
                   onClick={() => setMapView("google")}
                   className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
-                    mapView === "google" ? "bg-[#c8102e] text-white" : "text-slate-300 hover:text-white"
+                    mapView === "google" ? "bg-[#c8102e] text-white" : "text-white hover:text-red-400"
                   }`}
                 >
                   Google Map
@@ -50,7 +50,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 <button
                   onClick={() => setMapView("regional")}
                   className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
-                    mapView === "regional" ? "bg-[#c8102e] text-white" : "text-slate-300 hover:text-white"
+                    mapView === "regional" ? "bg-[#c8102e] text-white" : "text-white hover:text-red-400"
                   }`}
                 >
                   Regional Plan
@@ -61,7 +61,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 href="https://maps.google.com/?q=Mahindra+World+City+Chengalpattu+Chennai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-slate-300 hover:text-white font-semibold flex items-center gap-1 shrink-0"
+                className="text-xs text-white hover:text-red-400 font-semibold flex items-center gap-1 shrink-0"
               >
                 Open in Maps <ExternalLink className="h-3 w-3" />
               </a>
@@ -107,7 +107,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                     className={`px-3.5 py-1.5 rounded-md font-body text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
                       activeCategory === cat.id
                         ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                        : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100"
+                        : "bg-white text-slate-900 border border-slate-200 hover:bg-slate-100"
                     }`}
                   >
                     {cat.label}
@@ -127,7 +127,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                         {dest.name}
                       </h4>
                       {dest.detail && (
-                        <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
+                        <p className="text-[11px] text-slate-900 line-clamp-1 mt-0.5">
                           {dest.detail}
                         </p>
                       )}
@@ -137,7 +137,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                       <span className="font-display text-sm sm:text-base font-bold text-[#c8102e] block">
                         {dest.distance}
                       </span>
-                      <span className="text-[10px] text-slate-400 font-semibold uppercase">
+                      <span className="text-[10px] text-slate-900 font-semibold uppercase">
                         ~{dest.timeEst}
                       </span>
                     </div>
@@ -148,7 +148,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
 
             {/* Quick CTA */}
             <div className="p-4 bg-white rounded-lg border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
-              <div className="text-xs text-slate-600 text-center sm:text-left">
+              <div className="text-xs text-slate-900 text-center sm:text-left">
                 <strong className="text-slate-900 block">Want personalized driving route directions?</strong>
                 Our team can share detailed GPS coordinates & transit maps.
               </div>

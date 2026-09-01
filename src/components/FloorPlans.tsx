@@ -50,7 +50,7 @@ export default function FloorPlans({
           </p>
           <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Efficient Living Spaces <br />
-            <span className="text-slate-600 font-normal">Designed for Light & Ventilation</span>
+            Designed for Light & Ventilation
           </h2>
           <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
             Every apartment at <strong>Codename AquaVista</strong> and <strong>Mahindra Lakewoods</strong> is crafted with zero space wastage, large balconies or private decks, and adheres strictly to RERA carpet area measurements.
@@ -115,7 +115,7 @@ export default function FloorPlans({
                 {/* Header info */}
                 <div className="p-4 sm:p-5 border-b border-slate-100 flex items-start justify-between gap-2">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-700 inline-block mb-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-900 inline-block mb-1">
                       {plan.projectName}
                     </span>
                     <h3 className="font-display text-base sm:text-lg font-bold text-slate-900 leading-tight">
@@ -126,7 +126,7 @@ export default function FloorPlans({
                     <span className="font-display text-sm sm:text-base font-bold text-slate-900">
                       {plan.carpetAreaSqFt}
                     </span>
-                    <span className="text-[9px] sm:text-[10px] text-slate-500 font-semibold uppercase block">
+                    <span className="text-[9px] sm:text-[10px] text-slate-900 font-semibold uppercase block">
                       Sq.Ft. Carpet
                     </span>
                   </div>
@@ -171,27 +171,27 @@ export default function FloorPlans({
                 <div className="p-4 sm:p-5 space-y-3 sm:space-y-4">
                   <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-100">
                     <div>
-                      <span className="text-slate-500 block text-[10px] uppercase font-semibold">RERA Carpet</span>
-                      <span className="font-semibold text-slate-800">{plan.carpetAreaSqM} Sq.M ({plan.carpetAreaSqFt} Sft)</span>
+                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">RERA Carpet</span>
+                      <span className="font-semibold text-slate-900">{plan.carpetAreaSqM} Sq.M ({plan.carpetAreaSqFt} Sft)</span>
                     </div>
                     <div>
-                      <span className="text-slate-500 block text-[10px] uppercase font-semibold">Balcony / Deck</span>
-                      <span className="font-semibold text-slate-800">{plan.balconyOrDeckSqFt} Sq.Ft</span>
+                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Balcony / Deck</span>
+                      <span className="font-semibold text-slate-900">{plan.balconyOrDeckSqFt} Sq.Ft</span>
                     </div>
                     <div>
-                      <span className="text-slate-500 block text-[10px] uppercase font-semibold">Utility Area</span>
-                      <span className="font-semibold text-slate-800">{plan.utilitySqFt} Sq.Ft</span>
+                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Utility Area</span>
+                      <span className="font-semibold text-slate-900">{plan.utilitySqFt} Sq.Ft</span>
                     </div>
                     <div>
-                      <span className="text-slate-500 block text-[10px] uppercase font-semibold">Orientation</span>
-                      <span className="font-semibold text-slate-800 truncate block">
+                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Orientation</span>
+                      <span className="font-semibold text-slate-900 truncate block">
                         {plan.projectId === "lakewoods" ? "0 Common Walls" : "Lake / Park View"}
                       </span>
                     </div>
                   </div>
 
                   {/* Bullet points */}
-                  <ul className="space-y-1 text-xs text-slate-600">
+                  <ul className="space-y-1 text-xs text-slate-900">
                     {plan.features.slice(0, 3).map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-1.5">
                         <Check className="h-3.5 w-3.5 text-[#c8102e] shrink-0 mt-0.5" />
