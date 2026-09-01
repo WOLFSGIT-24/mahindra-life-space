@@ -270,7 +270,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                     <img loading="lazy" decoding="async"
                       src={infra.image}
                       alt={infra.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 )}

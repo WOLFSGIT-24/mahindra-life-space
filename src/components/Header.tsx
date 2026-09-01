@@ -116,7 +116,7 @@ export default function Header({
             : "bg-white/95 backdrop-blur-sm border-b border-slate-100"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 xl:gap-4">
           
           {/* Logo Brand Lockup */}
           <a
@@ -140,7 +140,7 @@ export default function Header({
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 mx-auto">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 mx-auto shrink-0">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -148,7 +148,7 @@ export default function Header({
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => handleLinkClick(e, link.id)}
-                  className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all duration-150 ${
+                  className={`px-2 xl:px-3 py-1.5 rounded-md text-[11px] xl:text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all duration-150 ${
                     isActive
                       ? "text-[#c8102e] font-bold bg-red-50"
                       : "text-slate-700 hover:text-slate-950 hover:bg-slate-50"
