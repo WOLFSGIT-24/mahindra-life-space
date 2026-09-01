@@ -89,20 +89,20 @@ export default function Header({
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-200">
       
-      {/* Top Banner Announcement Strip */}
-      <div className="bg-[#0B1120] text-white text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800 flex items-center justify-center gap-2">
+      {/* Top Banner Announcement Strip - Minimal Luxury Light */}
+      <div className="bg-slate-100/90 text-slate-800 text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-200/80 flex items-center justify-center gap-2 backdrop-blur-sm">
         <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider shrink-0">
           Mahindra World City
         </span>
-        <span className="hidden md:inline text-white truncate">
+        <span className="hidden md:inline text-slate-700 truncate">
           Codename AquaVista (3, 3.5 & 4 BHK Duplex) & Mahindra Lakewoods (2 & 3 BHK)
         </span>
-        <span className="md:hidden text-white truncate">
+        <span className="md:hidden text-slate-700 truncate">
           AquaVista & Lakewoods • 1,500 Acre Township
         </span>
         <button
           onClick={onRequestDownload}
-          className="underline text-white hover:text-red-400 font-bold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
+          className="underline text-[#c8102e] hover:text-[#a60d26] font-bold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
         >
           Download PDF
         </button>
@@ -204,10 +204,10 @@ export default function Header({
         </div>
       </div>
 
-      {/* Mobile Drawer Menu Overlay */}
+      {/* Mobile Drawer Menu Overlay - Minimal Light Luxury */}
       {mobileMenuOpen && (
-        <div className="bg-[#0f172a]/95 backdrop-blur-xl border-b border-slate-800 shadow-2xl lg:hidden flex flex-col p-6 space-y-4 animate-fade-in max-h-[80vh] overflow-y-auto">
-          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pb-1 border-b border-slate-800">
+        <div className="bg-white/98 backdrop-blur-xl border-b border-slate-200 shadow-2xl lg:hidden flex flex-col p-6 space-y-4 animate-fade-in max-h-[80vh] overflow-y-auto">
+          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pb-1 border-b border-slate-100">
             Navigation
           </div>
           {navLinks.map((link) => (
@@ -215,8 +215,8 @@ export default function Header({
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => handleLinkClick(e, link.id)}
-              className={`font-display text-base font-semibold py-2.5 border-b border-slate-800 flex items-center justify-between transition-colors ${
-                activeSection === link.id ? "text-white font-bold" : "text-slate-300 hover:text-white"
+              className={`font-display text-base font-semibold py-2.5 border-b border-slate-100 flex items-center justify-between transition-colors ${
+                activeSection === link.id ? "text-[#c8102e] font-bold" : "text-slate-800 hover:text-slate-950"
               }`}
             >
               <span>{link.label}</span>
@@ -239,14 +239,14 @@ export default function Header({
                 setMobileMenuOpen(false);
                 onRequestDownload();
               }}
-              className="w-full flex items-center justify-center gap-2 bg-slate-800 text-slate-200 font-body text-xs font-bold tracking-widest uppercase py-3.5 rounded-md border border-slate-700 hover:bg-slate-700"
+              className="w-full flex items-center justify-center gap-2 bg-slate-100 text-slate-900 font-body text-xs font-bold tracking-widest uppercase py-3.5 rounded-md border border-slate-200 hover:bg-slate-200"
             >
               Download PDF Catalog
             </button>
 
             <a
               href="tel:08047359991"
-              className="w-full flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-body text-xs font-bold tracking-widest uppercase py-3.5 rounded-md"
+              className="w-full flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-900 border border-slate-200 font-body text-xs font-bold tracking-widest uppercase py-3.5 rounded-md"
             >
               <Phone className="h-4 w-4 text-[#c8102e]" />
               Call 080 4735 9991

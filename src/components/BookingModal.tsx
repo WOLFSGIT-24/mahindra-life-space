@@ -93,23 +93,23 @@ export default function BookingModal({
   return (
     <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 animate-fade-in">
       <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto relative border border-slate-200">
-        <div className="bg-[#0f172a] p-4 sm:p-6 text-white flex justify-between items-center border-b border-slate-800 sticky top-0 z-10">
+        <div className="bg-slate-50 p-4 sm:p-6 text-slate-900 flex justify-between items-center border-b border-slate-200 sticky top-0 z-10">
           <div className="flex items-center gap-3">
-            <div className="p-2 sm:p-2.5 bg-slate-800 rounded-lg text-white">
-              <Calendar className="h-4 sm:h-5 w-4 sm:w-5 text-red-400" />
+            <div className="p-2 sm:p-2.5 bg-red-50 rounded-lg text-[#c8102e]">
+              <Calendar className="h-4 sm:h-5 w-4 sm:w-5 text-[#c8102e]" />
             </div>
             <div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-white">
+              <h3 className="font-display text-base sm:text-lg font-bold text-slate-900">
                 Book Site Visit & Model Tour
               </h3>
-              <p className="text-[10px] sm:text-[11px] text-white">
+              <p className="text-[10px] sm:text-[11px] text-slate-600">
                 Mahindra World City, Chengalpattu, Chennai
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors text-white cursor-pointer"
+            className="p-1.5 rounded-full bg-slate-200/80 hover:bg-slate-200 transition-colors text-slate-700 cursor-pointer"
           >
             <X className="h-5 w-5" />
           </button>

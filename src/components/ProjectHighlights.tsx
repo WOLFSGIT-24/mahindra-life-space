@@ -82,7 +82,7 @@ export default function ProjectHighlights({
             <div className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-300 overflow-hidden flex flex-col justify-between">
               <div>
                 {/* Visual Banner */}
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
                   <img loading="lazy" decoding="async"
                     src={av.heroImage}
                     alt="Codename AquaVista at Mahindra World City"
@@ -140,16 +140,13 @@ export default function ProjectHighlights({
                     </span>
                     <ul className="space-y-2 text-xs sm:text-sm text-slate-900">
                       {[
-                        "Multi storeyed towers (C7 & C8) with efficiently designed 3, 3.5 BHK & 4 BHK Duplex units",
-                        "Overlooks serene Kolavai Lake & rolling green hill vistas",
-                        "Grand 16,000 sq.ft clubhouse with pool, gym, aerobics/yoga room & multipurpose hall",
-                        "2 acre central park with shaded walkways, seating areas, half basketball court & amphitheatre",
-                        "Full height French windows & large L shaped balconies for maximum cross ventilation",
-                        "Duplex units feature private rooftop party terraces with granite staircase & SS railing",
-                        "Exclusive bay windows in living room and dedicated study room in 3.5 BHK homes"
+                        "Lakefront 3, 3.5 & 4 BHK Duplex residences overlooking Kolavai lake",
+                        "Grand 16,000 Sq.Ft resort clubhouse with swimming pool & gymnasium",
+                        "2 Acre central park with open amphitheatre & sports courts",
+                        "Private rooftop party terraces & full-height French balcony windows"
                       ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 text-[#c8102e] shrink-0 mt-0.5" />
+                        <li key={idx} className="flex items-center gap-2">
+                          <Check className="h-4 w-4 text-[#c8102e] shrink-0" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}
@@ -203,7 +200,7 @@ export default function ProjectHighlights({
             <div className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-300 overflow-hidden flex flex-col justify-between">
               <div>
                 {/* Visual Banner */}
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
                   <img loading="lazy" decoding="async"
                     src={lw.heroImage}
                     alt="Mahindra Lakewoods at Mahindra World City"
@@ -261,16 +258,13 @@ export default function ProjectHighlights({
                     </span>
                     <ul className="space-y-2 text-xs sm:text-sm text-slate-900">
                       {[
-                        "Multi storeyed towers (Towers A to E) with spacious 2 & 3 BHK deck residences",
-                        "Maximum privacy: Zero common walls between homes for peaceful living",
-                        "3.8 acre central vehicle free podium park with lush landscaping and open green lawns",
-                        "Private decks with authentic wooden tile finish offering views of lake, hill & podium",
-                        "Swimming pool, kids pool, elevated lounge pavilion, gym & open badminton court",
-                        "Wide entrance corridor leading to open concept living and dining spaces with hand wash nook",
-                        "Pre certified IGBC Platinum green homes with 100% SRI high albedo paint on terrace"
+                        "Zero common walls design for absolute privacy & 3-side cross ventilation",
+                        "3.8 Acre elevated vehicle-free podium park with continuous jogging loop",
+                        "Open-to-sky swimming pool, toddler splash zone & fitness gymnasium",
+                        "Private viewing decks overlooking scenic lake & rolling green hill vistas"
                       ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 text-[#c8102e] shrink-0 mt-0.5" />
+                        <li key={idx} className="flex items-center gap-2">
+                          <Check className="h-4 w-4 text-[#c8102e] shrink-0" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}

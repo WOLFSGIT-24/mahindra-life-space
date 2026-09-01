@@ -116,7 +116,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             Mahindra World City, Chennai <br />
             A City Where Life Thrives
           </h2>
-          <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed pt-2">
             Ranked the <strong>4th Best City to Live in India</strong> by JLL, Mahindra World City is a benchmark for sustainable urbanisation where nature, global employment, world class schooling, and residences coalesce.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeProject === "aquavista"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200"
             }`}
           >
             {projectGalleries.aquavista.buttonLabel}
@@ -139,7 +139,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             className={`px-6 py-2.5 sm:py-3 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
               activeProject === "lakewoods"
                 ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200"
             }`}
           >
             {projectGalleries.lakewoods.buttonLabel}
@@ -147,10 +147,10 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
         </div>
 
         {/* Interactive Image Slide Showcase */}
-        <div className="relative rounded-xl overflow-hidden shadow-lg bg-slate-950 mb-12 sm:mb-16 border border-slate-200 group">
+        <div className="relative rounded-xl overflow-hidden shadow-md bg-slate-100 mb-12 sm:mb-16 border border-slate-200 group">
           
           {/* Slide Visual Image */}
-          <div className="relative w-full h-[340px] sm:h-[440px] lg:h-[520px] overflow-hidden bg-slate-900">
+          <div className="relative w-full h-[340px] sm:h-[440px] lg:h-[520px] overflow-hidden bg-slate-100">
             {slides.map((slide, idx) => (
               <div
                 key={idx}
@@ -163,25 +163,25 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                   alt={slide.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 
                 {/* Top Badge on Slide */}
                 <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
-                  <span className="px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white bg-black/70 rounded">
+                  <span className="px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-900 bg-white/95 shadow-sm rounded">
                     {slide.tag}
                   </span>
                 </div>
 
                 {/* Bottom Slide Info Caption */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-20 text-white">
-                  <div className="max-w-2xl bg-slate-950/90 p-4 sm:p-5 rounded-lg border border-slate-800 space-y-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-red-400 block">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-20">
+                  <div className="max-w-2xl bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-lg border border-slate-200/80 shadow-md space-y-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#c8102e] block">
                       {gallery.name} • {gallery.badge}
                     </span>
-                    <h3 className="font-display text-base sm:text-xl lg:text-2xl font-bold text-white leading-snug">
+                    <h3 className="font-display text-base sm:text-xl lg:text-2xl font-bold text-slate-900 leading-snug">
                       {slide.title}
                     </h3>
-                    <p className="text-xs text-white leading-relaxed font-body">
+                    <p className="text-xs text-slate-700 leading-relaxed font-body">
                       {slide.subtitle}
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           {/* Left Arrow Button */}
           <button
             onClick={handlePrevSlide}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/80 hover:bg-slate-900 border border-slate-700 text-white flex items-center justify-center transition-all cursor-pointer"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 hover:bg-white border border-slate-200 text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer"
             aria-label="Previous Slide"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -202,14 +202,14 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           {/* Right Arrow Button */}
           <button
             onClick={handleNextSlide}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/80 hover:bg-slate-900 border border-slate-700 text-white flex items-center justify-center transition-all cursor-pointer"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 hover:bg-white border border-slate-200 text-slate-900 flex items-center justify-center shadow-md transition-all cursor-pointer"
             aria-label="Next Slide"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
 
           {/* Slide Indicator Dots */}
-          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 flex items-center gap-1.5 bg-slate-950/80 px-3 py-1.5 rounded border border-slate-800">
+          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 flex items-center gap-1.5 bg-white/90 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
             {slides.map((_, idx) => (
               <button
                 key={idx}
@@ -217,7 +217,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 className={`transition-all rounded-full cursor-pointer ${
                   idx === currentSlide
                     ? "w-5 h-1.5 bg-[#c8102e]"
-                    : "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
+                    : "w-1.5 h-1.5 bg-slate-300 hover:bg-slate-500"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -231,7 +231,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           {mwc.certifications.map((cert, idx) => (
             <div
               key={idx}
-              className="p-4 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-3 text-slate-900"
+              className="p-4 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-3 text-slate-900 shadow-sm"
             >
               <div className="w-7 h-7 rounded bg-slate-900 text-white flex items-center justify-center shrink-0">
                 <Check className="h-4 w-4 text-white" />
@@ -254,7 +254,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 Everything at Your Doorstep
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-slate-900 max-w-md">
+            <p className="text-xs sm:text-sm text-slate-700 max-w-md">
               From top CBSE schooling to shopping at The Canopy, hospitality at Fairfield by Marriott, and on site train connectivity.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
             {mwc.socialInfra.map((infra, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 transition-all overflow-hidden shadow-sm flex flex-col justify-between"
+                className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 transition-all overflow-hidden shadow-sm hover:shadow-md flex flex-col justify-between"
               >
                 {infra.image && (
                   <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
@@ -281,7 +281,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                   <h4 className="font-display text-sm sm:text-base font-bold text-slate-900">
                     {infra.title}
                   </h4>
-                  <p className="text-xs text-slate-900 leading-relaxed font-body">
+                  <p className="text-xs text-slate-700 leading-relaxed font-body">
                     {infra.desc}
                   </p>
                 </div>
@@ -290,18 +290,18 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
           </div>
         </div>
 
-        {/* Corporate Hubs & Walk-to-Work Ecosystem */}
-        <div className="bg-[#0f172a] rounded-xl p-6 sm:p-8 lg:p-10 text-white border border-slate-800">
+        {/* Corporate Hubs & Walk-to-Work Ecosystem - Minimal Light Luxury */}
+        <div className="bg-slate-50 rounded-xl p-6 sm:p-8 lg:p-10 text-slate-900 border border-slate-200 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
             <div className="lg:col-span-5 space-y-3 sm:space-y-4">
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-red-400 block">
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#c8102e] block">
                 Walk To Work Privilege
               </span>
-              <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight">
+              <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 leading-tight">
                 Work Close to Home with 65+ Global Conglomerates
               </h3>
-              <p className="text-xs sm:text-sm text-white leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                 Save hours of stressful daily traffic. Mahindra World City houses dedicated SEZs and corporate parks employing over 1,00,000 professionals across IT, automotive, healthcare, and engineering.
               </p>
               <div className="pt-1 sm:pt-2">
@@ -319,22 +319,22 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
               {mwc.corporateHubs.map((corp, idx) => (
                 <div
                   key={idx}
-                  className="bg-slate-900/90 p-3.5 sm:p-4 rounded-lg border border-slate-800 text-center flex flex-col items-center justify-between min-h-[110px]"
+                  className="bg-white p-3.5 sm:p-4 rounded-lg border border-slate-200 shadow-sm text-center flex flex-col items-center justify-between min-h-[110px]"
                 >
                   {corp.image ? (
                     <div className="h-8 flex items-center justify-center mb-1">
                       <img loading="lazy" decoding="async"
                         src={corp.image}
                         alt={corp.name}
-                        className="max-h-7 max-w-[80px] object-contain filter brightness-110"
+                        className="max-h-7 max-w-[80px] object-contain filter"
                       />
                     </div>
                   ) : null}
                   <div>
-                    <span className="font-display text-xs sm:text-sm font-bold text-white block truncate">
+                    <span className="font-display text-xs sm:text-sm font-bold text-slate-900 block truncate">
                       {corp.name}
                     </span>
-                    <span className="text-[10px] text-white block mt-0.5 truncate">
+                    <span className="text-[10px] text-slate-500 block mt-0.5 truncate">
                       {corp.sector}
                     </span>
                   </div>

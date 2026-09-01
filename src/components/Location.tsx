@@ -36,13 +36,13 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-stretch mb-8 sm:mb-12">
           
           {/* Left Column: Interactive Map with Toggle */}
-          <div className="lg:col-span-6 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-900 flex flex-col min-h-[340px] sm:min-h-[400px] lg:min-h-[440px]">
-            <div className="bg-slate-900 text-white p-3 sm:p-4 border-b border-slate-800 flex items-center justify-between gap-2">
-              <div className="flex items-center gap-1.5 bg-slate-800 p-1 rounded-md">
+          <div className="lg:col-span-6 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-50 flex flex-col min-h-[340px] sm:min-h-[400px] lg:min-h-[440px]">
+            <div className="bg-slate-50 text-slate-900 p-3 sm:p-4 border-b border-slate-200 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 bg-slate-200 p-1 rounded-md">
                 <button
                   onClick={() => setMapView("google")}
                   className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
-                    mapView === "google" ? "bg-[#c8102e] text-white" : "text-white hover:text-red-400"
+                    mapView === "google" ? "bg-[#c8102e] text-white shadow-sm font-bold" : "text-slate-700 hover:text-slate-900"
                   }`}
                 >
                   Google Map
@@ -50,7 +50,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 <button
                   onClick={() => setMapView("regional")}
                   className={`px-2.5 py-1 rounded text-[11px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
-                    mapView === "regional" ? "bg-[#c8102e] text-white" : "text-white hover:text-red-400"
+                    mapView === "regional" ? "bg-[#c8102e] text-white shadow-sm font-bold" : "text-slate-700 hover:text-slate-900"
                   }`}
                 >
                   Regional Plan
@@ -61,7 +61,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 href="https://maps.google.com/?q=Mahindra+World+City+Chengalpattu+Chennai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-white hover:text-red-400 font-semibold flex items-center gap-1 shrink-0"
+                className="text-xs text-slate-800 hover:text-[#c8102e] font-semibold flex items-center gap-1 shrink-0"
               >
                 Open in Maps <ExternalLink className="h-3 w-3" />
               </a>
@@ -79,7 +79,7 @@ export default function Location({ onOpenEnquiry }: LocationProps) {
                 title="Mahindra World City Chennai Location Map"
               />
             ) : (
-              <div className="flex-1 bg-slate-950 flex items-center justify-center p-2 overflow-auto">
+              <div className="flex-1 bg-slate-100 flex items-center justify-center p-2 overflow-auto">
                 <img loading="lazy" decoding="async"
                   src="/aquavista/location.webp"
                   alt="Mahindra World City Regional Connectivity Map"

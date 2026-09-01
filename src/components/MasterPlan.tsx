@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ZoomIn } from "lucide-react";
+import { ZoomIn, Check } from "lucide-react";
 
 interface MasterPlanProps {
   onSelectUnit: (unitType: string) => void;
@@ -16,16 +16,11 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
       imageUrl: "/aquavista/master pla aqua.webp",
       badge: "Lakefront Master Layout",
       legendItems: [
-        "Grand Entry / Exit Portal & Security",
+        "Towers C7 & C8 Lake View Residential Enclave",
+        "16,000 Sq.Ft. Clubhouse with Resort Swimming Pool",
         "2 Acre Central Park with Shaded Walkways",
         "Stepped Open Amphitheatre & Party Lawn",
-        "Half Basketball Court & Play Enclave",
-        "Children's Safe Activity Play Area",
-        "16,000 Sq.Ft. Clubhouse (Multipurpose Hall, Gym, Aerobics, Indoor Games)",
-        "Resort Swimming Pool & Kids Splash Pool Deck",
-        "Outdoor Regulation Tennis Court",
-        "Outdoor Badminton Courts",
-        "Towers C7 & C8 Lake view Residential Enclave"
+        "Outdoor Tennis, Badminton & Basketball Courts"
       ]
     },
     lakewoods: {
@@ -34,16 +29,11 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
       imageUrl: "/lakewoods/lakewood masterplan.webp",
       badge: "3.8 Acre Podium Master Layout",
       legendItems: [
-        "Ground Level Grand Entry / Exit & Security Cabin",
-        "Ramp to Stilt & Covered Resident Car Parking",
-        "3.8 Acre Vehicle Free Elevated Podium",
-        "Kids Play Area & Safe Playgrounds",
-        "Manicured Wellness Lawns & Yoga Pergola",
-        "Open Air Badminton Court",
-        "Podium Fitness Gymnasium",
-        "Continuous Shaded Jogging Loop",
-        "Swimming Pool, Kids Splash Pool & Pool Deck",
-        "Multipurpose Hall, Indoor Games Room & Elevated Sky Lounge"
+        "Towers A to E with Zero Common Walls Residences",
+        "3.8 Acre Central Vehicle-Free Elevated Podium",
+        "Swimming Pool, Kids Splash Pool & Leisure Sun Deck",
+        "Continuous Shaded Jogging Loop & Fitness Gymnasium",
+        "Outdoor Badminton Court, Kids Play Area & Yoga Lawns"
       ]
     }
   };
@@ -110,18 +100,16 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
               </p>
             </div>
 
-            {/* Master Plan Legend Items */}
+            {/* Master Plan Key Highlights */}
             <div className="space-y-2.5 pt-2 border-t border-slate-200">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-900 block">
-                Key Master Plan Elements:
+                Key Master Plan Highlights:
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+              <div className="space-y-2">
                 {current.legendItems.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-900">
-                    <span className="w-5 h-5 rounded bg-slate-800 text-white font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">
-                      {idx + 1}
-                    </span>
-                    <span className="leading-tight">{item}</span>
+                  <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-900">
+                    <Check className="h-4 w-4 text-[#c8102e] shrink-0" />
+                    <span className="leading-tight font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -130,7 +118,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => setZoomOpen(true)}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 px-6 rounded-md shadow-sm cursor-pointer text-center"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 px-6 rounded-md shadow cursor-pointer text-center"
               >
                 <ZoomIn className="h-4 w-4" />
                 Enlarge Master Plan
@@ -141,7 +129,7 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
           {/* Right Column: Visual Render */}
           <div
             onClick={() => setZoomOpen(true)}
-            className="lg:col-span-7 relative aspect-[4/3] rounded-lg overflow-hidden bg-slate-900 border border-slate-200 cursor-pointer"
+            className="lg:col-span-7 relative aspect-[4/3] rounded-lg overflow-hidden bg-slate-100 border border-slate-200 cursor-pointer shadow-sm"
           >
             <img loading="lazy" decoding="async"
               src={current.imageUrl}

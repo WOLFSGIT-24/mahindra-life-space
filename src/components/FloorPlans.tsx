@@ -94,8 +94,8 @@ export default function FloorPlans({
                 onClick={() => setTypologyFilter(type.id)}
                 className={`px-3 py-2 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                   typologyFilter === type.id
-                    ? "bg-slate-900 text-white shadow-sm font-bold"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                    ? "bg-[#c8102e] text-white shadow-sm font-bold"
+                    : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
                 {type.label}
@@ -167,50 +167,13 @@ export default function FloorPlans({
                   )}
                 </div>
 
-                {/* Specifications & Area Breakdown */}
-                <div className="p-4 sm:p-5 space-y-3 sm:space-y-4">
-                  <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-100">
-                    <div>
-                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">RERA Carpet</span>
-                      <span className="font-semibold text-slate-900">{plan.carpetAreaSqM} Sq.M ({plan.carpetAreaSqFt} Sft)</span>
-                    </div>
-                    <div>
-                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Balcony / Deck</span>
-                      <span className="font-semibold text-slate-900">{plan.balconyOrDeckSqFt} Sq.Ft</span>
-                    </div>
-                    <div>
-                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Utility Area</span>
-                      <span className="font-semibold text-slate-900">{plan.utilitySqFt} Sq.Ft</span>
-                    </div>
-                    <div>
-                      <span className="text-slate-900 block text-[10px] uppercase font-semibold">Orientation</span>
-                      <span className="font-semibold text-slate-900 truncate block">
-                        {plan.projectId === "lakewoods" ? "0 Common Walls" : "Lake / Park View"}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Bullet points */}
-                  <ul className="space-y-1 text-xs text-slate-900">
-                    {plan.features.slice(0, 3).map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-1.5">
-                        <Check className="h-3.5 w-3.5 text-[#c8102e] shrink-0 mt-0.5" />
-                        <span className="leading-tight">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
 
               {/* Bottom CTA */}
-              <div className="p-4 sm:p-5 pt-0">
+              <div className="p-4 sm:p-5">
                 <button
                   onClick={() => handlePlanClick(plan)}
-                  className={`w-full py-3 px-4 rounded-md font-body text-xs font-bold tracking-[0.15em] uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                    isUnlocked
-                      ? "bg-slate-900 hover:bg-slate-800 text-white shadow-sm"
-                      : "bg-[#c8102e] hover:bg-[#a60d26] text-white shadow-sm"
-                  }`}
+                  className={`w-full py-3 px-4 rounded-md font-body text-xs font-bold tracking-[0.15em] uppercase transition-all flex items-center justify-center gap-2 cursor-pointer bg-[#c8102e] hover:bg-[#a60d26] text-white shadow-sm`}
                 >
                   {isUnlocked ? (
                     <>

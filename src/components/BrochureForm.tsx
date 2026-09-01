@@ -81,47 +81,47 @@ export default function BrochureForm({
   };
 
   return (
-    <section id="lead-capture-section" className="w-full py-16 lg:py-24 bg-[#0f172a] text-white relative overflow-hidden scroll-mt-20 border-b border-slate-800">
+    <section id="lead-capture-section" className="w-full py-16 lg:py-24 bg-slate-50 text-slate-900 relative overflow-hidden scroll-mt-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Project Snapshot */}
           <div className="lg:col-span-5 space-y-6">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-400">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8102e]">
               Direct Developer Desk
             </p>
 
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
               Begin Your Journey at <br />
               Mahindra World City
             </h2>
 
-            <p className="font-body text-sm text-white leading-relaxed">
+            <p className="font-body text-sm text-slate-700 leading-relaxed">
               Schedule a personalized site visit to experience the tranquil lakes, 16,000 sq.ft clubhouse, 3.8 acre vehicle free podium, and walk to work lifestyle.
             </p>
 
             {/* Quick Specs Cards */}
-            <div className="bg-slate-900 p-5 sm:p-6 rounded-xl border border-slate-800 space-y-3">
-              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider">
+            <div className="bg-white p-5 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+              <h4 className="font-display text-sm font-bold text-slate-900 uppercase tracking-wider">
                 Project Snapshot & RERA
               </h4>
 
-              <div className="space-y-2.5 text-xs text-white divide-y divide-slate-800">
+              <div className="space-y-2.5 text-xs text-slate-700 divide-y divide-slate-100">
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="text-white">Codename AquaVista:</span>
-                  <span className="font-medium text-right text-white">3, 3.5 & 4 BHK Duplex (TNRERA: TN/01/Building/0174/2022)</span>
+                  <span className="font-semibold text-slate-900">Codename AquaVista:</span>
+                  <span className="text-right text-slate-700">3, 3.5 & 4 BHK Duplex (TNRERA: TN/01/Building/0174/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="text-white">Mahindra Lakewoods:</span>
-                  <span className="font-medium text-right text-white">2 & 3 BHK (TNRERA: TN/01/Building/0041/2022)</span>
+                  <span className="font-semibold text-slate-900">Mahindra Lakewoods:</span>
+                  <span className="text-right text-slate-700">2 & 3 BHK (TNRERA: TN/01/Building/0041/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="text-white">Location:</span>
-                  <span className="font-medium text-right text-white">Mahindra World City, Chengalpattu 603004</span>
+                  <span className="font-semibold text-slate-900">Location:</span>
+                  <span className="text-right text-slate-700">Mahindra World City, Chengalpattu 603004</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="text-white">Sales Office:</span>
-                  <span className="font-medium text-right text-white">The Canopy, 1st Floor, Block A, MWC</span>
+                  <span className="font-semibold text-slate-900">Sales Office:</span>
+                  <span className="text-right text-slate-700">The Canopy, 1st Floor, Block A, MWC</span>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function BrochureForm({
 
           {/* Right Column: Lead Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white text-slate-900 p-5 sm:p-8 md:p-10 rounded-xl shadow-lg relative overflow-hidden border border-slate-200">
+            <div className="bg-white text-slate-900 p-5 sm:p-8 md:p-10 rounded-xl shadow-md relative overflow-hidden border border-slate-200">
               <div className="absolute top-0 left-0 w-full h-[4px] bg-[#c8102e]" />
 
               {!formSubmitted ? (
@@ -138,7 +138,7 @@ export default function BrochureForm({
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900">
                       Schedule Site Walkthrough
                     </h3>
-                    <p className="font-body text-xs sm:text-sm text-slate-900 mt-1">
+                    <p className="font-body text-xs sm:text-sm text-slate-600 mt-1">
                       Fill out the form below to receive customized price sheets, sample apartment videos, and instant PDF brochures.
                     </p>
                   </div>
@@ -245,7 +245,7 @@ export default function BrochureForm({
                       )}
                     </button>
 
-                    <div className="flex items-center justify-center gap-2 text-[10px] text-slate-900 pt-1">
+                    <div className="flex items-center justify-center gap-2 text-[10px] text-slate-600 pt-1">
                       <ShieldCheck className="h-3.5 w-3.5 text-[#c8102e]" />
                       <span>100% Privacy Assured • Direct Developer Team</span>
                     </div>
@@ -261,7 +261,7 @@ export default function BrochureForm({
                   <h3 className="font-display text-2xl font-bold text-slate-900">
                     Thank You, {formData.fullName}
                   </h3>
-                  <p className="font-body text-xs sm:text-sm text-slate-900 max-w-md mx-auto">
+                  <p className="font-body text-xs sm:text-sm text-slate-700 max-w-md mx-auto">
                     Your site visit & brochure request for <strong>{formData.project}</strong> has been registered. Our relationship team will reach out to you shortly.
                   </p>
                   <div className="pt-2">

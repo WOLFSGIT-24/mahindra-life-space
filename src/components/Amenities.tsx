@@ -12,19 +12,19 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
   const activeCategory = amenitiesCategories[activeTab];
 
   return (
-    <section id="amenities" className="w-full py-12 sm:py-16 lg:py-24 bg-[#0f172a] text-white scroll-mt-20 border-b border-slate-800">
+    <section id="amenities" className="w-full py-12 sm:py-16 lg:py-24 bg-slate-50 text-slate-900 scroll-mt-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-400">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8102e]">
             Lifestyle & Leisure
           </p>
-          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
             Designed for Fitness <br />
             Wellness & Community
           </h2>
-          <p className="font-body text-xs sm:text-sm md:text-base text-white leading-relaxed pt-2">
+          <p className="font-body text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed pt-2">
             From the 16,000 sq.ft clubhouse at <strong>AquaVista</strong> to the 3.8 acre vehicle free podium at <strong>Lakewoods</strong> and the prestigious <strong>MWC Club</strong>, experience leisure on a grand scale.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
               className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeTab === idx
                   ? "bg-[#c8102e] text-white font-bold shadow-sm"
-                  : "bg-slate-800 text-white hover:bg-slate-700"
+                  : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:bg-slate-100"
               }`}
             >
               {cat.categoryName}
@@ -48,10 +48,10 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
 
         {/* Active Category Intro */}
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-          <h3 className="font-display text-lg sm:text-xl font-bold text-white">
+          <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
             {activeCategory.categoryName}
           </h3>
-          <p className="text-xs sm:text-sm text-white mt-1">
+          <p className="text-xs sm:text-sm text-slate-600 mt-1">
             {activeCategory.subtitle}
           </p>
         </div>
@@ -61,11 +61,11 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
           {activeCategory.items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-slate-900/90 rounded-xl border border-slate-800 hover:border-slate-700 transition-all duration-200 flex flex-col justify-between overflow-hidden shadow-sm"
+              className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 transition-all duration-200 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md"
             >
               <div>
                 {item.image && (
-                  <div className="relative aspect-[16/10] w-full bg-slate-950 overflow-hidden">
+                  <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
                     <img loading="lazy" decoding="async"
                       src={item.image}
                       alt={item.title}
@@ -76,21 +76,21 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
 
                 <div className="p-5 space-y-2.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-red-400">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#c8102e]">
                       Feature 0{idx + 1}
                     </span>
                     {item.tag && (
-                      <span className="px-2.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider bg-slate-800 text-white">
+                      <span className="px-2.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider bg-slate-100 text-slate-800 border border-slate-200">
                         {item.tag}
                       </span>
                     )}
                   </div>
 
                   <div>
-                    <h4 className="font-display text-base sm:text-lg font-bold text-white">
+                    <h4 className="font-display text-base sm:text-lg font-bold text-slate-900">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-white mt-1.5 leading-relaxed font-body">
+                    <p className="text-xs text-slate-700 mt-1.5 leading-relaxed font-body">
                       {item.desc}
                     </p>
                   </div>
@@ -98,13 +98,13 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
               </div>
 
               <div className="p-5 pt-0">
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-white">
-                  <span className="flex items-center gap-1.5 text-white text-[11px] font-medium">
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-700">
+                  <span className="flex items-center gap-1.5 text-slate-800 text-[11px] font-medium">
                     <Check className="h-3.5 w-3.5 text-[#c8102e]" /> Ready Facility
                   </span>
                   <button
                     onClick={() => onOpenEnquiry(item.title)}
-                    className="text-red-400 hover:text-red-300 font-semibold uppercase tracking-wider text-[11px] flex items-center gap-1 cursor-pointer"
+                    className="text-[#c8102e] hover:text-[#a60d26] font-bold uppercase tracking-wider text-[11px] flex items-center gap-1 cursor-pointer"
                   >
                     Enquire <ArrowRight className="h-3 w-3" />
                   </button>

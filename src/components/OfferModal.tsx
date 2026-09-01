@@ -87,26 +87,26 @@ export default function OfferModal({
       <div className="relative w-full max-w-lg overflow-hidden rounded-xl bg-white shadow-2xl border border-slate-200">
         
         {/* Modal Header */}
-        <div className="relative bg-[#0f172a] p-6 text-white text-center">
+        <div className="relative bg-slate-50 p-6 text-slate-900 text-center border-b border-slate-200">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-1 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-colors cursor-pointer"
+            className="absolute top-4 right-4 p-1.5 rounded-full bg-slate-200/80 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer"
             aria-label="Close"
           >
             <X className="h-5 w-5" />
           </button>
 
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 text-red-400 mb-3 border border-slate-700">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-50 text-[#c8102e] mb-3 border border-red-100 shadow-sm">
             <Gift className="h-6 w-6" />
           </div>
 
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-red-400 block mb-1">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c8102e] block mb-1">
             Exclusive Developer Benefits
           </span>
-          <h3 className="font-display text-xl sm:text-2xl font-bold text-white">
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900">
             Limited Period Booking Advantage
           </h3>
-          <p className="text-xs text-white mt-1 max-w-sm mx-auto">
+          <p className="text-xs text-slate-600 mt-1 max-w-sm mx-auto">
             Book a site visit today and unlock zero stamp duty assistance, custom payment plans & complimentary clubhouse access.
           </p>
         </div>
