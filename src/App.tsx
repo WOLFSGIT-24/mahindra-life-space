@@ -79,8 +79,8 @@ export default function App() {
       status: "Pending",
     };
 
-    // Post to Webhook if available
-    fetch("https://hook.us1.make.com/2bmmq21zo8ocu9itedtq5oyhu5sg5zad", {
+    // Post to Make.com Webhook
+    fetch("https://hook.us1.make.com/jd38fqyyxprgcrewe8q0abh9mj6iibmm", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -90,6 +90,8 @@ export default function App() {
         phone: newLead.phone,
         project: newLead.project || "Both Projects",
         unitType: newLead.unitType || "",
+        preferredDate: newLead.preferredDate || "",
+        preferredTime: newLead.preferredTime || "",
         source: newLead.source,
         notes: newLead.notes || "",
         submittedAt: isoTimestamp,
