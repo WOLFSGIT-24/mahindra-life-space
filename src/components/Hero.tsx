@@ -37,7 +37,7 @@ export default function Hero({
   return (
     <section
       id="overview"
-      className="relative min-h-[90vh] flex items-center bg-[#0b1120] text-white pt-24 pb-14 sm:pt-28 sm:pb-20 overflow-hidden border-b border-slate-800"
+      className="relative min-h-[90vh] flex items-center bg-[#0b1120] text-white pt-28 pb-14 sm:pt-36 sm:pb-20 overflow-hidden border-b border-slate-800"
     >
       {/* Background Architectural Grid Pattern */}
       <div 

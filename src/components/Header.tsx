@@ -24,7 +24,7 @@ export default function Header({
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 20);
 
       const sections = [
         "overview",
@@ -35,14 +35,17 @@ export default function Header({
         "township",
         "location",
         "specifications",
-        "lead-capture-section",
       ];
-      for (const section of sections) {
-        const el = document.getElementById(section);
+
+      const scrollPosition = window.scrollY + 140;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
         if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 140 && rect.bottom >= 140) {
-            setActiveSection(section);
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
             break;
           }
         }
@@ -53,16 +56,17 @@ export default function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = el.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+    const element = document.getElementById(targetId);
+    if (element) {
+      const navOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -83,28 +87,30 @@ export default function Header({
   ];
 
   return (
-    <>
-      {/* Top Banner Announcement */}
-      <div className="bg-[#0b1120] text-white text-[11px] font-medium py-2 px-4 text-center border-b border-slate-800 z-50 relative flex items-center justify-center gap-2">
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider">
-          Mahindra World City, Chennai
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-200">
+      
+      {/* Top Banner Announcement Strip */}
+      <div className="bg-[#0b1120] text-white text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800 flex items-center justify-center gap-2">
+        <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider shrink-0">
+          Mahindra World City
         </span>
-        <span className="hidden sm:inline text-slate-300">
-          Two Residences: <strong>Codename AquaVista</strong> (3, 3.5 & 4 BHK Duplex) & <strong>Mahindra Lakewoods</strong> (2 & 3 BHK)
+        <span className="hidden md:inline text-slate-300 truncate">
+          Codename AquaVista (3, 3.5 & 4 BHK Duplex) & Mahindra Lakewoods (2 & 3 BHK)
         </span>
-        <span className="sm:hidden text-slate-300">
+        <span className="md:hidden text-slate-300 truncate">
           AquaVista & Lakewoods • 1,500 Acre Township
         </span>
         <button
           onClick={onRequestDownload}
-          className="underline text-slate-200 hover:text-white font-semibold ml-2 cursor-pointer transition-colors"
+          className="underline text-slate-200 hover:text-white font-semibold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
         >
           Download PDF
         </button>
       </div>
 
-      <header
-        className={`fixed top-[33px] left-0 w-full h-[72px] z-40 transition-all duration-200 ${
+      {/* Main Navigation Bar */}
+      <div
+        className={`w-full h-[64px] sm:h-[72px] transition-all duration-200 ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm"
             : "bg-white/95 backdrop-blur-sm border-b border-slate-100"
@@ -142,10 +148,10 @@ export default function Header({
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => handleLinkClick(e, link.id)}
-                  className={`px-3 py-1.5 rounded-md text-[13px] font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all duration-150 ${
                     isActive
-                      ? "text-[#c8102e] bg-red-50 font-bold"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-[#c8102e] font-bold bg-red-50"
+                      : "text-slate-700 hover:text-slate-950 hover:bg-slate-50"
                   }`}
                 >
                   {link.label}
@@ -154,27 +160,37 @@ export default function Header({
             })}
           </nav>
 
-          {/* Action CTA Group */}
-          <div className="flex items-center gap-2.5 shrink-0">
+          {/* Right Action CTAs */}
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
+            <a
+              href="tel:08047359991"
+              className="flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-[#c8102e] transition-colors py-2 px-2.5 rounded border border-slate-200 hover:border-slate-300"
+            >
+              <Phone className="h-3.5 w-3.5 text-[#c8102e]" />
+              <span>080 4735 9991</span>
+            </a>
+
             <button
               onClick={onOpenBooking}
-              className="hidden sm:inline-flex items-center gap-2 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-wider uppercase px-5 py-2.5 rounded-md transition-all shadow-sm cursor-pointer whitespace-nowrap"
+              className="bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.12em] uppercase px-4 py-2.5 rounded shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
             >
               Book Site Visit
             </button>
+          </div>
 
+          {/* Mobile Phone & Hamburger Actions */}
+          <div className="flex sm:hidden items-center gap-2">
             <a
               href="tel:08047359991"
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-md border border-slate-200 text-slate-700 hover:text-[#c8102e] hover:border-[#c8102e] hover:bg-red-50 transition-colors"
-              title="Call Sales Office: 080 4735 9991"
+              className="p-2 rounded-md border border-slate-200 text-slate-800 hover:text-[#c8102e] bg-slate-50"
+              aria-label="Call Sales"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 text-[#c8102e]" />
             </a>
 
-            {/* Hamburger Button for Mobile / Tablet */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-md border border-slate-200 text-slate-800 focus:outline-none hover:bg-slate-100 transition-colors cursor-pointer"
+              className="p-2 rounded-md border border-slate-200 text-slate-800 hover:bg-slate-100 focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? (
@@ -186,11 +202,11 @@ export default function Header({
           </div>
 
         </div>
-      </header>
+      </div>
 
       {/* Mobile Drawer Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[105px] bg-[#0f172a]/95 backdrop-blur-xl z-50 lg:hidden flex flex-col p-6 space-y-4 animate-fade-in overflow-y-auto">
+        <div className="bg-[#0f172a]/95 backdrop-blur-xl border-b border-slate-800 shadow-2xl lg:hidden flex flex-col p-6 space-y-4 animate-fade-in max-h-[80vh] overflow-y-auto">
           <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pb-1 border-b border-slate-800">
             Navigation
           </div>
@@ -238,6 +254,6 @@ export default function Header({
           </div>
         </div>
       )}
-    </>
+    </header>
   );
 }
