@@ -90,19 +90,19 @@ export default function Header({
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-200">
       
       {/* Top Banner Announcement Strip */}
-      <div className="bg-[#0b1120] text-white text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800 flex items-center justify-center gap-2">
+      <div className="bg-slate-100 text-slate-900 text-[11px] font-medium py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-200 flex items-center justify-center gap-2">
         <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c8102e] text-white uppercase tracking-wider shrink-0">
           Mahindra World City
         </span>
-        <span className="hidden md:inline text-slate-300 truncate">
+        <span className="hidden md:inline text-slate-900 truncate">
           Codename AquaVista (3, 3.5 & 4 BHK Duplex) & Mahindra Lakewoods (2 & 3 BHK)
         </span>
-        <span className="md:hidden text-slate-300 truncate">
+        <span className="md:hidden text-slate-900 truncate">
           AquaVista & Lakewoods • 1,500 Acre Township
         </span>
         <button
           onClick={onRequestDownload}
-          className="underline text-slate-200 hover:text-white font-semibold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
+          className="underline text-[#c8102e] hover:text-[#a60d26] font-bold ml-1 cursor-pointer transition-colors shrink-0 text-[10px] sm:text-[11px]"
         >
           Download PDF
         </button>
