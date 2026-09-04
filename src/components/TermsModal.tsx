@@ -46,14 +46,14 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
           
           <div className="space-y-4">
             <p>
-              By accessing and using this website, you agree to be bound by these Terms and Conditions. This website presents information on Codename AquaVista and Mahindra Lakewoods at Mahindra World City, Chengalpattu, Chennai.
+              By accessing and using this website, you agree to be bound by these Terms and Conditions. This website presents information on 2, 3, 3.5 & 4 BHK Luxury Residences at Mahindra World City, Chengalpattu, Chennai.
             </p>
           </div>
 
           <div className="space-y-4">
             <h3 className="font-display text-lg font-bold text-slate-900">1. Website Purpose</h3>
             <p>
-              This website has been created for the purpose of providing project information and generating customer enquiries for residential projects at Mahindra World City, Chennai.
+              This website has been created for the purpose of providing residential configuration information and generating customer enquiries for residential developments at Mahindra World City, Chennai.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
             <ul className="list-disc pl-5 space-y-1">
               <li>All images, renders, floor plans, and layouts shown are artistic impressions and represent conceptual design.</li>
               <li>Prices, specifications, amenities, and availability are subject to change as per developer discretion.</li>
-              <li>TNRERA registrations: Codename AquaVista is registered as Aqualily phase 2C2 (TN/01/Building/0174/2022) and Mahindra Lakewoods is registered as Lakewoods Towers D & E (TN/01/Building/0041/2022). Details are available at www.rera.tn.gov.in.</li>
+              <li>TNRERA registrations: 3, 3.5 & 4 BHK Duplex is registered as Aqualily phase 2C2 (TN/01/Building/0174/2022) and 2 BHK Deck is registered as Lakewoods Towers D & E (TN/01/Building/0041/2022). Details are available at www.rera.tn.gov.in.</li>
             </ul>
           </div>
 

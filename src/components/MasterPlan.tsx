@@ -11,10 +11,10 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
 
   const plans = {
     aquavista: {
-      name: "Codename AquaVista Master Plan",
-      subtitle: "Overlooking Serene Kolavai Lake with 2 Acre Central Park & 16,000 Sq.Ft. Clubhouse",
+      name: "3, 3.5 & 4 BHK Duplex Master Layout",
+      subtitle: "Lakefront Residences (1,053 to 1,610 Sft) with 2 Acre Central Park & 16,000 Sq.Ft. Clubhouse",
       imageUrl: "/aquavista/master pla aqua.webp",
-      badge: "Lakefront Master Layout",
+      badge: "3, 3.5 & 4 BHK • ₹ 79 L* onwards",
       legendItems: [
         "Towers C7 & C8 Lake View Residential Enclave",
         "16,000 Sq.Ft. Clubhouse with Resort Swimming Pool",
@@ -24,10 +24,10 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
       ]
     },
     lakewoods: {
-      name: "Mahindra Lakewoods Master Plan",
-      subtitle: "9.33 Acre Master Layout with Towers D & E (Stilt + 14 Floors) & 45% Open Spaces",
+      name: "2 BHK Deck Residences Master Layout",
+      subtitle: "9.33 Acre Master Layout with Towers D & E (1,079 Sft) & 45% Open Spaces",
       imageUrl: "/lakewoods/lakewood masterplan.webp",
-      badge: "9.33 Acres • 166 Units • Ready to Move In",
+      badge: "2 BHK (1,079 Sft) • ₹ 84 L* (No GST*)",
       legendItems: [
         "Towers D & E with 2 BHK (1079 Sft) Ready to Move In Residences",
         "Stilt + 14 Floors with East & West Facing Orientations",
@@ -54,12 +54,12 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
             Harmonized with Nature
           </h2>
           <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
-            Explore the master layouts of both projects within Mahindra World City. Each development provides generous open space, dedicated sports courts, pedestrian safety, and tranquil water vistas.
+            Explore the master layouts of the residences within Mahindra World City. Each enclave provides generous open space, dedicated sports courts, pedestrian safety, and tranquil green vistas.
           </p>
         </div>
 
         {/* Master Plan Selector Tabs */}
-        <div className="flex items-center justify-center max-w-md mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-8 sm:mb-10">
+        <div className="flex items-center justify-center max-w-lg mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-8 sm:mb-10">
           <button
             onClick={() => setActivePlan("aquavista")}
             className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
@@ -68,8 +68,8 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
                 : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            <span className="sm:hidden">AquaVista</span>
-            <span className="hidden sm:inline">AquaVista Master Plan</span>
+            <span className="sm:hidden">3 & 4 BHK Duplex</span>
+            <span className="hidden sm:inline">3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)</span>
           </button>
 
           <button
@@ -80,8 +80,8 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
                 : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            <span className="sm:hidden">Lakewoods</span>
-            <span className="hidden sm:inline">Lakewoods Master Plan</span>
+            <span className="sm:hidden">2 BHK (1,079 Sft)</span>
+            <span className="hidden sm:inline">2 BHK Deck (1,079 Sft)</span>
           </button>
         </div>
 

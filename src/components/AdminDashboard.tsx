@@ -64,7 +64,7 @@ export default function AdminDashboard({
                 Mahindra World City Sales Partner CRM
               </h3>
               <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">
-                AquaVista & Lakewoods Real-Time Inquiries & Site Bookings
+                Mahindra World City Real-Time Inquiries & Site Bookings
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function AdminDashboard({
             </div>
 
             <div className="flex bg-slate-100 p-1 rounded-lg">
-              {["All", "AquaVista", "Lakewoods"].map((proj) => (
+              {["All", "3, 3.5 & 4 BHK", "2 BHK Deck"].map((proj) => (
                 <button
                   key={proj}
                   onClick={() => setProjectFilter(proj)}

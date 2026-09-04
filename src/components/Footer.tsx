@@ -65,7 +65,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps = {})
             <ul className="space-y-2 text-xs text-slate-700">
               {[
                 { label: "Overview", id: "overview" },
-                { label: "The 2 Projects", id: "projects" },
+                { label: "The Residences", id: "projects" },
                 { label: "Floor & Unit Plans", id: "floor-plans" },
                 { label: "Master Plans", id: "master-plan" },
                 { label: "Amenities & Clubs", id: "amenities" },
@@ -88,7 +88,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps = {})
           {/* Column 3: The 2 Projects RERA details */}
           <div className="lg:col-span-3 space-y-2.5 sm:space-y-3">
             <span className="text-[11px] font-bold text-slate-900 uppercase tracking-wider block">
-              Project Registrations
+              RERA Registrations
             </span>
             <div className="space-y-2.5 sm:space-y-3 text-xs text-slate-900">
               <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
@@ -144,10 +144,10 @@ export default function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps = {})
         <div className="space-y-3 sm:space-y-4 text-[11px] text-slate-600 leading-relaxed">
           <div className="space-y-2">
             <p>
-              <strong className="text-slate-900">Codename AquaVista Disclaimer:</strong> Codename AquaVista is registered as “Aqualily phase 2C2” under TNRERA No: TN/01/Building/0174/2022 dated 20.05.2022 valid up to 31.12.2024 and details are available at <a href="https://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c8102e] text-slate-800 font-medium">www.rera.tn.gov.in</a>. Developed by Mahindra World City Developers Limited in phases.
+              <strong className="text-slate-900">3, 3.5 & 4 BHK Duplex Residences Disclaimer:</strong> Registered as “Aqualily phase 2C2” under TNRERA No: TN/01/Building/0174/2022 dated 20.05.2022 valid up to 31.12.2024 and details are available at <a href="https://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c8102e] text-slate-800 font-medium">www.rera.tn.gov.in</a>. Developed by Mahindra World City Developers Limited in phases.
             </p>
             <p>
-              <strong className="text-slate-900">Mahindra Lakewoods Disclaimer:</strong> This project is registered as “Lakewoods Towers D & E” under TNRERA No. TN/01/Building/0041/2022 dated 01.02.2022 valid up to 31.05.2025 available on <a href="https://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c8102e] text-slate-800 font-medium">www.rera.tn.gov.in</a>. Developed by Mahindra Integrated Township Limited in phases.
+              <strong className="text-slate-900">2 BHK Deck Residences Disclaimer:</strong> Registered as “Lakewoods Towers D & E” under TNRERA No. TN/01/Building/0041/2022 dated 01.02.2022 valid up to 31.05.2025 available on <a href="https://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c8102e] text-slate-800 font-medium">www.rera.tn.gov.in</a>. Developed by Mahindra Integrated Township Limited in phases.
             </p>
             <p>
               This communication is purely conceptual and for representational purposes only. Any furniture, fixtures and white goods shown are not part of the offering and purely for showcasing possibilities. Distances and timelines are indicative and approximate. Mentioned prices do not include stamp duty and registration fees. Terms and conditions apply.

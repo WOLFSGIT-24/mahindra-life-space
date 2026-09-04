@@ -25,7 +25,7 @@ export default function Amenities({ onOpenEnquiry }: AmenitiesProps) {
             Wellness & Community
           </h2>
           <p className="font-body text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed pt-2">
-            From the 16,000 sq.ft clubhouse at <strong>AquaVista</strong> to the 3.8 acre vehicle free podium at <strong>Lakewoods</strong> and the prestigious <strong>MWC Club</strong>, experience leisure on a grand scale.
+            From the 16,000 sq.ft clubhouse (3, 3.5 & 4 BHK Duplex) to the 3.8 acre vehicle-free podium (2 BHK Deck Residences) and the prestigious <strong>MWC Club</strong>, experience leisure on a grand scale.
           </p>
         </div>
 

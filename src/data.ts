@@ -24,12 +24,12 @@ export interface ProjectData {
 export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
   aquavista: {
     id: "aquavista",
-    name: "Codename AquaVista",
-    codename: "AquaVista",
+    name: "3, 3.5 & 4 BHK Duplex Residences",
+    codename: "3, 3.5 & 4 BHK Duplex",
     tagline: "A life replete with space, greenery, and peace at abodes that are deservingly distinct",
-    subtagline: "The Quintessence of Panache and Tranquillity",
-    description: "Located within the 1,500 acre Mahindra World City, Codename AquaVista offers large sized premium homes overlooking serene Kolavai Lake and rolling hills. Enjoy an exclusive low density community with a 16,000 sq.ft clubhouse and a 2 acre central park.",
-    badge: "Lakefront Luxury Living",
+    subtagline: "1,053 to 1,610 Sq.Ft. Carpet • Starting ₹ 79 Lakhs* onwards",
+    description: "Located within the 1,500 acre Mahindra World City, these large-sized premium homes overlook serene Kolavai Lake and rolling hills. Enjoy an exclusive low density community with a 16,000 sq.ft clubhouse and a 2 acre central park.",
+    badge: "Lakefront Luxury • ₹ 79 L* onwards",
     reraNumber: "TN/01/Building/0174/2022",
     reraProjectName: "Aqualily phase 2C2",
     reraValidUntil: "31.12.2024",
@@ -50,18 +50,18 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
       "Pre certified IGBC Gold rated Green homes with 20% power savings"
     ],
     stats: [
+      { label: "Price", value: "₹ 79 L* onwards" },
       { label: "Clubhouse", value: "16,000 Sq.Ft." },
-      { label: "Central Park", value: "2.0 Acres" },
-      { label: "Configuration", value: "3, 3.5 & 4 BHK Duplex" },
+      { label: "Carpet Area", value: "1,053 to 1,610 Sft" },
       { label: "Green Rating", value: "IGBC Gold" }
     ]
   },
   lakewoods: {
     id: "lakewoods",
-    name: "Mahindra Lakewoods",
+    name: "2 BHK Deck Residences",
     tagline: "An abode where you can Rediscover Yourself",
-    subtagline: "Ready to Move In • No GST* • 10-70-20 Payment Plan",
-    description: "Nestled in 9.33 acres within Mahindra World City, Mahindra Lakewoods offers ready-to-move-in 2 BHK residences across Stilt + 14 floors (Towers D & E). Designed with East & West facing orientations, 45% open spaces, and ZERO common walls for complete privacy.",
+    subtagline: "1,079 Sq.Ft. Sft • Ready to Move In • No GST* • 10-70-20 Plan",
+    description: "Nestled in 9.33 acres within Mahindra World City, these ready-to-move-in 2 BHK residences span across Stilt + 14 floors (Towers D & E). Designed with East & West facing orientations, 45% open spaces, and ZERO common walls for complete privacy.",
     badge: "Ready to Move In • No GST*",
     reraNumber: "TN/01/Building/0041/2022",
     reraProjectName: "Lakewoods Towers D & E",
@@ -82,7 +82,7 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
       { label: "Price", value: "₹ 84 L* (No GST*)" },
       { label: "Status", value: "Ready to Move In" },
       { label: "Payment Plan", value: "10-70-20" },
-      { label: "Land Area", value: "9.33 Acres (166 Units)" }
+      { label: "Area / Units", value: "1079 Sft (166 Units)" }
     ]
   }
 };
@@ -154,12 +154,12 @@ export const mwcTownshipHighlights = {
 };
 
 export const floorPlansData: FloorPlanUnit[] = [
-  // AquaVista Plans
+  // 3, 3.5 & 4 BHK Duplex Plans
   {
     id: "av-3bhk",
     projectId: "aquavista",
-    projectName: "Codename AquaVista",
-    title: "AquaVista Tower C7/C8: 3 BHK",
+    projectName: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)",
+    title: "3 BHK Luxury Residence (1,053.5 Sq.Ft. Carpet)",
     type: "3 BHK Luxury",
     carpetAreaSqFt: "1,053.5",
     carpetAreaSqM: "97.88",
@@ -186,8 +186,8 @@ export const floorPlansData: FloorPlanUnit[] = [
   {
     id: "av-3.5bhk",
     projectId: "aquavista",
-    projectName: "Codename AquaVista",
-    title: "AquaVista Tower C7/C8: 3.5 BHK + Study",
+    projectName: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)",
+    title: "3.5 BHK + Study Duplex Residence (1,346.5 Sq.Ft. Carpet)",
     type: "3.5 BHK + Study",
     carpetAreaSqFt: "1,346.5",
     carpetAreaSqM: "125.1",
@@ -214,8 +214,8 @@ export const floorPlansData: FloorPlanUnit[] = [
   {
     id: "av-4bhk-duplex",
     projectId: "aquavista",
-    projectName: "Codename AquaVista",
-    title: "AquaVista Tower C7/C8: 4 BHK Duplex with Private Terrace",
+    projectName: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)",
+    title: "4 BHK Duplex Residence with Private Terrace (1,610.2 Sq.Ft. Carpet)",
     type: "4 BHK Duplex",
     carpetAreaSqFt: "1,610.2",
     carpetAreaSqM: "149.59",
@@ -240,12 +240,12 @@ export const floorPlansData: FloorPlanUnit[] = [
     ]
   },
 
-  // Lakewoods Plans
+  // 2 BHK Deck Plans
   {
     id: "lw-2bhk",
     projectId: "lakewoods",
-    projectName: "Mahindra Lakewoods",
-    title: "Lakewoods Towers D & E: 2 BHK Luxury",
+    projectName: "2 BHK Deck (1,079 Sft • Ready to Move In)",
+    title: "2 BHK Luxury Deck Residence (1,079 Sq.Ft. Sft)",
     type: "2 BHK (1079 Sft)",
     carpetAreaSqFt: "751.22",
     carpetAreaSqM: "69.79",
@@ -271,8 +271,8 @@ export const floorPlansData: FloorPlanUnit[] = [
   {
     id: "lw-3bhk",
     projectId: "lakewoods",
-    projectName: "Mahindra Lakewoods",
-    title: "Lakewoods Towers A to E: 3 BHK Deck",
+    projectName: "2 BHK Deck (1,079 Sft • Ready to Move In)",
+    title: "3 BHK Luxury Deck Residence (925.4 Sq.Ft. Carpet)",
     type: "3 BHK Deck",
     carpetAreaSqFt: "925.4",
     carpetAreaSqM: "85.97",
@@ -299,8 +299,8 @@ export const floorPlansData: FloorPlanUnit[] = [
   {
     id: "lw-3bhk-grand",
     projectId: "lakewoods",
-    projectName: "Mahindra Lakewoods",
-    title: "Lakewoods Towers A to E: 3 BHK Grand Deck",
+    projectName: "2 BHK Deck (1,079 Sft • Ready to Move In)",
+    title: "3 BHK Grand Deck Residence (1,013.86 Sq.Ft. Carpet)",
     type: "3 BHK Grand",
     carpetAreaSqFt: "1,013.86",
     carpetAreaSqM: "94.19",
@@ -329,98 +329,98 @@ export const floorPlansData: FloorPlanUnit[] = [
 export const amenitiesCategories: AmenityCategory[] = [
   {
     id: "aquavista-club",
-    categoryName: "Codename AquaVista Club & Park",
+    categoryName: "16,000 Sq.Ft. Clubhouse & 2 Acre Park (3, 3.5 & 4 BHK)",
     subtitle: "16,000 Sq.Ft. Clubhouse & 2 Acre Central Park Overlooking Kolavai Lake",
     items: [
       {
         title: "16,000 Sq.Ft. Grand Clubhouse",
         desc: "Multi level recreation hub with reception lobby, multipurpose hall, yoga/aerobics room, and indoor games room.",
         icon: "castle",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/grand clubhouse.webp"
       },
       {
         title: "Resort Style Swimming Pool",
         desc: "Crystal clear adult swimming pool and dedicated kids splash pool with sun loungers.",
         icon: "pool",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/resort style pool.webp"
       },
       {
         title: "2 Acre Central Park & Shaded Walkways",
         desc: "Expansive landscaped central green park with pedestrian seating pavilions and tree lined jogging paths.",
         icon: "park",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/central podium.webp"
       },
       {
         title: "Open Amphitheatre & Party Lawns",
         desc: "Stepped open air amphitheatre for cultural gatherings, musical nights, and festive community celebrations.",
         icon: "theater_comedy",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/open amphitheatre.webp"
       },
       {
         title: "Regulation Badminton Court",
         desc: "Outdoor badminton courts and athletic facilities for residents of all age groups.",
         icon: "sports_tennis",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/badminton court.webp"
       },
       {
         title: "Half Basketball Court & Play Arena",
         desc: "Dedicated half basketball hoop court and safe multi play equipment zone for kids.",
         icon: "sports_basketball",
-        tag: "AquaVista",
+        tag: "3, 3.5 & 4 BHK",
         image: "/aquavista/half basketball.webp"
       }
     ]
   },
   {
     id: "lakewoods-podium",
-    categoryName: "Mahindra Lakewoods 3.8 Acre Podium",
+    categoryName: "3.8 Acre Vehicle-Free Podium (2 BHK Deck)",
     subtitle: "Vehicle Free Elevated Realm of Peace, Fitness & Unmatched Privacy",
     items: [
       {
         title: "3.8 Acre Vehicle Free Podium",
         desc: "Zero traffic, pristine elevated podium providing total safety for children and seniors to stroll freely.",
         icon: "nature_people",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/lakewoods/lakewood gallery.webp"
       },
       {
         title: "Open to Sky Swimming Pool",
         desc: "Sparkling resort swimming pool with changing rooms, dedicated shallow pool for children, and expansive timber deck.",
         icon: "water",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/lakewoods/pool-amenities.webp"
       },
       {
         title: "Elevated Lounge & Skyview Decks",
         desc: "Bespoke social pavilion overlooking the green podium, rolling reserve hills, and distant lake waters.",
         icon: "deck",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/lakewoods/podium-park.webp"
       },
       {
         title: "Podium Fitness Gym & Jogging Loop",
         desc: "Fully equipped gymnasium with cardio and strength training gear, opening onto a soft cushion jogging track.",
         icon: "fitness_center",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/lakewoods/hero.webp"
       },
       {
         title: "Open Badminton Court & Play Lawn",
         desc: "Outdoor badminton court and sprawling manicured lawns for morning yoga and evening family recreation.",
         icon: "sports_kabaddi",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/aquavista/badminton court.webp"
       },
       {
         title: "Multipurpose Hall & Indoor Games",
         desc: "Air conditioned celebration hall with indoor games room for table tennis, carrom, and board games.",
         icon: "sports_esports",
-        tag: "Lakewoods",
+        tag: "2 BHK Deck",
         image: "/aquavista/grand clubhouse.webp"
       }
     ]

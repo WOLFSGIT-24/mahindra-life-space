@@ -8,9 +8,9 @@ interface TownshipExperienceProps {
 
 const projectGalleries = {
   aquavista: {
-    name: "Codename AquaVista",
-    badge: "Lakefront Luxury Living",
-    buttonLabel: "AquaVista Gallery",
+    name: "3, 3.5 & 4 BHK Duplex Residences",
+    badge: "1,053 to 1,610 Sft • ₹ 79 L* onwards",
+    buttonLabel: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)",
     tagline: "Overlooking scenic Kolavai Lake with 16,000 Sq.Ft. Clubhouse & 2 Acre Park",
     slides: [
       {
@@ -40,14 +40,14 @@ const projectGalleries = {
     ],
   },
   lakewoods: {
-    name: "Mahindra Lakewoods",
-    badge: "3.8 Acre Podium Living",
-    buttonLabel: "Lakewoods Gallery",
-    tagline: "3.8 Acre Central Vehicle Free Podium with Zero Common Walls residences",
+    name: "2 BHK Deck Residences",
+    badge: "1,079 Sft • ₹ 84 L* (No GST*)",
+    buttonLabel: "2 BHK Deck (1,079 Sft)",
+    tagline: "9.33 Acre parcel with Towers D & E and Zero Common Walls residences",
     slides: [
       {
         title: "3.8 Acre Central Vehicle Free Elevated Podium",
-        subtitle: "Lush green recreational podium with zero traffic, connecting Towers A to E",
+        subtitle: "Lush green recreational podium with zero traffic, connecting Towers D & E",
         image: "/lakewoods/lakewood gallery.webp",
         tag: "Vehicle Free Podium",
       },
@@ -122,7 +122,7 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
         </div>
 
         {/* 2 Project Tabs for Slideshow */}
-        <div className="flex items-center justify-center max-w-md mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-6 sm:mb-8">
+        <div className="flex items-center justify-center max-w-lg mx-auto bg-slate-100 p-1 rounded-lg border border-slate-200 mb-6 sm:mb-8">
           <button
             onClick={() => handleTabChange("aquavista")}
             className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-4 rounded-md font-body text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
@@ -131,8 +131,8 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            <span className="sm:hidden">AquaVista</span>
-            <span className="hidden sm:inline">{projectGalleries.aquavista.buttonLabel}</span>
+            <span className="sm:hidden">3 & 4 BHK Duplex</span>
+            <span className="hidden sm:inline">3, 3.5 & 4 BHK (1,053 - 1,610 Sft)</span>
           </button>
 
           <button
@@ -143,8 +143,8 @@ export default function TownshipExperience({ onOpenEnquiry }: TownshipExperience
                 : "text-slate-700 hover:text-slate-900"
             }`}
           >
-            <span className="sm:hidden">Lakewoods</span>
-            <span className="hidden sm:inline">{projectGalleries.lakewoods.buttonLabel}</span>
+            <span className="sm:hidden">2 BHK (1,079 Sft)</span>
+            <span className="hidden sm:inline">2 BHK Deck (1,079 Sft)</span>
           </button>
         </div>
 

@@ -77,7 +77,7 @@ export default function Header({
 
   const navLinks = [
     { label: "Overview", id: "overview" },
-    { label: "Projects", id: "projects" },
+    { label: "Residences", id: "projects" },
     { label: "Floor Plans", id: "floor-plans" },
     { label: "Master Plan", id: "master-plan" },
     { label: "Amenities", id: "amenities" },
@@ -95,7 +95,7 @@ export default function Header({
           Mahindra World City
         </span>
         <span className="hidden sm:inline text-slate-700 font-medium">
-          Codename AquaVista & Mahindra Lakewoods • Luxury Residences
+          2, 3, 3.5 & 4 BHK Duplex Residences • Starting ₹ 79 Lakhs* onwards
         </span>
         <button
           onClick={onRequestDownload}

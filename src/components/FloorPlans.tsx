@@ -50,7 +50,7 @@ export default function FloorPlans({
             Designed for Light & Ventilation
           </h2>
           <p className="font-body text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed pt-2">
-            Every apartment at <strong>Codename AquaVista</strong> and <strong>Mahindra Lakewoods</strong> is crafted with zero space wastage, large balconies or private decks, and adheres strictly to RERA carpet area measurements.
+            Every apartment across <strong>3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sq.Ft.)</strong> and <strong>2 BHK Deck (1,079 Sq.Ft.)</strong> is crafted with zero space wastage, large balconies or private decks, and adheres strictly to RERA carpet area measurements.
           </p>
         </div>
 

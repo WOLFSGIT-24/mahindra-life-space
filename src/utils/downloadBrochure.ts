@@ -8,36 +8,36 @@ export const BROCHURE_FILES = {
   aquavista: {
     url: "/AquaVista at Mahindra World City - Brochure.pdf",
     filename: "AquaVista_at_Mahindra_World_City_Brochure.pdf",
-    projectName: "Codename AquaVista",
+    projectName: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)",
   },
   lakewoods: {
     url: "/Lakewoods Brochure - Phase II.pdf",
     filename: "Lakewoods_Brochure_Phase_II.pdf",
-    projectName: "Mahindra Lakewoods",
+    projectName: "2 BHK Deck Residences (1,079 Sft)",
   },
 };
 
 /**
  * Triggers PDF download based on user project selection.
  * - If user selected 'Both Projects' (or all), both PDF brochures will be downloaded.
- * - If user selected 'AquaVista', only the AquaVista PDF brochure will be downloaded.
- * - If user selected 'Lakewoods', only the Lakewoods PDF brochure will be downloaded.
+ * - If user selected '3, 3.5 & 4 BHK' / 'AquaVista', only that PDF brochure will be downloaded.
+ * - If user selected '2 BHK' / 'Lakewoods', only that PDF brochure will be downloaded.
  */
 export function downloadBrochures(projectSelection?: string | null): BrochureFileInfo[] {
   const selection = (projectSelection || "").toLowerCase();
 
-  const isAqua = selection.includes("aqua");
-  const isLake = selection.includes("lake");
-  const isBoth = selection.includes("both") || (!isAqua && !isLake);
+  const isDuplex = selection.includes("aqua") || selection.includes("3") || selection.includes("4") || selection.includes("duplex") || selection.includes("1053") || selection.includes("1610");
+  const is2BHK = selection.includes("lake") || selection.includes("2 bhk") || selection.includes("1079") || selection.includes("deck");
+  const isBoth = selection.includes("both") || selection.includes("all") || (isDuplex && is2BHK) || (!isDuplex && !is2BHK);
 
   const toDownload: BrochureFileInfo[] = [];
 
   if (isBoth) {
     toDownload.push(BROCHURE_FILES.aquavista, BROCHURE_FILES.lakewoods);
-  } else if (isAqua) {
-    toDownload.push(BROCHURE_FILES.aquavista);
-  } else if (isLake) {
+  } else if (is2BHK) {
     toDownload.push(BROCHURE_FILES.lakewoods);
+  } else if (isDuplex) {
+    toDownload.push(BROCHURE_FILES.aquavista);
   }
 
   toDownload.forEach((file, index) => {

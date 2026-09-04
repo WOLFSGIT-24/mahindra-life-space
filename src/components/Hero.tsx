@@ -24,7 +24,7 @@ export default function Hero({
 
   const handleBooking = () => {
     if (onOpenBooking) onOpenBooking();
-    else if (onOpenEnquiry) onOpenEnquiry(activeHeroTab === "aquavista" ? "Codename AquaVista" : "Mahindra Lakewoods");
+    else if (onOpenEnquiry) onOpenEnquiry(activeHeroTab === "aquavista" ? "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)" : "2 BHK Deck (1,079 Sft)");
   };
 
   const handleDownload = () => {
@@ -118,10 +118,10 @@ export default function Hero({
                     </span>
                   </div>
                   <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                    Codename AquaVista
+                    3, 3.5 & 4 BHK Duplex
                   </h3>
-                  <p className="text-[11px] text-slate-700 mt-1">
-                    3, 3.5 & 4 BHK Duplex • 1,053 to 1,610 Sft
+                  <p className="text-[11px] text-slate-700 mt-1 font-medium">
+                    1,053 to 1,610 Sq.Ft. Carpet • Towers C7 & C8
                   </p>
                   <p className="text-[10px] text-slate-500 mt-0.5">
                     16,000 Sq.Ft. Clubhouse • 2 Acre Central Park
@@ -129,7 +129,7 @@ export default function Hero({
                 </div>
               </div>
 
-              {/* Option 2: Lakewoods */}
+              {/* Option 2: 2 BHK Deck */}
               <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-left hover:border-slate-300 transition-all flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between gap-1 mb-1.5">
@@ -141,10 +141,10 @@ export default function Hero({
                     </span>
                   </div>
                   <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                    Mahindra Lakewoods
+                    2 BHK Deck Residences
                   </h3>
-                  <p className="text-[11px] text-slate-700 mt-1">
-                    2 BHK (1079 Sft) • Towers D & E
+                  <p className="text-[11px] text-slate-700 mt-1 font-medium">
+                    1,079 Sq.Ft. Sft • Towers D & E (Stilt + 14)
                   </p>
                   <p className="text-[10px] text-slate-500 mt-0.5">
                     9.33 Acres • 10-70-20 Plan • Zero Common Walls

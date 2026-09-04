@@ -44,21 +44,21 @@ export default function ProjectHighlights({
             Choose Your Ideal Home
           </h2>
           <p className="font-body text-xs sm:text-sm md:text-base text-slate-900 leading-relaxed pt-2">
-            Explore both signature developments at Mahindra World City: lake facing duplex luxury with a 16,000 sq.ft clubhouse at <strong>AquaVista</strong>, and ready-to-move-in residences with zero common walls at <strong>Lakewoods</strong>.
+            Explore both signature residential configurations at Mahindra World City: <strong>3, 3.5 & 4 BHK Duplex Residences (1,053 - 1,610 Sq.Ft.)</strong> starting from ₹ 79 Lakhs*, and ready-to-move-in <strong>2 BHK Deck Residences (1,079 Sq.Ft.)</strong> at ₹ 84 Lakhs* with No GST*.
           </p>
         </div>
 
-        {/* Projects Cards Grid - Both Projects Displayed Directly */}
+        {/* Projects Cards Grid - Both Residences Displayed Directly */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
           
-          {/* PROJECT 1: Codename AquaVista Card */}
+          {/* RESIDENCE 1: 3, 3.5 & 4 BHK Duplex Card */}
           <div className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-300 overflow-hidden flex flex-col justify-between">
               <div>
                 {/* Visual Banner */}
                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
                   <img loading="lazy" decoding="async"
                     src={av.heroImage}
-                    alt="Codename AquaVista at Mahindra World City"
+                    alt="3, 3.5 & 4 BHK Duplex Residences at Mahindra World City"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -151,14 +151,14 @@ export default function ProjectHighlights({
               {/* Card Footer Actions */}
               <div className="p-5 sm:p-8 pt-0 flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => handleBooking(undefined, "Codename AquaVista (3, 3.5 & 4 BHK Duplex)")}
+                  onClick={() => handleBooking(undefined, "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)")}
                   className="flex-1 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded shadow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Calendar className="h-4 w-4" />
                   Book Site Visit
                 </button>
                 <button
-                  onClick={() => handleDownload("Codename AquaVista (3, 3.5 & 4 BHK Duplex)")}
+                  onClick={() => handleDownload("3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft)")}
                   className="flex-1 bg-white hover:bg-slate-50 text-slate-900 font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded border border-slate-300 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Download className="h-4 w-4 text-[#c8102e]" />
@@ -174,7 +174,7 @@ export default function ProjectHighlights({
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
                 <img loading="lazy" decoding="async"
                   src={lw.heroImage}
-                  alt="Mahindra Lakewoods at Mahindra World City"
+                  alt="2 BHK Deck Residences at Mahindra World City"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -267,14 +267,14 @@ export default function ProjectHighlights({
             {/* Card Footer Actions */}
             <div className="p-5 sm:p-8 pt-0 flex flex-col sm:flex-row gap-3">
               <button
-                onClick={() => handleBooking(undefined, "Mahindra Lakewoods (2 BHK)")}
+                onClick={() => handleBooking(undefined, "2 BHK Deck Residences (1,079 Sft)")}
                 className="flex-1 bg-[#c8102e] hover:bg-[#a60d26] text-white font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded shadow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Calendar className="h-4 w-4" />
                 Book Site Visit
               </button>
               <button
-                onClick={() => handleDownload("Mahindra Lakewoods (2 BHK)")}
+                onClick={() => handleDownload("2 BHK Deck Residences (1,079 Sft)")}
                 className="flex-1 bg-white hover:bg-slate-50 text-slate-900 font-body text-xs font-bold tracking-[0.15em] uppercase py-3.5 rounded border border-slate-300 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Download className="h-4 w-4 text-[#c8102e]" />

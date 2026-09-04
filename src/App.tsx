@@ -135,10 +135,10 @@ export default function App() {
 
   const handleOpenEnquiry = (topicOrProject?: string) => {
     if (topicOrProject) {
-      if (topicOrProject.toLowerCase().includes("aquavista")) {
-        setPreselectedProject("Codename AquaVista (3, 3.5 & 4 BHK Duplex)");
-      } else if (topicOrProject.toLowerCase().includes("lakewoods")) {
-        setPreselectedProject("Mahindra Lakewoods (2 & 3 BHK)");
+      if (topicOrProject.toLowerCase().includes("aquavista") || topicOrProject.toLowerCase().includes("duplex") || topicOrProject.toLowerCase().includes("3")) {
+        setPreselectedProject("3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)");
+      } else if (topicOrProject.toLowerCase().includes("lakewoods") || topicOrProject.toLowerCase().includes("deck") || topicOrProject.toLowerCase().includes("2")) {
+        setPreselectedProject("2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)");
       } else {
         setPreselectedUnit(topicOrProject);
       }
@@ -175,7 +175,7 @@ export default function App() {
       {/* Hero Section */}
       <Hero
         onOpenEnquiry={handleOpenEnquiry}
-        onRequestDownload={() => handleRequestDownload(selectedProject !== "all" ? (selectedProject === "aquavista" ? "Codename AquaVista (3, 3.5 & 4 BHK Duplex)" : "Mahindra Lakewoods (2 & 3 BHK)") : undefined)}
+        onRequestDownload={() => handleRequestDownload(selectedProject !== "all" ? (selectedProject === "aquavista" ? "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)" : "2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)") : undefined)}
         selectedProject={selectedProject}
         onSelectProject={(p) => setSelectedProject(p)}
       />
@@ -317,7 +317,7 @@ export default function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919035679657?text=Hi%2C%20I%20am%20interested%20in%20Mahindra%20World%20City%20residences%20(AquaVista%20%26%20Lakewoods)."
+        href="https://wa.me/919035679657?text=Hi%2C%20I%20am%20interested%20in%20Mahindra%20World%20City%20residences%20(2%2C%203%2C%203.5%20%26%204%20BHK%20Duplex)."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-[68px] md:bottom-6 right-3.5 md:right-6 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 md:p-3.5 rounded-full shadow-2xl hover:scale-110 transition-transform z-30 flex items-center justify-center cursor-pointer"
@@ -345,7 +345,7 @@ function generateMockLeads(): LeadSubmission[] {
       fullName: "Anand Swaminathan",
       email: "anand.swamy@infosys.com",
       phone: "9445128941",
-      project: "Codename AquaVista (3, 3.5 & 4 BHK Duplex)",
+      project: "3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)",
       unitType: "4 BHK Duplex with Private Terrace",
       submittedAt: new Date(Date.now() - 3 * 3600000).toISOString(),
       source: "site_visit_form",
@@ -359,8 +359,8 @@ function generateMockLeads(): LeadSubmission[] {
       fullName: "Pooja Malhotra",
       email: "pooja.malhotra@renault.com",
       phone: "8826519032",
-      project: "Mahindra Lakewoods (2 & 3 BHK)",
-      unitType: "3 BHK Grand Deck",
+      project: "2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)",
+      unitType: "2 BHK Luxury Deck",
       submittedAt: new Date(Date.now() - 9 * 3600000).toISOString(),
       source: "brochure_form",
       status: "Contacted",
@@ -371,7 +371,7 @@ function generateMockLeads(): LeadSubmission[] {
       fullName: "Dr. Sandeep Vardhan",
       email: "sandeep.v@srm.edu.in",
       phone: "9916030214",
-      project: "Both Projects (AquaVista & Lakewoods)",
+      project: "All Residences (2, 3, 3.5 & 4 BHK Duplex)",
       unitType: "3.5 BHK + Study",
       submittedAt: new Date(Date.now() - 20 * 3600000).toISOString(),
       source: "site_visit_form",

@@ -18,7 +18,7 @@ export default function BrochureForm({
     fullName: "",
     email: "",
     phone: "",
-    project: preselectedProject || "Both Projects (AquaVista & Lakewoods)",
+    project: preselectedProject || "All Residences (2, 3, 3.5 & 4 BHK Duplex)",
     unitType: preselectedUnit || "All Typologies",
     source: "brochure_form" as const,
   });
@@ -108,12 +108,12 @@ export default function BrochureForm({
 
               <div className="space-y-2.5 text-xs text-slate-700 divide-y divide-slate-100">
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="font-semibold text-slate-900">Codename AquaVista:</span>
-                  <span className="text-right text-slate-700">3, 3.5 & 4 BHK Duplex (TNRERA: TN/01/Building/0174/2022)</span>
+                  <span className="font-semibold text-slate-900">3, 3.5 & 4 BHK Duplex:</span>
+                  <span className="text-right text-slate-700">1,053 - 1,610 Sft • ₹ 79 L* onwards (TNRERA: TN/01/Building/0174/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
-                  <span className="font-semibold text-slate-900">Mahindra Lakewoods:</span>
-                  <span className="text-right text-slate-700">2 & 3 BHK (TNRERA: TN/01/Building/0041/2022)</span>
+                  <span className="font-semibold text-slate-900">2 BHK Deck Residences:</span>
+                  <span className="text-right text-slate-700">1,079 Sft • ₹ 84 L* No GST* (TNRERA: TN/01/Building/0041/2022)</span>
                 </div>
                 <div className="pt-2 flex justify-between items-start">
                   <span className="font-semibold text-slate-900">Location:</span>
@@ -148,7 +148,7 @@ export default function BrochureForm({
                     {/* Project Preference Dropdown */}
                     <div>
                       <label className="text-[11px] font-bold text-slate-900 uppercase tracking-wider block mb-1">
-                        Interested In Project*
+                        Interested Residence Configuration*
                       </label>
                       <select
                         id="project"
@@ -156,9 +156,9 @@ export default function BrochureForm({
                         onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-300 rounded-md px-3.5 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e]"
                       >
-                        <option value="Both Projects (AquaVista & Lakewoods)">Both Projects (AquaVista & Lakewoods)</option>
-                        <option value="Codename AquaVista (3, 3.5 & 4 BHK Duplex)">Codename AquaVista (3, 3.5 & 4 BHK Duplex)</option>
-                        <option value="Mahindra Lakewoods (2 & 3 BHK)">Mahindra Lakewoods (2 & 3 BHK)</option>
+                        <option value="All Residences (2, 3, 3.5 & 4 BHK Duplex)">All Residences (2, 3, 3.5 & 4 BHK Duplex)</option>
+                        <option value="2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)">2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)</option>
+                        <option value="3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)">3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)</option>
                       </select>
                     </div>
 

@@ -23,7 +23,7 @@ export default function BookingModal({
     fullName: "",
     email: "",
     phone: "",
-    project: initialProject || "Both Projects (AquaVista & Lakewoods)",
+    project: initialProject || "All Residences (2, 3, 3.5 & 4 BHK Duplex)",
     unitType: initialUnitType || "",
     preferredDate: "",
     preferredTime: "11:00 AM",
@@ -126,11 +126,11 @@ export default function BookingModal({
                   id="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3 py-2.5 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-300 rounded-md px-3.5 py-2 text-xs sm:text-sm font-body outline-none focus:border-[#c8102e] text-slate-900"
                 >
-                  <option value="Both Projects (AquaVista & Lakewoods)">Both Projects (AquaVista & Lakewoods)</option>
-                  <option value="Codename AquaVista (3, 3.5 & 4 BHK Duplex)">Codename AquaVista (3, 3.5 & 4 BHK Duplex)</option>
-                  <option value="Mahindra Lakewoods (2 & 3 BHK)">Mahindra Lakewoods (2 & 3 BHK)</option>
+                  <option value="All Residences (2, 3, 3.5 & 4 BHK Duplex)">All Residences (2, 3, 3.5 & 4 BHK Duplex)</option>
+                  <option value="2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)">2 BHK Deck Residences (1,079 Sft - ₹ 84 L* No GST*)</option>
+                  <option value="3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)">3, 3.5 & 4 BHK Duplex (1,053 - 1,610 Sft - ₹ 79 L* onwards)</option>
                 </select>
               </div>
 

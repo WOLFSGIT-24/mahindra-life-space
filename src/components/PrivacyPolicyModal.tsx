@@ -46,7 +46,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyMod
           
           <div className="space-y-4">
             <p>
-              This website provides information for Codename AquaVista and Mahindra Lakewoods at Mahindra World City, Chengalpattu, Chennai. We are committed to protecting the privacy of every visitor to this website and handling your personal information with care, transparency, and respect.
+              This website provides information for 2, 3, 3.5 & 4 BHK Luxury Residences at Mahindra World City, Chengalpattu, Chennai. We are committed to protecting the privacy of every visitor to this website and handling your personal information with care, transparency, and respect.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyMod
               <li>Full Name</li>
               <li>Email Address</li>
               <li>Phone Number</li>
-              <li>Project of interest (AquaVista or Lakewoods)</li>
+              <li>Residence configuration of interest (3, 3.5 & 4 BHK Duplex or 2 BHK Deck)</li>
               <li>Preferred visit date and time slot</li>
             </ul>
             <p>We may also automatically collect non personal technical data such as browser type, IP address, device type, and pages visited, solely for analytics and performance optimisation purposes.</p>
@@ -67,7 +67,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyMod
             <h3 className="font-display text-lg font-bold text-slate-900">2. How We Use Your Information</h3>
             <p>Your personal information is used solely for the following purposes:</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Responding to your enquiry about Codename AquaVista and Mahindra Lakewoods</li>
+              <li>Responding to your enquiry about Mahindra World City residential developments</li>
               <li>Sharing digital brochures, floor plans, and project price sheets</li>
               <li>Connecting you with the official sales team at The Canopy, Mahindra World City</li>
               <li>Scheduling site walkthrough appointments</li>
