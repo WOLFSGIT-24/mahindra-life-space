@@ -14,21 +14,18 @@ export default function FloorPlans({
   onSelectUnit,
   isUnlocked,
   onUnlockRequest,
-  selectedProjectFilter = "all",
 }: FloorPlansProps) {
-  const [projectFilter, setProjectFilter] = useState<"all" | "aquavista" | "lakewoods">(selectedProjectFilter);
   const [typologyFilter, setTypologyFilter] = useState<string>("all");
   const [selectedPlanModal, setSelectedPlanModal] = useState<FloorPlanUnit | null>(null);
 
   const filteredPlans = floorPlansData.filter((plan) => {
-    const matchesProject = projectFilter === "all" || plan.projectId === projectFilter;
     const matchesTypology =
       typologyFilter === "all" ||
       (typologyFilter === "2bhk" && plan.bedrooms === 2) ||
       (typologyFilter === "3bhk" && plan.bedrooms === 3 && !plan.type.includes("3.5")) ||
       (typologyFilter === "3.5bhk" && plan.type.includes("3.5")) ||
       (typologyFilter === "4bhk" && plan.bedrooms === 4);
-    return matchesProject && matchesTypology;
+    return matchesTypology;
   });
 
   const handlePlanClick = (plan: FloorPlanUnit) => {
@@ -57,51 +54,27 @@ export default function FloorPlans({
           </p>
         </div>
 
-        {/* Filters Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-          {/* Project Filter */}
-          <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm w-full sm:w-auto">
-            {[
-              { id: "all", label: "All Projects" },
-              { id: "aquavista", label: "AquaVista" },
-              { id: "lakewoods", label: "Lakewoods" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setProjectFilter(tab.id as any)}
-                className={`flex-1 sm:flex-none px-3.5 sm:px-4 py-2 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-                  projectFilter === tab.id
-                    ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Typology Filter */}
-          <div className="flex flex-wrap justify-center gap-1 sm:gap-1.5 bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm w-full sm:w-auto">
-            {[
-              { id: "all", label: "All Types" },
-              { id: "2bhk", label: "2 BHK" },
-              { id: "3bhk", label: "3 BHK" },
-              { id: "3.5bhk", label: "3.5 BHK" },
-              { id: "4bhk", label: "4 BHK Duplex" },
-            ].map((type) => (
-              <button
-                key={type.id}
-                onClick={() => setTypologyFilter(type.id)}
-                className={`px-3 py-2 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-                  typologyFilter === type.id
-                    ? "bg-[#c8102e] text-white shadow-sm font-bold"
-                    : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
-                }`}
-              >
-                {type.label}
-              </button>
-            ))}
-          </div>
+        {/* Typology Filter Bar */}
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-xl mx-auto mb-8 sm:mb-10 bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm">
+          {[
+            { id: "all", label: "All Configurations" },
+            { id: "2bhk", label: "2 BHK (1079 Sft)" },
+            { id: "3bhk", label: "3 BHK" },
+            { id: "3.5bhk", label: "3.5 BHK" },
+            { id: "4bhk", label: "4 BHK Duplex" },
+          ].map((type) => (
+            <button
+              key={type.id}
+              onClick={() => setTypologyFilter(type.id)}
+              className={`px-3 sm:px-4 py-2 rounded-md font-body text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                typologyFilter === type.id
+                  ? "bg-[#c8102e] text-white shadow-sm font-bold"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
+              }`}
+            >
+              {type.label}
+            </button>
+          ))}
         </div>
 
         {/* Floor Plan Cards Grid */}

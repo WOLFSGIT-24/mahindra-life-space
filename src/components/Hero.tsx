@@ -104,90 +104,53 @@ export default function Hero({
               </div>
             </div>
 
-            {/* Project Selection Tabs */}
-            <div className="bg-slate-100 p-1.5 rounded-xl border border-slate-200 max-w-xl mx-auto lg:mx-0 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <button
-                onClick={() => {
-                  setActiveHeroTab("aquavista");
-                  onSelectProject?.("aquavista");
-                }}
-                className={`py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
-                  activeHeroTab === "aquavista"
-                    ? "bg-[#c8102e] text-white font-bold shadow-sm"
-                    : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:bg-slate-50"
-                }`}
-              >
-                <div className="text-xs uppercase tracking-wider font-bold">
-                  Codename AquaVista
-                </div>
-                <div className={`text-[11px] mt-0.5 font-normal ${activeHeroTab === "aquavista" ? "text-white/90" : "text-slate-500"}`}>
-                  3, 3.5 & 4 BHK Duplex • Lake View
-                </div>
-              </button>
-
-              <button
-                onClick={() => {
-                  setActiveHeroTab("lakewoods");
-                  onSelectProject?.("lakewoods");
-                }}
-                className={`py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg text-left transition-all duration-200 cursor-pointer ${
-                  activeHeroTab === "lakewoods"
-                    ? "bg-[#c8102e] text-white font-bold shadow-sm"
-                    : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:bg-slate-50"
-                }`}
-              >
-                <div className="text-xs uppercase tracking-wider font-bold">
-                  Mahindra Lakewoods
-                </div>
-                <div className={`text-[11px] mt-0.5 font-normal ${activeHeroTab === "lakewoods" ? "text-white/90" : "text-slate-500"}`}>
-                  2 & 3 BHK • 3.8 Acre Podium
-                </div>
-              </button>
-            </div>
-
-            {/* Active Project Highlight Details */}
-            <div className="bg-white p-5 sm:p-6 rounded-xl border border-slate-200 shadow-sm max-w-xl mx-auto lg:mx-0 space-y-3.5 text-left">
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+            {/* Direct Dual-Project Showcase */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto lg:mx-0">
+              {/* Option 1: AquaVista */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-left hover:border-slate-300 transition-all flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#c8102e] block">
-                    {currentProj.badge}
-                  </span>
-                  <h3 className="font-display text-base sm:text-xl font-bold text-slate-900">
-                    {currentProj.name}
+                  <div className="flex items-center justify-between gap-1 mb-1.5">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#c8102e] bg-red-50 px-2 py-0.5 rounded">
+                      Lakefront Luxury
+                    </span>
+                    <span className="text-[11px] font-bold text-slate-900">
+                      ₹ 79 L* onwards
+                    </span>
+                  </div>
+                  <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                    Codename AquaVista
                   </h3>
-                </div>
-                <div className="text-right">
-                  <span className="text-[10px] text-slate-500 uppercase tracking-wider block">
-                    Starting From
-                  </span>
-                  <span className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                    {currentProj.startingPrice}
-                  </span>
+                  <p className="text-[11px] text-slate-700 mt-1">
+                    3, 3.5 & 4 BHK Duplex • 1,053 to 1,610 Sft
+                  </p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">
+                    16,000 Sq.Ft. Clubhouse • 2 Acre Central Park
+                  </p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-800 bg-slate-50 p-3 rounded-lg border border-slate-100">
+              {/* Option 2: Lakewoods */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-left hover:border-slate-300 transition-all flex flex-col justify-between">
                 <div>
-                  <span className="text-slate-500 block text-[10px] uppercase font-semibold">
-                    Configuration
-                  </span>
-                  <span className="font-semibold text-slate-900">
-                    {currentProj.typologies.join(", ")}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-slate-500 block text-[10px] uppercase font-semibold">
-                    Carpet Area Range
-                  </span>
-                  <span className="font-semibold text-slate-900">
-                    {currentProj.carpetAreaRange}
-                  </span>
+                  <div className="flex items-center justify-between gap-1 mb-1.5">
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                      Ready to Move In
+                    </span>
+                    <span className="text-[11px] font-bold text-[#c8102e]">
+                      ₹ 84 L* (No GST*)
+                    </span>
+                  </div>
+                  <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                    Mahindra Lakewoods
+                  </h3>
+                  <p className="text-[11px] text-slate-700 mt-1">
+                    2 BHK (1079 Sft) • Towers D & E
+                  </p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">
+                    9.33 Acres • 10-70-20 Plan • Zero Common Walls
+                  </p>
                 </div>
               </div>
-
-              <p className="text-xs text-slate-700 leading-relaxed pt-1">
-                {currentProj.keyFeature}
-              </p>
             </div>
 
             {/* CTA Buttons */}

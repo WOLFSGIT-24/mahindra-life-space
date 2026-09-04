@@ -60,33 +60,29 @@ export const projectsData: Record<"aquavista" | "lakewoods", ProjectData> = {
     id: "lakewoods",
     name: "Mahindra Lakewoods",
     tagline: "An abode where you can Rediscover Yourself",
-    subtagline: "Rediscover The Pride of a Beautiful Home",
-    description: "Nestled in the pristine greens of Mahindra World City, Mahindra Lakewoods offers thoughtfully crafted 2 & 3 BHK residences designed with NO common walls for absolute privacy, surrounded by a massive 3.8 acre central vehicle free podium.",
-    badge: "Podium Living & Zero Common Walls",
+    subtagline: "Ready to Move In • No GST* • 10-70-20 Payment Plan",
+    description: "Nestled in 9.33 acres within Mahindra World City, Mahindra Lakewoods offers ready-to-move-in 2 BHK residences across Stilt + 14 floors (Towers D & E). Designed with East & West facing orientations, 45% open spaces, and ZERO common walls for complete privacy.",
+    badge: "Ready to Move In • No GST*",
     reraNumber: "TN/01/Building/0041/2022",
     reraProjectName: "Lakewoods Towers D & E",
     reraValidUntil: "31.05.2025",
     heroImage: "/lakewoods/lakewood gallery.webp",
-    typologies: ["Spacious 2 BHK", "Luxury 3 BHK"],
-    startingPrice: "₹ 55 Lakhs*",
-    carpetAreaRange: "751.2 to 1,013.9 Sq.Ft. Carpet",
+    typologies: ["2 BHK (1079 Sft)"],
+    startingPrice: "₹ 84 Lakhs*",
+    carpetAreaRange: "1079 Sq.Ft. Sft • Ready to Move in",
     greenRating: "IGBC Pre certified Platinum",
-    keyFeature: "3.8 Acre Central Vehicle Free Podium & Zero Common Walls for Utmost Privacy",
+    keyFeature: "9.33 Acres • 166 Units • Stilt + 14 Floors • Ready to Move in with No GST*",
     featuresList: [
-      "Multi storeyed towers (Towers A to E) with spacious 2 & 3 BHK residences",
-      "Maximum privacy: Homes designed with NO common walls",
-      "3.8 acre central vehicle free podium with abundant green spaces",
-      "Private decks with wooden tile finish offering views of lake, hill & podium",
-      "Swimming pool, kids pool, elevated lounge, gym & open badminton court",
-      "6ft wide corridor leading to spacious living & dining with hand wash nook",
-      "High performance heat reducing glass, UPVC windows & 100% SRI roof paint",
-      "Pre certified IGBC Platinum rated Green homes with solar PV common lighting"
+      "9.33 Acre land parcel with 166 units across Stilt + 14 floors (Towers D & E)",
+      "Ready to move in residences with NO GST* and flexible 10-70-20 payment plan",
+      "Spacious 1079 Sq.Ft 2 BHK homes with East and West facing options",
+      "Zero common walls architecture with 45% open green spaces"
     ],
     stats: [
-      { label: "Green Podium", value: "3.8 Acres" },
-      { label: "Privacy Level", value: "0 Common Walls" },
-      { label: "Configuration", value: "2 & 3 BHK" },
-      { label: "Green Rating", value: "IGBC Platinum" }
+      { label: "Price", value: "₹ 84 L* (No GST*)" },
+      { label: "Status", value: "Ready to Move In" },
+      { label: "Payment Plan", value: "10-70-20" },
+      { label: "Land Area", value: "9.33 Acres (166 Units)" }
     ]
   }
 };
@@ -249,28 +245,27 @@ export const floorPlansData: FloorPlanUnit[] = [
     id: "lw-2bhk",
     projectId: "lakewoods",
     projectName: "Mahindra Lakewoods",
-    title: "Lakewoods Towers A to E: 2 BHK Comfort",
-    type: "2 BHK Smart",
+    title: "Lakewoods Towers D & E: 2 BHK Luxury",
+    type: "2 BHK (1079 Sft)",
     carpetAreaSqFt: "751.22",
     carpetAreaSqM: "69.79",
     balconyOrDeckSqFt: "37.89",
     utilitySqFt: "24.54",
-    totalAreaDisplay: "751.22 Sq.Ft. Carpet (+ 62.43 Sq.Ft. Deck & Utility)",
+    totalAreaDisplay: "1,079 Sq.Ft. Sft (751.22 Sft Carpet) • Ready to Move In",
     imageUrl: "/lakewoods/2 bhk lakewood.webp",
     bedrooms: 2,
     bathrooms: 2,
     features: [
       "Zero common walls for unmatched privacy & peaceful living",
-      "Private deck with authentic wooden tile finish",
-      "6ft wide entrance corridor leading to open concept living & dining",
-      "Separate common hand wash niche for guests",
-      "UPVC heat reducing glass windows for lower temperature"
+      "Ready to move in with NO GST* & special 10-70-20 payment plan",
+      "East & West facing orientations with 45% open green spaces",
+      "Spacious living & dining with attached deck and separate utility"
     ],
     keyHighlights: [
-      "RERA Carpet Area: 69.79 Sq.M (751.22 Sq.Ft)",
-      "Deck Area: 3.52 Sq.M (37.89 Sq.Ft)",
-      "Utility Area: 2.28 Sq.M (24.54 Sq.Ft)",
-      "Common Area: 24.65 Sq.M (265.33 Sq.Ft)"
+      "Total Area: 1079 Sq.Ft (69.79 Sq.M Carpet)",
+      "Starting Price: ₹ 84 Lakhs* (No GST*)",
+      "Stilt + 14 Floors • Towers D & E",
+      "Payment Scheme: 10-70-20 Special Plan"
     ]
   },
   {

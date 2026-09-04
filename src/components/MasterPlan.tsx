@@ -25,15 +25,15 @@ export default function MasterPlan({ onSelectUnit }: MasterPlanProps) {
     },
     lakewoods: {
       name: "Mahindra Lakewoods Master Plan",
-      subtitle: "3.8 Acre Central Vehicle Free Elevated Podium with Towers A to E",
+      subtitle: "9.33 Acre Master Layout with Towers D & E (Stilt + 14 Floors) & 45% Open Spaces",
       imageUrl: "/lakewoods/lakewood masterplan.webp",
-      badge: "3.8 Acre Podium Master Layout",
+      badge: "9.33 Acres • 166 Units • Ready to Move In",
       legendItems: [
-        "Towers A to E with Zero Common Walls Residences",
-        "3.8 Acre Central Vehicle-Free Elevated Podium",
+        "Towers D & E with 2 BHK (1079 Sft) Ready to Move In Residences",
+        "Stilt + 14 Floors with East & West Facing Orientations",
+        "Zero Common Walls Architecture & 45% Open Green Landscapes",
         "Swimming Pool, Kids Splash Pool & Leisure Sun Deck",
-        "Continuous Shaded Jogging Loop & Fitness Gymnasium",
-        "Outdoor Badminton Court, Kids Play Area & Yoga Lawns"
+        "Continuous Shaded Jogging Loop & Fitness Gymnasium"
       ]
     }
   };
